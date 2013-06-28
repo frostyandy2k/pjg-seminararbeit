@@ -2,166 +2,342 @@
 %%
 
 %% ==============
-Add additional content chapters if required. \chapter{Model Driven Software Development}
-\label{ch:Content1}
+Add additional content chapters if required. \chapter{Grundlagen}
+\label{ch:Chapter1}
 %% ==============
-
-The content chapters of your thesis should of course be renamed. How many chapters you need to write depends on your thesis and cannot be said in general. 
-
-Check our the examples theses in the Wiki. 
-
-Of course, you can split this .tex file into several files if you prefer. 
-
-
+\ldots
 %% ===========================
-\section{Common MDSD Concept and Terminology}
-\label{ch:Content1:sec:Section1}
+\section{Product Line Engineering}
+\label{ch:Chapter1:sec:Section1}
 %% ===========================
 
-What is MDSD
-Book 
-Terminology
-How detailed an introduction to MDSD area?
-Motivation
-	Modeling4.1Common MDSD COncept and Terminology
-		4.5 Software Factories
-			4.8 Domain SPecific Modeling
-			5.4 MDSD and Domain-Driven Design
-			5.6 MDSD and Agile Software Development
-			13.5 Product-Line Engineering
-			
-			Tools EMF, Eclipse
-			9. Code generation ?
+Infos from SPLE book
 
 \dots
-
 %% ===========================
-\subsection{\ldots}
-\label{ch:Content1:sec:Section1:subsec:SubSection1}
-%% ===========================
-
-\dots
-
-
-%% ===========================
-\section{Domain Specific Modeling}
+\section{Variability Modeling}
 \label{ch:Content1:sec:Section2}
 %% ===========================
 
-\dots
-%% ===========================
-\subsection{\ldots}
-\label{ch:Content1:sec:Section2:subsec:SubSection1}
-%% ===========================
-
-\dots
-
-%% ===========================
-\section{Product-Line Engineering}
-\label{ch:Content1:sec:Section3}
-%% ===========================
-
-\dots
-
-%% ===========================
-\subsection{\ldots}
-\label{ch:Content1:sec:Section2:subsec:SubSection1}
-%% ===========================
-
-\dots
-
-%% ===========================
-\section{Develpoment Methodologies}
-\label{ch:Content1:sec:Section4}
-%% ===========================
-
-\dots
-
-%% ===========================
-\subsection{MDSD and Agile Software Development}
-\label{ch:Content1:sec:Section4:subsec:SubSection1}
-%% ===========================
-
-\dots
-
-
-%% content.tex
-%%
+\ldots
 
 %% ==============
-\chapter{End User Installation of Sensors/Smart Environmets}
-\label{ch:Content2}
-%% ==============
-
-\huge{} ITS ABOUT HOW TO GUIDE THE USER THROUGH THE INSTALLATION
-\normalsize{}
-
-Smart home systems are on the rise
-
-Ubiquitous computing systems rely upon information obtained from sensors depoyed
-in the environment to \hl{function/work}. In the past years these sensors have
-become cheaper, smaller and \hl{increasingly available to end users}. With this
-in mind, the dominant factor of deploying smart home systems is the installation
-barrier. Hiring a professional to do the installation is very expensive and the
-flexibility to adapt the system to the ever changing needs of the user are
-greately limited. Unfortunately, as noted in \cite{Beckmann2004}, the user has
-difficulties 
-
-This paper gives an overview ?of the? 
-Motivation : Financial aspect
-
-\dots
-
-
-%% ===========================
-\section{Section 1}
-\label{ch:Content1:sec:Section1}
-%% ===========================
-
-\dots
-
-
-%% ===========================
-\section{Section 2}
-\label{ch:Content1:sec:Section2}
-%% ===========================
-
-\dots
-
-%% ==============
-\chapter{Environmental Smartness With Second Sighted Glasses?}
-\label{ch:Content6}
+\chapter{Existierende Ansätze}
+\label{ch:Existierende}
 %% ==============
 
 %% ===========================
-\section{Takuro Yonezawa}
-\label{ch:Content6:sec:Section1}
-%% ===========================
-
-\dots
-
-%% ==============
-\chapter{Usability of User Interfaces Generated with ah Model-Driven
-Architecture Tool?}
-\label{ch:Content7}
-%% ==============
-
-%% ===========================
-\section{\ldots}
+\section{Document Generation}
 \label{ch:Content7:sec:Section1}
 %% ===========================
 
-\dots
+\newcommand{\dopler}{\textsc{Dopler}}
 
-%% ==============
-\chapter{User comprehension performance for dataflow-based rules in smart
-Environments}
-\label{ch:Content8}
-%% ==============
+Der in \cite{Rabiser} beschriebene Ansatz kann laut
+den Autoren unabhängig vom \textbf{Aufbaustadium/Reifegrades}, der Variabilitäts
+Modellierungstechnik oder des Dokumenttyps verwendet werden. Der
+Ansatz wurde durch die Tool-Suite \dopler unterstützt. 
+
+Der Ansatz beschreibt vier Schritte, wie in \ref{dopler-approach}
+dargestellt, welche iterativ zu durchlaufen sind:
+
+\begin{enumerate}
+  \item \textbf{Extrahieren und analysieren der Variabilität in
+  Dokumenten}
+  \\
+  Im ersten Schritt werden existierende Dokumente herangezogen um die
+  Variabilität zu extrahieren. Es wird empfohlen diesen Schritt
+  durch einen Produktionslinienexperten mit Wissen über
+  Variabilitäts-Modellierung durchführen zu lassen. Durch Workshops
+  mit Domänenexperten der Produkt-Managements, des Vertriebs oder der
+  Entwicklung können zusätzliche Informationen gewonnen werden. Die
+  Dokumentanalyse bringt die Variabilitätspunkte und ihre
+  dazugehörigen Varianten hervor.
+  
+  \item Variabilitäts-Modelle erstellen oder anpassen \\
+  Der Produktionslinienexperte kann, mit dem gewonnen wissen,
+  existierende Modelle anpassen oder neue erstellen. Falls
+  existierende Modelle schon in der Automation benutzt werden
+  könnten diese auch für Dokumentengenerierung benutzt werden. Die
+  gewählte Technik sollte flexibel sein und fortgeschrittene
+  Automatisierung während der Produktableitung zulassen.
+  
+  \item Variabilitäts-Mechanismus und passenden Generator erstellen \\
+  Der Generator ist erforderlich um die produktspezifischen Dokumente
+  zu generieren. Der Generator benötigt die Variations-Information
+  die in den Dokumenten abgespeichert ist. Der Mechanismus mit dem
+  man die Variations-Information in die Dokumente aufnimmt hängt
+  vom Dokumentformat ab. Aus diesem Grund werden strukturierte
+  Dokumentformate wie XML-basierte Formate benutzt.
+  Auch das Format von office Programmen wie Microsoft Word kann mit Hilfe
+  von Markup-Informationen erweitert werden.
+  
+  \item Dokumente um Variabilitäts-Information erweitern \\
+  Der letzte Schritt webt die Informationen in die Dokumente ein. Der
+  Produktlinienexperte spezifiziert die Variationspunkte und Varianten
+  die in Schritt 1 hervorgehoben wurden und stellt sie in Beziehung
+  mit den Modellen aus Schritt 2. Die Beziehungen werden mit Hilfe des
+  Mechanismus aus Schritt 3 realisiert. Während der Produktableitung
+  kann der Generator die Informationen aus der
+  Nutzereingabe und den Dokumenten heranziehen und produktspezifische
+  Dokumente erstellen.
+  
+\end{enumerate}
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=1\textwidth]{img/dopler-approach.pdf}
+  \caption{Die vier iterativ zu durchlaufenden Phasen des Dopler
+  Ansatzes}
+  \label{dopler-approach}
+\end{figure}
 
 %% ===========================
-\section{\ldots}
+
+Die Tool-Suite enthält ein Variabilitäts-Modellierungs-Tool, einen
+Konfigurations-Wizard und \ldots.
+	
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=0.4\textwidth]{img/dopler-overview.pdf}
+  \caption{Komponenten der \dopler Tool-Suite nach
+  \cite{Rabiser}}
+  \label{dopler-overview}
+\end{figure}
+
+\ref{dopler-overview} muss noch Erweitert werden um die
+DecisionKing \& co.
+	
+Die Decision(Entscheidung) modelliert die Entscheidungspunkte. Sie
+enthält eine eindeutige Identifikationsnummer, eine Frage und einen
+Typen(\ref{fig:dopler-decision-me}. Die Frage wird dem Nutzer bei der
+Konfiguration gestellt und die Antwort auf die Frage bestimmt die Zusammensetzung des Dokumentes. Eine Entscheidung
+kann von anderen Entscheidungen in zwei Arten abhängig sein, siehe
+\ref{fig:dopler-meta_model-me}.
+Eine hierarhische abhängigkeit bedeutet, dass Entscheidungen in einer bestimmten Rheienfolge
+gemacht werden müssen. Wenn eine logische Abhängigkeit besteht dann ändert eine
+Entscheidung die Antworten der davon abhängigen.
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=0.9\textwidth]{img/dopler-decision_model-me.pdf}
+  \caption{Die Entscheidung und ihre Hauptbestandteile}
+  \label{fig:dopler-decision-me}
+\end{figure}
+
+Das Dopler-Meta-Model in \ref{fig:dopler-meta_model-me} zeigt auch den
+Zusammenhang zwischen den Decisions und Assets. Die Inklusion eines Asset
+in das abgeleitete Produkt geschieht durch seine Verbindung zu der Decision.
+Die Attribute eine Asset können von den Antworten auf die Decision Frage beinflusst werden.
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=1\textwidth]{img/dopler-meta_model-me.pdf}
+  \caption{Dopler Meta-Model aus \cite{Rabiser}.}
+  \label{fig:dopler-meta_model-me}
+\end{figure}
+
+Das Diagramm \ref{dopler-meta_model} beschreiben.
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=0.8\textwidth]{img/dopler-meta_model.pdf}
+  \caption{Dopler Meta-Model mit Dokumenten aus \cite{Rabiser}.}
+  \label{dopler-meta_model}
+\end{figure}
+
+%% ===========================
+\section{Intelligente Augmented-Reality-Handbücher}
 \label{ch:Content8:sec:Section1}
 %% ===========================
 
+Der Augmented-Reality-Forschungsbereich des DFKI  arbeitet an der Entwicklung
+und Verbesserung von Augmented-Reality-Handbüchern um sie eines Tages in reelen
+Szenarien einsetzen zu können. Ein Augmented-Reality-Handbuch ist ein digitales
+Handbuch, dass Schritt für Schritt Anleitungen auf einem Head-Mounted-Display
+(HUD) auf das Blickfeld des Benutzers projeziert. Jeder Schritt wird dem
+Benutzer vorgezeigt bis dieser erfolgreich durchgefürhrt wurde.
+
+Wenn der Nutzer eine Aufgabe mit Hilfe des Systems durchführt, \ref{fig:test1},
+werden zuerst die Schritte notwendigen Schritte für die Teilaufgabe
+eingebledet, \ref{fig:test2}.
+Nachdem der Nutzer mit der Ausführung der Teilaufgabe anfängt wird
+auf das Sichtfeld der Status der Durchführung mit Hilfe einer Farbkodierung
+angezeigt.Dabei bedeutet in \ref{fig:test3} die grüne kodierung eine korrekte durchführung.
+
+Eine integrierte Kamera erkennt die Handgriffe und überlagert diese zusammen mit
+einem vorher aufgenommenen Video auf dem HUD um den nächsten Schritt anzuzeigen.
+Der Ansatz kann die vom Benutzer durchgeführten Gesten erkennen und braucht
+keine speziellen Markierungen.
+
+Das Authoring-Tool kann unabhängig(wovon?) die Video-Sequenz in Einzelteile
+teilen 
+
+Die Autoren meinen/behaupten dass \ldots
+
+
+Das Authoring-Tool zerlegt eine einmal gesehene Sequenz
+selbstständig in einzelne, unterscheidbare Handlungsabläufe
+und kombiniert im Anschluss diese einzelnen Kapitel mit
+einem stochastischen Übergangsmodell. Zur Laufzeit kann
+eine beobachtete Tätigkeit zeitlich den Kapiteln zugeordnet
+werden, genau zum passenden Zeitpunkt werden Hinweise
+für die nachfolgenden Schritte eingeblendet. Das Verfahren
+erzeugt vollautomatisch entsprechende Überlagerungen,
+indem es ein "Schattenbild" der anstehenden Handlungen
+halbtransparent einblendet. Wichtige Details oder zusätzliche
+Hinweise können durch einfaches Hineinzeichnen grafischer
+Symbole wie Pfeile oder Striche verdeutlicht werden.
+
+%Second Sighted glasses erwähnen
+%Ex-Valve Brille
+
+\begin{figure}
+\centering
+\begin{minipage}{.30\textwidth}
+  \centering
+  \includegraphics[width=0.9\linewidth]{img/ar-handbook-outside_view.jpg}
+  %\captionof{figure}{Der Nutzer fürht eine Aufgabe mit Hilfe des Systems aus}
+  \captionof{figure}{Anwender}
+  \label{fig:test1}
+\end{minipage}%
+\begin{minipage}{.30\textwidth}
+  \centering
+  \includegraphics[width=0.9\linewidth]{img/ar-handbook-overlay_bsp.jpg}
+  %\captionof{figure}{Die Schritte die durchzuführen sind werden im Sichtfeld
+  \captionof{figure}{Einblenden der Schritte}
+  \label{fig:test2}
+\end{minipage}
+\begin{minipage}{.30\textwidth}
+  \centering
+  \includegraphics[width=0.9\linewidth]{img/ar-handbook-glove_green.jpg}
+  \captionof{figure}{Richtige Durchführung}
+ % \captionof{figure}{Die grüne Färbung symbolisiert die richtige Durchführung der Aufgabe}
+  \label{fig:test3}
+\end{minipage}
+% source : http://av.dfki.de/projects_recent/ar-handbook
+\end{figure}
+
+%% ==============
+\section{Usability of User Interfaces Generated with a Model-Driven
+Architecture Tool}
+\label{ch:Existierende}
+%% ==============
+
+\ldots
+
+%% ==============
+\section{User comprehension performance for dataflow-based rules in smart
+Environments}
+\label{ch:Existierende}
+%% ==============
+
+
+%% ==============
+\chapter{Leichtgewichtige Generierung(Meine Idee)}
+\label{ch:MeineIdee}
+%% ==============
+
 \dots
+
+%% ==============
+\chapter{Vergleich der Ansätze}
+\label{ch:Vergleich}
+%% ==============
+
+\begin{table}
+  %\rowcolors{3}{green!25}{yellow!50}
+  \caption{Vergleich der Ansätze(unter dem Aspekt der Benutzbarkeit)}
+  \centering
+  \begin{tabular}{l c c c c c}
+    %heading
+    \hline\hline
+    
+    & \dopler & AR-Handbook & Modellgetriebene GUI & Regelbasiert &
+    Meine Idee
+    \\
+    [1ex]
+
+    \hline
+    %heading end
+    
+    %     DUdu & &&& \parbox[t]{5cm}{Sales and marketing
+    %     people \\ porduct managers} \\ [1ex]
+    
+    Ansatz &  Entscheidungs orientiert\\ [1ex] 
+    
+    Interaktionsmodus \\ [1ex]
+    
+    Quell-Artefakte \\ [1ex] 
+    
+    Generierte Artefakte & Fertige Dokumente & \\ [1ex] 
+    
+    End-Nutzer & Vertrieb, Marketing, & \\
+    & Produkt-Management &&&& \\ [1ex]
+    
+    Form der Unterstützung & Textuell & Graphisch, VR & Graphisch &&
+    \\ [1ex]
+     
+    Flexibilität \\ [1ex] 
+    
+    Domänenexperten & \textsc{Ja} & \textsc{Ja} & \textsc{Nein} &
+    \textsc{Ja} & \textsc{Nein} \\ [1ex]
+    
+    Wiederverwendung \\ [1ex]
+    
+    Aufwand für die Instandsetzung \\ [1ex]
+    
+    Aufwand für die Benutzung \\ [1ex]
+    
+    Genauigkeit der Beschreibung \\ [1ex]
+    
+    Synchronisierungsaufwand \\ [1ex]
+    
+    Aufwand für die Erstellung neuer Handbücher \\ [1ex] 
+    
+    Anwendungsszenarien & & physiche Umgebung\\ [1ex]
+    \hline
+  \end{tabular}
+  \label{table:tab1}
+\end{table}
+
+Eine Übersicht der Ansätze findet man in den Tabellen
+\ref{table:tab1} und \ref{table:tab1}.
+
+Genauigkeit der Beschreibung: kann das Garantiert werden wenn menschen das
+System intepretieren?
+
+
+%==============================================
+%% ==============
+\chapter{Weiteres Vorgehen}
+\label{ch:NextSteps}
+%% ==============
+
+Usability studies machen
+Am anfang um eine Hypothese zu erstellen und sehen was leute von so einem System
+erwarten
+
+ !System definieren!
+ 
+Punkte finden die interessant sind/interessant zu beschreiben sind.
+Formative studie - ?
+Qualitativ, qunatitative?
+
+Interviews erstellen -> Requirements sammeln -> Hypothese
+
+Studien erstellen um zu sehen ob eine statistisch signifikanter Unterschied
+zwischen den statisch erstellten und den dynamisch generierten besteht.
+
+Wizard of Oz studie => Referenzimplementierung machen
+
+Idee:
+	Seite erstellen die einen konfigurator darstellt. User konfigurieren lassen.
+	Nach einiger zeit den usern das ding in die Hand drücken und arbeten lassen.
+	
+2x5/7 Leute sollte man haben für eine Usability studie
+Gruppen Interviews sind nicht schlecht um Gruppendynamik zu fördern.
+Tutorium Users study?
+
+Methodik muss fest sitzen! 
+
