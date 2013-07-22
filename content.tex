@@ -22,6 +22,301 @@ Infos from SPLE book
 \ldots
 
 %% ==============
+\chapter{Motivation}
+\label{ch:Motivation}
+%% ==============
+
+Bestimmtes Paper belegt, dass die Installation schwierig ist/Noch ein anderes
+Paper heranziehen?
+
+Problem: Was ist das Problem? (allgemeinverständlich für Informatiker)
+Die Systeme die uns umgeben werden flexibler, enthalten mehr Intelligenz und
+sind größtenteils rekonfigurierbar. Dadurch entsteht eine hoche Komplexität bei
+der Installation, Konfiguration oder Wartung. Um den Nutzern eine Hilfestellung
+zu leisten könnte man individuell angepasste Handbücher erstellen. Dieser Ansatz
+kann jedoch nur effizient sein wenn es eine automatisierte Lösung gibt.
+
+Idee: Was ist ihr Lösungsansatz?
+Modellgetrieben Handbücher für intelligente, rekonfigurierbare Systeme erstellen
+um damit den Nutzern einen besseren Überblick über das System zu verleihen
+
+Was ist der Vorteil ihres Lösungsansatzes? (auch ggü.anderen Ansätzen) Aktionen
+(Action): Welche Schritte wollen Sie gehen?
+Der Vorteil wäre eine automatisierte toolchain die Änderungen in dem System in
+dem Handbuch reflektieren und somit immer Aktuellen bleiben und dem Nutzer eine
+Sicht auf das System erlauben.
+
+3. Folie: Einleitung/Grundlagen/Motivation?: Was sind die wichtigsten Grundlagen ihres Themengebietes?
+Welche anderen Ansätze gibt es?
+Worauf muss man achten wenn man ein Handbuch erstellt.
+
+%% ===========================
+\section{Szenario}
+\label{ch:Motivation:sec:Szenario}
+%% ===========================
+ 
+ Um das Anwendungsfeld zu begrenzen wird ein Auschnitt aus einer Ubiquitären
+ Anwendung für das eigene Heim betrachtet. Es werden nur die in
+ \ref{table:smart-home-components} aufgeführten Komponenten in Betracht
+ genommen.
+ 
+ 
+[Bild mit Beispielszenario oder nur tabelle ?] 
+ 
+ [Abhängigkeitsmatrix/Zusammenspiel aufzeigen? Ist ja das Wichtigste]
+ 
+\begin{table}
+  \caption{Elemente der Smart-Home Anwendung }
+  \centering
+  \begin{tabular}{l c c c c c}
+    %heading
+    \hline\hline
+    
+    Objekte & Aktuatoren & Sensoren  & Direktional &Proximität  \\    [1ex]
+
+    \hline
+    %heading end
+    
+	Fenster &  $\times$ & \checkmark \\ [1ex]
+    
+    Temperaturregler
+    
+    Anwendungsszenarien & & physiche Umgebung\\ [1ex]
+    \hline
+  \end{tabular}
+  \label{table:smart-home-components}
+\end{table}
+
+ 
+%% ==============
+\chapter{Plannung der User Studie}
+\label{ch:UserStudie}
+%% ==============
+
+
+%% ==============
+\chapter{Sensor Installation für Ubicomp-Systeme in Heimumgebungen}
+\label{ch:AssemblyRequired}
+%% ==============
+
+//das hier vielleicht in die motivation rein?
+aus \cite{Beckmann2004}
+Fortschritte in der Technologie haben sensoren kostengünstiger und leichter zu
+bentuzen gemacht. Diese Fortschritte reduzieren die Technologische Barriere für
+die Installtion von Ubicomp-Systemen Der Installationsprozess beschränkt sich
+auf die korrekte Platzierung und der semantischen Assoziation zwischen den
+Knoten der Anwendung und den Teil der physikalischen Welt den sie beobachten.
+Professionelle Installationen sind im Vergleich zu den Kosten der Anschaffung
+sehr groß und können die Ausbreitung solcher Systeme negativ beeinflußen. Die
+Endnutzer Installtion bringt mehrere Vorteile. Sie ist billiger und kann
+einem Ubicomp-System helfen schneller in der breiten Masse benutzt zu werden.
+Des weiteren lernen Benutzer das Sytem besser kennen und können so mehr
+Kontrolle darüber haben und sie können das System an ihre speziellen Bedürfnisse
+anpassen. 
+
+Faktoren einer Sensorinstallation
+[damit könnte man constraint für das modell aufbauen]
+
+Die Installation von Sensoren wird in \cite{Beckmann2004} als eine Aufgabe mit
+zwei Dimensionen betrachtet: Platzierung und Assoziation.
+Die Platzierung ist wichtig um den Sensorknoten zu erlauben die korrekte
+physikalische Größe mit ausreichende Qualität zu messen. Die Positionierung wird
+weiterhin in zwei Unterfaktoren aufgeteilt: Direktionalität und Proximität.
+Unter dem Direktionalitätsfaktor versteht man wie sensibel der Sensor auf
+fehlern in seiner Ausrichtung reagiert. Eine Kamera ist zum Beispiel sehr darauf
+angewiesen, dass sie die richtige Szene aufnimmt, ein Mikrofon hingegen ist
+nicht so sensibel auf seine Ausrichtung. Der Proximitätsfaktor gibt an wie nahe
+der Sensor an sein Messziel angebracht ist.
+Die Assoziation bezieht sich auf die semantische verbindung zwischen dem
+Datenstrom eines Sensors und des gemessenen Objektes in der realen Welt. Eine
+Eins-zu-Eins Assoziation ist für Menschen die einfachste Variante und
+kann viel leichter nachvollzogen werden. In [10 din AssemblyRequired-to read]
+werden auch Ansätze zu selbst konfigurierenden Sensoren besprochen, die meiste
+Zeit aber ist es notwendig die Erstellung der Assoziationen dem Anwender
+überlassen. 
+Die Präzision einer Assoziation wird als Funktion der
+Sensorplatzierung[KnotenPlazierung] und dessen zu messendes Subjekt. Die
+Assoziation eines proximitätssensiblen Sensors ist leichter durchzuführen als
+die eines Direktionalen Sensors. Außerdem ist auch das Monitoring von Objekten
+leichter als das Monitoring von Räumen weil die Reichtweite eines Sensors schwer
+einzugrenzen ist.
+
+[Amu o fost mock-up sau nu - DA o fost mockup [4.2]]
+[l-o demontat dupa instalare]
+
+Aufbau des Kits
+
+[Tabelle mit Inhalt?]
+
+Ein Item-Katalog mit Barcodes für alle Möglichen Geräte und Typen die in einem
+Haushalt auftreten können, wie z.B. Kühlschränke. Dieser Katalog in Zusammenhang
+mit den Barcodes auf den Sensoren und dem Barcodereader wurden benutzt um die
+Assoziation zwischen den Sensoren und ihren Subjekten durchzuführen. Das Kit
+wurde so konzipiert, dass die Installation keine komplexen schritte, wie das
+rumspielen an dem elektrischen sicherungskasten. 
+
+Die Sensoren die mitgeliefert wurden waren vibrations, strom und mikrofon um
+das benutzen von haushaltsgeräten zu messen. Bewegungssensoren und und Kamera
+Sesoren wurden benutzte um Aktivität und elektrisches Licht zu überwachen.
+
+Ein kompakter Computer wurde mitgeliefert der Daten von den Wireless-Sensoren
+auslesen sollte. Die einzige Interaktion die die Nutzer mit dem Computer hatten
+war es ihn mit Strom zu versorgen.
+
+Ein Scanner und gedruckte Anweisungen wurden den Nutzern überreicht um sie durch
+den Installationsprozess zu führen.
+[poza cu scanner screen?]
+
+[inainte de 4.1 zic aia ca sunt si ecrane si dupa nu stiu daca mai zic ceva de
+ele]
+
+[Smart robot vacuum?]
+
+Die Evaluierung die durchgeführt wurde war eine in situ evaluierung in 15
+Haushalten aush den Vereinigten Staaten. Daten der Durchführung der
+Installation die im Durchschnitt etwa 84 Minuten gedauert hat wurden von zwei
+Mitarbeiter mit hilfe von Notitzen, Fotos jeden Installationsversuches und einem
+Fragenbogen der am von jedem Teilnehmer ausgefüllt wurde, durchgefürht. Als Teilnehmer wurde eine
+repräsentative Gruppe von einer MarktResearchFirm ausgesucht und es gab keine
+Experten in dem Feld, bis auf einen in Rente gegangegnen Programmierer. Die
+Teilnehmer wurden mit einer Geldsumme entlohnt.
+Eine Installationsrunde hatte vier Phasen: Einleitung, Erkundung, Installation
+der Sensoren und ein Interview.
+In der Einleitung wurde eine Freigabeform und ein Fragebogen ausgeteilt. Die
+Erkundungsphase diente zur Oberflächlichen(High-Level Description) Erklärung des
+Konzepts hinter dem Ubicomp-System und dem Installationskit. In der
+Installationsphase wurden die Teilnehmer gebeten jeden der mitgelieferten
+Sensoren einzeln an ein Gerät oder in einem Raum aufzustellen.
+
+Die Evaluatoren haben während der Installationphase keine Fragen über den
+Prozess mehr beantwortet und haben versucht keine Feedback über die Handlungen
+der Teilnehmer zu geben um die Effekte ihrer Präsens zu minimieren.
+
+Nach der Installationsphase wurde ein semi-structured interview durchgeführt.
+Die Fragen die gestellt wurden dienten die der Erfassung des Verstehens der
+Teilnehmer über die vershiedenen Installationsschritte und Komponenten des
+Systems, was für Probleme sie identifizieren wenn das System einen Monat lang
+angebracht bleiben würde. Wie würden sie die Sensoren davon abbringen Daten zu
+sammeln und generelles Feedback zur Anwendung.
+
+[Die Erkundungsphase könnte man mit Hilfe eines Onlinekonfigurators ersetzen]
+
+[Formative Studie]
+
+Es wurden generische Sensoren benutzt, vibration, geräuschsensor damit diese
+eine hoche Zahl von einsatzgebieten(appliances and roomse) abdecken können.
+
+Die Sensoren wurden je nach Typ Farbkodiert und es wurden nur 2 Sensoren von
+jedem Typ, insgesamt 10, mitgeliefert. Obwohl eine solche Ubicomp-Anwendung
+mehr als 50 Sensoren beinhalten würde.[Atunci cate plm de tipuri au? Tabel?]
+ 
+Es wurden verschiedene Nutzeranleitungen ausgeteilt um zu vermeiden,
+dass die Studie die Nutzeranleitung bewertet und nicht das
+eigentliche Ziel die Sensorinstallation zu betrachtenn. In Tabelle
+\ref{tab:assembly_doku} werden die Unterschiede zwischen den Dokumentationstypen aufgezeigt.
+
+\begin{table}
+  %\rowcolors{3}{green!25}{yellow!50}
+  \caption{Die Unterschiede zwischen den Dokumentationen}
+  \centering
+  \begin{tabular}{l c c c}
+    %heading
+    \hline\hline  
+    Enthaltene Informationen & Dokumentation A & Dokumentation B &
+    Dokumentation C
+    \\
+    [1ex]
+    \hline
+    %heading end
+	Installationsanleitung & \checkmark & \checkmark & \checkmark \\
+	[1ex] 
+	Gesammelte Daten & \checkmark & \checkmark & x \\ [1ex]
+	Funktion der Sensoren & \checkmark & x & x \\ [1ex] 
+    \hline
+  \end{tabular}
+  \label{tab:assembly_doku}
+\end{table}
+
+Die Namen der Sensoren in Dokumentation A und B waren gleich
+(\emph{Strom, Vibration, Bewegung, Bild, Geräusch}). In version C der
+Dokumentation wurden nur Farben bentuzt um zwischen den Sensoren zu
+unterscheiden. Eine richtige Installation wurde nach den in Kapitel XX
+präsentierten Positionierungs- und Assoziationsfaktoren. Alle Sensoren
+mussten mit Hilfe des PDAs assoziert werden in dem der Sensor und das
+zu messende Objekt aus dem Katalog eingescannt wurden.
+
+[4.3 Evaluation Results]\\
+[Evaluation Results etwas mager, keine Tabellen oder statistiken,
+keine Detaillierten angaben]\\
+[Keine Angaben wie die Handbücher genau aussehen]\\
+
+Die Resultate der Evaluation werden im Folgenden aufgeführt:
+\begin{itemize}
+  \item 112 von 150 Aufgaben zur Sensorinstallation waren erfolgreich
+  \item 5 Teilnehmer haben alle Aufgaben korrekt durchgeführt
+  \item Zwei der fünfzehn Teilnehmer konnten keine der Aufgaben
+erfüllen und haben auch die Assoziation mit Hilfe des Barcodes nicht
+verstanden. Dieselben konnten weder den Anweisungen auf dem PDA
+folgen, noch wussten sie wie die Sensoren zu deaktivieren sind.
+\end{itemize}
+
+[Rezultatele evaluarii din alea 5 Puncte extrase]
+Nur 5 aus den 10 Teilnehmern die die Dokumentationen A und B erhalten
+haben, also mit den Beschreibungen was die Sensoren aufnehemen,
+konnten den konkreten Anwendugsfall der Sensoren nennen.
+Am meistens fehlerhaft installiert war der Geräuschsensor, mit 67\%
+Erfolgsrate, gefolgt von dem Bildsensor, mit 70\% Erfolgsrate.
+13 von 15 (86\%) der Anwender haben das Barcode-Einlesen korrekt
+genutzt.
+Die Teilnehmer hatten Bedenken dass die Installation ihren
+Einrichtungen schaden würden und, dass Haustiere oder Kinder an die
+Sensoren kommen könnten.
+    
+Of the nine incorrect image sensor installations in the study, four were due to 
+participants who did not notice or follow through on the aiming directions (Figure 5). 
+
+ Two of the participants refused to 
+place  the  image  sensors  in  their  homes,  and  several  more  expressed grave  concern 
+about placement of cameras or microphones.
+
+[Asta poate la concluzii/comparatie]Leider wurde keine Assoziation
+zwischen \ldots (din prezentare)
+
+[5 Design Principles]
+Im folgenden werden die 5 in \cite{Beckmann2004} erhobenen
+Design-Prinzipien für die Endnutzerinstallation von Sensoren. Die
+ersten zwei Prinzipien lehnen sich an traditionelle Prinzipien aus
+Mensch-Maschine-Interaktion. Die letzten drei sind Erkenntnisse die zur
+Studie gehören.
+\begin{enumerate}
+  \item \textbf{Das Konzeptuelle Modell des Benutzer bei bekannten
+  Technologien angemessen nutzen}\\ Sensortypen deren Funktionalität
+  ähnlich ist wie in anderen Anwendungsszenarien können die Benutzer
+  beim Verständnis unterstützen, da die Konzeptuellen Modelle der
+  Nutzer nicht mehr redefiniert werden müssen. Man muss aber darauf
+  achten, dass vertraute Technologie nicht anders angewendet wird als
+  es normalerweise gemacht wird. Wenn dieser Fall dennoch auftritt,
+  dann den Sensor verstecken, sowohl im Namen als auch im Aussehen.
+  \item \textbf{Nutzbarkeit der Installation mit den häuslichen
+  Anliegen im Gleichgewicht halten} \\
+  Designer und Anwender müssen ästhetische und Umgebungsfaktoren unter
+  betracht nehmen. Technische Aspekte können leicht in den
+  Hintegrund treten wenn BEnutzer aus pragmatischen Gründen die
+  Installation nicht durchführen wollen. Ein system, dass den dem
+  BEnutzer EIgentum violates kann genauso in der Box liegen gelassen
+  werden wie ein System, dass schwer zu installieren ist.
+  \item \textbf{Die Anwendung von Kameras, Mikrophonen und
+  hochdirektionale Sensoren Vermeiden}
+  Nicht nur die Sensitiven Daten die solche sensoren aufnehmen können
+  sondern auch die verschiedenen Installationsmöglichkeiten in
+  Verbindung mit unterschiedlichen Layouts der Wohnungen können dieses
+  Art von Sensoren problematisch sein.
+  \\
+   \item \textbf{Inkorrekte Installationnen sollten erkannt werden
+   und ein Mehrwert sollte auch für Teilinstalltionen bieten}
+\end{enumerate}
+
+%% ==============
 \chapter{Existierende Ansätze}
 \label{ch:Existierende}
 %% ==============
@@ -32,6 +327,10 @@ Infos from SPLE book
 %% ===========================
 
 \newcommand{\dopler}{\textsc{Dopler}}
+
+Der in \cite{Rabiser} beschriebene Ansatz konzentriert sich auf\ldots
+
+Es wird argumentiert, dass
 
 Der in \cite{Rabiser} beschriebene Ansatz kann laut
 den Autoren unabhängig vom \textbf{Aufbaustadium/Reifegrades}, der Variabilitäts
@@ -190,33 +489,32 @@ Hinweise können durch einfaches Hineinzeichnen grafischer
 Symbole wie Pfeile oder Striche verdeutlicht werden.
 
 %Second Sighted glasses erwähnen
-%Ex-Valve Brille
+%Ex-Valve Brille - erwähnen (wird daran stark geforscht)
 
-\begin{figure}
+%% ==============
+%% Drei Zustände
+\begin{figure}[h]
 \centering
-\begin{minipage}{.30\textwidth}
-  \centering
-  \includegraphics[width=0.9\linewidth]{img/ar-handbook-outside_view.jpg}
-  %\captionof{figure}{Der Nutzer fürht eine Aufgabe mit Hilfe des Systems aus}
-  \captionof{figure}{Anwender}
-  \label{fig:test1}
-\end{minipage}%
-\begin{minipage}{.30\textwidth}
-  \centering
-  \includegraphics[width=0.9\linewidth]{img/ar-handbook-overlay_bsp.jpg}
-  %\captionof{figure}{Die Schritte die durchzuführen sind werden im Sichtfeld
-  \captionof{figure}{Einblenden der Schritte}
-  \label{fig:test2}
-\end{minipage}
-\begin{minipage}{.30\textwidth}
-  \centering
-  \includegraphics[width=0.9\linewidth]{img/ar-handbook-glove_green.jpg}
-  \captionof{figure}{Richtige Durchführung}
- % \captionof{figure}{Die grüne Färbung symbolisiert die richtige Durchführung der Aufgabe}
-  \label{fig:test3}
-\end{minipage}
-% source : http://av.dfki.de/projects_recent/ar-handbook
+\subfigure[]{
+   	\includegraphics[scale=0.8]{img/ar-handbook-outside_view.png}
+	\label{fig:nospeech-lowsound}
+}
+\subfigure[]{
+   \includegraphics[scale=0.8]{img/ar-handbook-overlay_bsp.jpg}
+   \label{fig:speech-moderatesound}
+}
+\subfigure[]{
+   \includegraphics[scale=0.8]{img/ar-handbook-glove_green.jpg}
+   \label{fig:nospeech-highsound}
+}
+\caption{}
+\label{fig:ui_drei_zustaende}
 \end{figure}
+%% ==============
+Der Nutzer fürht eine Aufgabe mit Hilfe des Systems aus
+Die Schritte die durchzuführen sind werden im Sichtfeld
+Die grüne Färbung symbolisiert die richtige Durchführung der Aufgabe
+
 
 %% ==============
 \section{Usability of User Interfaces Generated with a Model-Driven
@@ -234,9 +532,88 @@ Environments}
 
 
 %% ==============
-\chapter{Leichtgewichtige Generierung(Meine Idee)}
+\chapter{Leichtgewichtige Generierung mit InstaGuide(Meine Idee)}
 \label{ch:MeineIdee}
 %% ==============
+
+Konfigurator -> Features sind bekannt -> zusammenstellen des
+Benutzerhandbuchs
+
+Relations between components on a meta level have do be defined, or do
+they?
+Consider having dependencies, they must be known within the system
+model (Uses relations)
+
+
+Mit Hilfe von  Modell-zu-Modell-Transformationen kann der Zustand/ die
+Informationen des Systems in einer anderen Form dargestellt werden.
+Der Transformationsmechanismus ist automatisiert 
+Herausforderungen sind es eine Transformation zu erstellen die ein für
+den Menschen nutzbares Resultat liefert und auch schnell genug
+läuft um sie mit jeder Änderung neu generieren zu können.
+
+In dem Beispielszenario
+
+
+\begin{table}
+  %\rowcolors{3}{green!25}{yellow!50}
+  \caption{Vergleich der Ansätze(unter dem Aspekt der Benutzbarkeit)}
+  \centering
+  \begin{tabular}{l c c c c c}
+    %heading
+    \hline\hline
+    
+    & Licht & \\ [1ex]
+
+    \hline
+    %heading end
+	
+	Heizkörper & $\times$ & \checkmark \\ [1ex]
+	LED Strang \\ [1ex]
+	Steckdosen \\ [1ex]
+	Server \\ [1ex]
+    \hline
+  \end{tabular}
+  \label{table:tab1}
+\end{table}
+Modell-zu-Text Transformation (M2T)
+Heizkörper
+Elements in the smart house config:
+An alle bewegbaren objekte
+	Sensoren
+Fenster 
+	Sensoren
+	Motoren
+Heizkörper
+LED Strang
+Steckdosen
+Damit assoziieert geräte
+Server
+Kontroll/Setup gerät
+
+Variability in:
+measured sensor values
+Available peers for communicatioj
+Eingesetze geräte
+
+User stories:
+User buys some of the gizmos we offer
+In the background the configuration has to check the constraints
+User gets the package and a QR code to read in with the app(offline for mounting when data connection available)
+
+
+Szenario: 
+
+Nutzer geht auf eine Webseite und wählt die Komponenten aus die er
+benötigt. Dies ist der Konfigurationsschritt den der Nutzer
+durchführt. Mit den Konfigurationsdaten wird eine Instanz des
+Modells angepasst. Diese Instanz soll dann mit Hilfe einer
+Modelltransformation in Beschreibungsmodell transformiert werden.
+Daraus soll zum Schluss eine natürlichsprachliche Benutzeranleitung
+generiert werden.
+   
+
+Natürliche Sprache 
 
 \dots
 

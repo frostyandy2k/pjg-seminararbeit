@@ -24,6 +24,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[latin1]{inputenc} % Input in ISO 8859-1 (Latin1)
 
+\usepackage{amsfonts}		  % for the \checkmark command 
 \usepackage{ae}               % Almost european, virtual T1-Font
 \usepackage[pdftex]{graphicx}
 \usepackage{vmargin}          % Adjust margins in a simple way
