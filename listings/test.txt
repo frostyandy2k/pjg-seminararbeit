@@ -1,0 +1,7 @@
+In Listing \ref{lst:dopler_docbook_xml} wird ein Beispiel aus einem
+DocBook-Dokument mit der \dopler Erweiterung aufgeführt. Das Kapitel
+"cooling" wird in die Dokumentation nur aufgenommen wenn das
+Dokumentfragment \emph{cooling_chapter}, aufgrund einer Decision
+aufgenommen wurde. Das Element \emph{doplerdocplaceholder} mit dem
+\emph{doplerdoc} Attribut dient als Platzhalter für den
+Kühlungsmechanismus \emph{cooling_mech}.

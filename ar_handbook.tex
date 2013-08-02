@@ -1,0 +1,138 @@
+
+
+
+%% ===========================
+\section{Intelligente Augmented-Reality-Handbücher}
+\label{sec:arhandbook}
+%% ===========================
+
+Ein Augmented-Reality-Handbuch ist ein digitales Handbuch, dass
+Schritt für Schritt Anleitungen auf einem Head-Mounted-Display (HUD)
+in das Blickfeld des Benutzers projiziert. Jeder Schritt wird dem
+Benutzer vorgezeigt bis dieser erfolgreich durchgeführt wurde. 
+
+\subsection{DFKI AR-Handbuch}
+
+Der Augmented-Reality-Forschungsbereich des DFKI (Deutsches
+Forschungszentrum für Künstliche Intelligenz) arbeitet an der
+Entwicklung und Verbesserung von Augmented-Reality-Handbüchern, mit
+Hilfe von KI, um sie eines Tages in reelen Szenarien einsetzen zu
+können \cite{Niels2013}.
+
+Die Erstellung von Material, das so genannte \emph{Authoring}, für
+AR-Handbücher ist komplex und leidet unter hohen Zeit- und
+Geldaufwänden. Dieses Problem wird mit Hilfe des \emph{programming by
+demonstration Ansatzes} gelöst. Das Authoring-Tool kann eine einmal
+gesehene Video-Sequenz in einzelne Handlungsabläufe zerlegen und kann
+diese mit einem stochastischen Übergangsmodell kombinieren (vgl.
+Abbildung \ref{fig:ar-authoring}). Mit Hilfe einer auf der Brille
+integrierten Kamera wird die Durchführung der Aufgabe analysiert und
+auf dem HUD werden die nächsten durchzuführenden Schritte
+eingeblendet. Dieses System ist leichtgewichtig in dem Sinne, dass
+keine speziellen Marker benötigt werden und das Erlernen der
+durchzuführenden Schritte automatisch passiert. Die transparenten
+Einblendungen der zu durchführenden Schritte werden auch automatisch
+von der Software erstellt.
+
+In Abbildung \ref{fig:ar-authoring} wird das Authoring gezeigt. Die
+einzelnen Handlungsabläufe werden aus der Video-Sequenz extrahiert und
+damit werden Klassifikatoren trainiert. Die Sequenz wird in Teile
+aufgespalten die Eigenschaften wie \emph{statisch, wiederholend, nicht
+wiederholend} haben. Die Einblendungen werden automatisch von der
+Software genriert und es besteht die Möglichkeit manuelle
+Annotierungen, wie Pfeile oder andere graphische Symbole, einzufügen. Die
+Automatischen Annotierungen werden synchron mit den Handlungen des
+Benutzers eingeblendet.
+
+Mit diesem Ansatz können Techniker Referenzabläufe aufnehmen um
+sicherzustellen, dass alle zukünftigen Aktivitäten in derselben Art
+und Weise durchgeführt werden.
+
+%% ==============
+%% 
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=0.8\textwidth]{img/ar-authoring.png}
+  \caption{Authoring für das AR-Handbuch, aus
+  \cite{Niels2013}}
+  \label{fig:ar-authoring}
+\end{figure}
+%% ==============
+
+Wenn der Nutzer eine Aufgabe mit Hilfe des Systems durchführt
+(Abbildung \ref{fig:ar-outside}) werden zuerst die notwendigen
+Schritte für die Teilaufgabe, wie in Abbildung \ref{fig:ar-overlay},
+eingeblendet. Nachdem der Nutzer mit der Ausführung der Teilaufgabe
+anfängt wird auf das Sichtfeld der Status der Durchführung mit Hilfe
+einer Farbkodierung angezeigt. Dabei bedeutet in
+\ref{fig:ar-glove_green} die grüne Kodierung eine korrekte
+Durchführung.
+
+%% ==============
+%% 
+\begin{figure}[h]
+\centering
+\subfigure[]{
+   	\includegraphics[scale=0.8]{img/ar-handbook-outside_view.png}
+	\label{fig:ar-outside}
+}
+\subfigure[]{
+   \includegraphics[scale=0.8]{img/ar-handbook-overlay_bsp.jpg}
+   \label{fig:ar-overlay}
+}
+\subfigure[]{
+   \includegraphics[scale=0.8]{img/ar-handbook-glove_green.jpg}
+   \label{fig:ar-glove_green}
+}
+\caption{Das AR-Handbuch System aus \cite{Niels2013}}
+\label{fig:}
+\end{figure}
+%% ==============
+
+Das AR System soll in Zunkunft auch auf Android Geräte laufen. Dies bedeutet,
+dass auch private Anwender, z.B. bei der Installation von Haushaltsgeräten,
+davon Gebrauch machen könnten.
+
+% =======
+\subsection{Second-sighted Glasses}
+% =======
+
+Ein ähnlicher Ansatz, genannt Second-sighted Glasses, wird in
+\cite{Yone2011} vorgestellt. Hierbei handelt es sich um die
+Einblendung in das Sichtfeld des Nutzer von Varianten die er in der
+Interaktion mit verschiedenen Objekten haben kann. Das Ziel ist es dem
+Benutzer zu zeigen mit welchen Aktionen ein bestimmter Kontext erfüllt
+werden kann. Die Varianten, auch \emph{Futures} genannt, werden
+abhängig vom Kontext in dem sich der Benutzer befindet angezeigt.
+Diese repräsentieren mögliche Abläufe die vom Kontextsensitiven
+Systemen definiert werden. Um den Objekten der Umgebung Intelligenz
+(Smartness) zu verleihen werden Sensoren oder Marker angebracht. Auch
+hier wird eine Assoziation zwischen den Sensoren der Realwelt und
+ihren Virtuellen Semantik erstellt. Diese Assoziationen können mit
+Hilfe einer Kamera erstellt werden. Da der Kontext eines Objektes
+schwer zu definieren ist wurde die Smart Object Event Modeling
+Language \cite{Yone2009} entwickelt. Diese erlaubt es trotz ihrer
+Einfachheit die Lesbarkeit, Portabilität, Expressivität und die
+Unabhängigkeit zwischen Modell und Zielobjekt zu wahren. Temporale
+folgen können so definiert werden um komplexe Abläufe darzustellen.
+Auch eine graphische Oberfläche für die Modellierung von SOEML wird
+angeboten.
+
+Die Autoren identifizieren bei diesem Ansatz die Notwendigkeit eine
+Benutzerstudie durchzuführen um zu klären ob die Benutzer die smarte
+Umgebung gut genug verstehen können und ob die Installation von den
+Entwicklern gut durchgeführt werden kann. Weitere Forschung muss noch
+betrieben werden um die Generierung von Animationen aus den
+Kontextdefinitionen zu erlauben und um die Zusammenarbeit mit anderen
+Kontextsensitiven Systemen zu erlauben.
+
+AR-Technologien werden noch nicht in der breiten Masse angewendet. Es
+werden aber zunehmend vielverspechende Ansätze entwickelt. CastAR
+\cite{CastAR2013} ist ein AR-System, dass für rund 200 US-Dollar
+demnächst auf den Markt kommen soll. Kostengünstige Hardware könnte es
+Ansätzen wie in \cite{Niels2013} oder \cite{Yone2011} erlauben sehr
+schnell in den Nutzermarkt einsteigen und breite Anwendung zu finden.
+
+Die Vorteile dieser Ansätze sind die hohe Intuitivität und die
+Präzision der Aufgabenbeschreibung, da jeder Schritt dem Benutzer
+so Angezeigt wird wie er durchzuführen ist.

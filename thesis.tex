@@ -4,7 +4,7 @@
 % ----------------------------------------------------------------
 % Thesis - Main document
 % ----------------------------------------------------------------
-
+\usepackage{listings}
 
 %% -------------------------------
 %% |  Information for PDF file   |
@@ -36,6 +36,11 @@
 \newcommand{\timeend}{XX. Monat 20XX}
 \newcommand{\submissiontime}{DD. MM. 20XX}
 
+
+%% ---------------------------------
+%% | Topic specific commands       |
+%% ---------------------------------
+\newcommand{\dopler}{\textsc{Dopler}}
 
 %% ---------------------------------
 %% | ToDo Marker - only for draft! |
@@ -92,7 +97,7 @@ declaration,
 introduction,
 content,
 %document_generation,
-%tools,
+instaguide,
 %evaluation,
 %conclusion,
 appendix
@@ -129,7 +134,7 @@ appendix
 \include{introduction}
 \include{content}
 %\include{document_generation}
-%\include{tools}
+\include{instaguide}
 \include{evaluation}
 \include{conclusion}
 

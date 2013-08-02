@@ -1,16 +1,328 @@
-%% ==============================
-\chapter{Document Generation}
-\label{ch:Chapter3}
-%% ==============================
+% % ===========================
+\section{Dokumentengenerierung in industriellen Umgebungen}
+\label{sec:documentGeneration}
+% % ===========================
+
+Der Ansatz basiert auf vorhergehenden Arbeiten [12,13][citeste] und
+erlaubt die Generierung von Dokumenten als auch von Softwaresystemen
+aus demselben Variabilitätsmodel. Der Ansatz basiert auf der
+Beobachtung, dass viele Entscheidungen die während der Ableitungsphase
+des Produktes gemacht werden, für beide Artefakte relevant sind.
+Der Ansatz wurde, mit Hilfe der \dopler Werkzeuge [12,13],
+Erfolgreich auf zwei Produktlinien mit verschiedenen Reifegraden
+angewandt. Bei der ersten Produktlinie handelte es sich um eine
+Prozessautomatisierungsanwendung von Siemens VAI, dessen technische
+Variabilität schon modelliert war.[Citeste 15] [Pagina 2]
+
+Der in \cite{Rabiser2010} beschriebene Ansatz kann laut den Autoren
+unabhängig vom \textbf{Aufbaustadium/Reifegrades}, der Variabilitäts
+Modellierungstechnik oder der zu generierenden Dokumenttypen verwendet
+werden. Der Ansatz wurde durch die Tool-Suite \dopler unterstützt.
+
+% =======
+\subsection{Flexibler Ansatz zur Dokumentengenerierung}
+% =======
+
+Der Ansatz beschreibt vier Schritte, wie in \ref{dopler-approach}
+dargestellt, welche iterativ zu durchlaufen sind:
+
+\begin{enumerate}
+  \item \textbf{Extrahieren und analysieren der Variabilität in
+  Dokumenten}
+  \\
+  Im ersten Schritt werden existierende Dokumente herangezogen um die
+  Variabilität zu extrahieren. Es wird empfohlen diesen Schritt
+  durch einen Produktionslinienexperten mit Wissen über
+  Variabilitäts-Modellierung durchführen zu lassen. Durch Workshops
+  mit Domänenexperten der Produkt-Managements, des Vertriebs oder der
+  Entwicklung können zusätzliche Informationen gewonnen werden. Die
+  Dokumentanalyse bringt die Variabilitätspunkte und ihre
+  dazugehörigen Varianten hervor.
+  
+  \item Variabilitäts-Modelle erstellen oder anpassen \\
+  Der Produktionslinienexperte kann, mit dem gewonnen wissen,
+  existierende Modelle anpassen oder neue erstellen. Falls
+  existierende Modelle schon in der Automation benutzt werden
+  könnten diese auch für Dokumentengenerierung benutzt werden. Die
+  gewählte Technik sollte flexibel sein und fortgeschrittene
+  Automatisierung während der Produktableitung zulassen.
+  
+  \item Variabilitäts-Mechanismus und passenden Generator erstellen \\
+  Der Generator ist erforderlich um die produktspezifischen Dokumente
+  zu generieren. Der Generator benötigt die Variations-Information
+  die in den Dokumenten abgespeichert ist. Der Mechanismus mit dem
+  man die Variations-Information in die Dokumente aufnimmt hängt
+  vom Dokumentformat ab. Aus diesem Grund werden strukturierte
+  Dokumentformate wie XML-basierte Formate benutzt.
+  Auch das Format von office Programmen wie Microsoft Word kann mit Hilfe
+  von Markup-Informationen erweitert werden.
+  
+  \item Dokumente um Variabilitäts-Information erweitern \\
+  Der letzte Schritt webt die Informationen in die Dokumente ein. Der
+  Produktlinienexperte spezifiziert die Variationspunkte und Varianten
+  die in Schritt 1 hervorgehoben wurden und stellt sie in Beziehung
+  mit den Modellen aus Schritt 2. Die Beziehungen werden mit Hilfe des
+  Mechanismus aus Schritt 3 realisiert. Während der Produktableitung
+  kann der Generator die Informationen aus der
+  Nutzereingabe und den Dokumenten heranziehen und produktspezifische
+  Dokumente erstellen.
+  
+\end{enumerate}
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=1\textwidth]{img/dopler-approach.pdf}
+  \caption{Die vier iterativ zu durchlaufenden Phasen des Ansatzes zur
+  Dokumentengenerierung aus \cite{Rabiser2010}}
+  \label{dopler-approach}
+\end{figure}
 
 %% ===========================
-\section{Siemens VAI Studie}
-\label{ch:Chapter3:sec:Section4}
-%% ===========================
 
-\dots
+% \begin{figure}[htb]
+%   \centering
+%   \includegraphics[width=0.4\textwidth]{img/dopler-overview.pdf}
+%   \caption{Komponenten der \dopler Tool-Suite nach
+%   \cite{Rabiser}}
+%   \label{dopler-overview}
+% \end{figure}
+
+% =======
+\subsection{Dopler Toolchain zur Unterstützung}
+% =======
+
+Im \cite{Rabiser2010} wurde der oben Beschriebene Ansatz
+implementiert.
+
+Die Variablitätsmodellierung wurde durch den Entscheidungsorientierten
+\dopler Ansatz gemacht[12,15] und um die Variabilität in den
+Dokumenten zu definieren wurde das DocBook-System erweitert [16]. Als
+Generator wurde eine Erweiterung für \dopler [13] erstellt.
+
+Die Tool-Suite enthält ein Variabilitäts-Modellierungs-Tool, einen
+Konfigurations-Wizard um dem Nutzer die Variabilität während der
+Produktableitung zu zeigen.
 
 
-\cite{becker2008a}
-\dots
+[\ref{dopler-overview} muss noch Erweitert werden um die
+DecisionKing \& co. poate mai scoti si din celalalte papere]
 
+Die \dopler Variabilitätsmodelle enthalten Assets und Decisions. Die
+Assets sind die Artefakte der Produktlinie (Dokumente oder Technische
+Bestandteile). Die Abhängigkeiten zwischen den Assets können sein:
+\begin{itemize}
+  \item Funktional
+  \item Strukturell
+\end{itemize}
+\dopler erlaubt es Assets mit arbitrary Granularität und mit
+domänenspezifischen Attributen und Abhängigkeiten, basierend auf einem
+set von Basistypen. Die Benutzer können Domänenspezifische Metamodelle
+erstellen um ihre eigenen Asset Typen, Attribute und Abhängigkeiten zu definieren.
+
+Entscheidungspunkte werden als Decision(Entscheidung) modelliert.
+Eine Decision enthält eine eindeutige Identifikationsnummer, eine
+Frage und einen Typen(\ref{fig:dopler-decision-me}. Die Frage wird dem Nutzer bei der
+Konfiguration gestellt und die Antwort auf die Frage bestimmt die Zusammensetzung des Dokumentes. Eine Entscheidung
+kann von anderen Entscheidungen in zwei Arten abhängig sein, siehe
+\ref{fig:dopler-meta_model-me}. Folgende sind die Abhängigkeitstypen
+der Decision:
+\begin{itemize}
+  \item Hierarchisch
+  \item Logisch
+\end{itemize}
+Eine hierarchische Abhängigkeit bedeutet, dass Entscheidungen in einer
+bestimmten Reihenfolge gemacht werden müssen. Wenn eine logische
+Abhängigkeit besteht dann ändert eine Entscheidung die Antworten der davon abhängigen.
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=0.9\textwidth]{img/dopler-decision_model-me.pdf}
+  \caption{Die Entscheidung und ihre Hauptbestandteile}
+  \label{fig:dopler-decision-me}
+\end{figure}
+
+Das Dopler-Meta-Model in \ref{fig:dopler-meta_model-me} zeigt auch den
+Zusammenhang zwischen den Decisions und Assets. Die Inklusion eines Asset
+in das abgeleitete Produkt geschieht durch seine Verbindung zu der Decision.
+Die Attribute eine Asset können von den Antworten auf die Decision Frage beinflusst werden.
+
+\dopler erlaubt es domänenspezifische Assets zu definieren indem es
+ein meta-model für eine spezifische organisation oder Kontext
+erstellt. Um Dokumente zu generieren kann man so ganze oder nur Teile
+von Dokumenten als Assets in den Modellen repräsentieren. So wurden,
+wie in Abbildung \ref{fig:dopler-meta_model-me}, die Assets
+erweitert(inheritance) in dem das DocumentFragment eingeführt wurde.
+Dieses repräsentiert TEile eines Dokuments wie Kapitel oder
+Abschnitte. Um auch den Fall zu modellieren, dass bestimmte Fragmente
+teil von anderen Fragmenten sind wurde noch eine Assoziation(vezi k
+aici e aggregation) zwischen den Fragmenten eingeführt.
+
+
+Die explizite modellierung von Dokumentfragmenten erlaubt es, durch
+die höhere Abstraktion, die selbe Decision zu benutzten um mehere
+Dokumentfragmente zu verwalten?!. Es wird dann auch möglich durch die
+selbe Decision sowohl Dokumentfragmente als auch Komponenten
+einzubeziehen.
+
+Die Dokumentenfragmente als Assets werden benutzt um die grobkörnige
+Variabilität zu modellieren. Um die feinkörnigen Anpassungen
+durchzuführen wurde ein variabilitätsmechanismus basierend auf DocBook
+erstellt. Da DocBook standardisiert und sehr geeignet um elektronische
+Dokumente zu erzeugen(vergleiche Kapitel \ref{sec:docBook}) wird es
+auch in diesem Ansatz benutzt.
+
+% =======
+\subsection{Implementierung der Dokumente}
+% =======
+
+Der Profiling-Mechanismus aus DocBook wird benutzt um Elemente und
+Attribute zu implementieren die die Variationspunkte in den Dokumenten
+definieren. Die zentrale Erweiterung zu DocBook ist das
+\emph{doplerdoc} Attribut.
+Es koppelt das Markup-Element an ein Dokumentenfragment und erlaubt es
+so optionale oder alternative Texte zu definieren. Durch diesen
+Mechanismus sind auch Querverweise möglich. Platzhalter können in
+Verbindung mit dem \emph{doplerdocplaceholder} Element erstellt
+werden.
+
+Die am öftesten benutzten Variabilitätsmuster, laut
+\cite{Rabiser2010}, sind:
+\begin{itemize}
+  \item Platzhalter
+  \item Optionaler Text
+  \item Alternativer Text
+  \item Querverweise
+  \item Einfache grammatikalische Variabilität (z.B. Pluralbildung
+  \item Multi-Media-Objekte (z.B. Bilder)
+  \item Formattierung und Layout (durch XSL oder CSS Style-Sheets
+  realisiert)
+\end{itemize}
+
+In Listing \ref{lst:dopler_docbook_xml} wird ein Beispiel aus einem
+DocBook-Dokument mit der \dopler Erweiterung aufgeführt. Das Kapitel
+\emph{cooling} wird in die Dokumentation nur aufgenommen wenn das
+Dokumentfragment \emph{cooling\_chapter}, aufgrund einer Decision
+aufgenommen wurde. Das Element \emph{doplerdocplaceholder} mit dem
+\emph{doplerdoc} Attribut dient als Platzhalter für den
+Kühlungsmechanismus \emph{cooling\_mech}.
+
+% =======
+\lstset{breaklines=true,language=XML,caption={Beispiel der DocBook
+Erweiterungen für \dopler\ aus
+\cite{Rabiser2010}},label=lst:dopler_docbook_xml}
+\lstinputlisting[language=XML]{listings/docbook_example.xml}
+% =======
+
+Mit dem Modellierungswerkzeug für Variabilität (z.B. \dopler) wird ein
+Variabilitätsmodell erstellt. Die Antworten auf die Fragen der
+Decisions werden durch den Nutzer mit Hilfe eines
+Konfigurationsassitenten (z.B. \dopler Konfigurationsassitent) in das Modell
+eingetragen.
+
+Das variable Dokument, das zentrale Artefakt im Prozess der
+Dokumentengenerierung, entsteht durch Erweiterung mit
+Variabilitätsinformation und eine ständige Rückkopplung zu dem
+Variabilitätsmodell.
+
+Der Dokumentengenerator kann mit Hilfe der schon aufgelösten Variabilität, durch beantwortung
+der Fragen durch den Nutzer, die Anpassung durchführen. Der
+Dokumentengenerator ist auch dafür zuständig die DocBook XSLT Engine zu konfigurieren und
+auszuführen. Die variablen Dokumente werden mittels der DocBook
+Engine in ein Ausgabeformat (z.B. PDF) transformiert und mit Hilfe von XSL
+oder CSS formatiert, die auch von den Decisions abhängen könnten.
+
+% =======
+\subsection{Ergebnisse industrieller Studien}
+% =======
+
+Die Erkenntnisse die aus den zwei industriellen Anwendungen des Ansatzes
+gewonnen werden im weiteren beschrieben.
+Im ersten Anwendungsfall waren Teile der Dokumentation für Benutzer schon als
+DocBook Quellen vorhanden. Des weiteren waren die Variabilitätsmodelle schon
+vorhanden und die Generierung von Produktkonfigurationen wurde schon
+unterstützt.  In der ersten Phase der Methodik (siehe mai sus) wurden die
+Variationspunkte die, laut einer Befragung der Domänenexperten, am meisten
+auftreten, in Betracht genommen:
+\begin{itemize}
+  \item Teile der Dokumentation sind optional abhängig von den Teilen des
+  Systems
+  \item Querverweise müssen konsistent sein
+  \item Platzhalter kommen oft vor und müssen ersetzt werden (z.B Name des
+  Kunden)
+  \item Gramatikalische 
+  \item Spezifischere Dokumente müssen geliefert werden, wenn Kunden eigene
+  Erweiterungen für das System entwickeln wollen.
+\end{itemize}
+In der zweiten Phase der Methodik konnten 70\% der
+Decisions der Software-Konfiguration aus den Variabilitäsmodellen
+, benutzt werden. In den restlichen Fällen wurden Decisions spezifisch für die
+Dokumentengenerierung erstellt[nu zice daca le-o bagat dupa in varmodel
+original].
+Ein Generator wurde danach erstellt der die Technische Benutzerdokumentation laut den
+Decisions aufbauen kann (wie oben beschrieben). Die Aufgabe der Erweiterung
+der Dokumente mit der Variabilitätsinformation (der 4.
+Schritt der Methode) wurde von den Domänenexperten durchgeführt, nachdem für
+jede Art von Variabilität die von den Domänenexperten erwähnt wurde (siehe auch
+oben) ein Beispiel gegeben wurde. Die so erhaltene Werkzeugkette unterstützt
+sowohl die Variabilitätsmodellierung der Software als auch der Dokumente. Ein
+einziges Entscheidungsmodell (Decision model) wird benutzt um die
+Produktkonfiguration als auch die Technische Benutzerdokumentation zu erstellen.
+
+In der zweiten Industriellen Anwendung mussten Kundenspezifische
+Verkaufsdokumenete erstellt werden. In diesem Fall wurde noch keine
+Variabilitätsmodellierung durchgeführt. Es wurden die Schritte der Methode
+durchgeführt. Die folgenden Variabilitätspunkte wurden von den Domäne:
+\begin{itemize}
+  \item Zahlenindikatoren mussten abhängig vom Kunden und den ausgewählten
+  Fetaures berechnet werden[hier ist das besonders]
+  \item Alternative Texte
+\end{itemize}
+Einige Variationspunkte hatten Einfluss auf mehrere Dokumente. 
+Die Teile die hier die Rolle der Assets hatten, waren die
+verkaufbaren Einheiten.
+Decisions wurden modelliert um Kundendetails, Systemeigenschaften oder Werte für
+die Berechung der numerischen Indikatoren(ROI) [Types of decisions mehr
+erläutern?]
+
+Der Generator hatte die Aufgabe die Preise und ähnliches zu generieren.
+
+Auch in DocBook sources gemacht, aus word dokumenten.
+
+Man kann aus den Studien schließen, dass folgende Variabilitätspunkte relevant
+für die Dokumentengenerierung sind:
+\begin{itemize}
+  \item 
+\end{itemize}
+
+[Related work]
+Was diese arbeit von den anderen hervorhebt ist dass es besonders für nicht
+technisches Personal geignet ist. Dieser Ansatz ist auch bessers weil beliebige
+Dorkumente erstellt werden können. Laut [22 -SLR] gibt es viel andere Ansätze
+aber sie betrachten nur einen Typen von Dokumenten, nähmlich die
+Anforderungsspezifikation.
+Most importantly, we use end-
+user customization tools based on decision models to resolve variability. 
+DocLine
+
+[COnclusion]
+
+
+% =======
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=1\textwidth]{img/dopler-meta_model-me.pdf}
+  \caption{\dopler\ Meta-Model aus \cite{Rabiser2010}.}
+  \label{fig:dopler-meta_model-me}
+\end{figure}
+%=======
+
+Das Diagramm \ref{dopler-meta_model} beschreiben.
+
+%=======
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=0.8\textwidth]{img/dopler-meta_model.pdf}
+  \caption{\dopler\ Meta-Model mit Dokumenten aus \cite{Rabiser2010}.}
+  \label{dopler-meta_model}
+\end{figure}
+%=======

@@ -44,7 +44,7 @@
 						bookmarks=true,
 						bookmarksopenlevel=1,
 						bookmarksopen=true,
-						bookmarksnumbered=true,
+						bookmarksnumberedS=true,
 						hyperindex=true,
 						plainpages=false,
 						pdfpagelabels=true,

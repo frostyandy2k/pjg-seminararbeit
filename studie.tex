@@ -1,0 +1,94 @@
+%% ==============
+\chapter{Plannung der User Studie}
+\label{ch:UserStudie}
+%% ==============
+
+%===========PPT
+Wizard of Oz
+Standard Handbuch vs. individuell zugeschneidertes
+
+Szenario
+Konfigurationsportal zum Auswählen der gewünschten Komponenten
+Nach der Auswahl werden individuelle Handbücher erstellt
+Die Gruppen unterscheiden sich nur in dem Handbuch
+Vielleicht in einem 2. Experiment auch durch das Portal
+
+Aufbau
+Limitierung des Budgets um eine variierte Konfiguration zu erhalten
+An einem Ort, wie z.B. Living Labs oder bei dem Nutzer zu Hause wird die Installation durchgeführt
+
+Gruppen festlegen
+2 Gruppen mit der selben Aufgabe aber verschiedene Handbücher
+Selektion der Teilnehmer
+Ist Alter ein wichtiger Faktor
+Technologie sollte möglichst allen Gruppen einen Nutzen bringen
+Laut Nielsen sind 5 Teilnehmer in der Anfangsphase ausreichend
+Sample Size festlegen
+Sind hier online Berechnungsysteme gut?
+http://www.surveysystem.com/
+Referenzimplementierung der Handbücher muss gemacht werden.
+Ein Handbuch, das mit einem solchen System kommt erhalten und bei einer Gruppe einsetzen
+
+
+%==============Aufbau Metamodell
+There are two major types of control devices: devices that are produced to be 
+flexibly adaptable to a wide range of tasks, and devices that are dedicated to 
+a special purpose.
+
+
+%============Wizard of Oz
+Um eine Wizard of Oz Studie durchzuführen wird 
+Es werden die Kommunikationsprotok
+Keine Bus Technologien und alles was man in einer wiz of oz nicht sieht bzw.
+nicht braucht. Keine Protokolle werden betrachtet.
+We assume that the SW ist somehow deployed on the W.
+
+Nutzer geht auf eine Webseite und wählt die Komponenten aus die er
+benötigt. Dies ist der Konfigurationsschritt den der Nutzer
+durchführt. Mit den Konfigurationsdaten wird eine Instanz des
+Modells angepasst. Diese Instanz soll dann mit Hilfe einer
+Modelltransformation in Beschreibungsmodell transformiert werden.
+Daraus soll zum Schluss eine natürlichsprachliche Benutzeranleitung
+generiert werden.
+
+ 
+%============Aufbau des Handbuches
+
+%============Durchzuführende Aufgaben
+ Home-Server platzieren,
+ einschalten, Sensoren platzieren, assoziieren
+ 
+ 
+ [Abhängigkeitsmatrix/Zusammenspiel aufzeigen? Ist ja das Wichtigste]
+ 
+\begin{table}
+  \caption{Elemente der Smart-Home Anwendung }
+  \centering
+  \begin{tabular}{l c c c c c}
+    %heading
+    \hline\hline
+    
+    Objekte & Aktuatoren & Sensoren  & Direktional & Proximität  \\   
+    [1ex]
+
+    \hline
+    %heading end
+    
+	Fenster &  $\times$ & \checkmark \\ [1ex]
+    
+    Temperaturregler
+    
+    Anwendungsszenarien & & physiche Umgebung\\ [1ex]
+    \hline
+  \end{tabular}
+  \label{table:smart-home-components}
+\end{table}
+ 
+  
+%============Bewertung der Installation
+
+Um die Installation bewerten zu können muss eine korrekte Definition
+der Installation gegeben werden. Um die Bewertung durchzuführen werden
+die Assozierung, Positionierung, Konfigurierung und weiter Aspekte in
+betracht gezogen.
+Folgende Tabelle zeigt es ausführlich 

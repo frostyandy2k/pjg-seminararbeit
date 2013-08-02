@@ -1,0 +1,7 @@
+<chapter id="cooling" doplerdoc="cooling_chapter">  
+  <para id="cooling_mechanism"> 
+	The caster supports the 
+	<doplerdocplaceholder doplerdoc="cooling_mech"/> 
+	mechanism. ... 
+  </para> 
+</chapter> 

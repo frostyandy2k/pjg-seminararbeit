@@ -1,0 +1,123 @@
+%% ==============
+\chapter{Vergleich der Ansätze}
+\label{ch:Vergleich}
+%% ==============
+
+\begin{table}
+  %\rowcolors{3}{green!25}{yellow!50}
+  \caption{Vergleich der Ansätze(unter dem Aspekt der Benutzbarkeit)}
+  \centering
+  \begin{tabular}{l c c c c c}
+    %heading
+    \hline\hline
+    
+    & \dopler & AR-Handbook & Modellgetriebene GUI & Regelbasiert &
+    Meine Idee
+    \\
+    [1ex]
+
+    \hline
+    %heading end
+    
+    %     DUdu & &&& \parbox[t]{5cm}{Sales and marketing
+    %     people \\ porduct managers} \\ [1ex]
+    
+    Ansatz &  Entscheidungs orientiert\\ [1ex] 
+    
+    Interaktionsmodus \\ [1ex]
+    
+    Quell-Artefakte \\ [1ex] 
+    
+    Generierte Artefakte & Fertige Dokumente & \\ [1ex] 
+    
+    End-Nutzer & Vertrieb, Marketing, & \\
+    & Produkt-Management &&&& \\ [1ex]
+    
+    Form der Unterstützung & Textuell & Graphisch, VR & Graphisch &&
+    \\ [1ex]
+     
+    Flexibilität \\ [1ex] 
+    
+    Domänenexperten & \textsc{Ja} & \textsc{Ja} & \textsc{Nein} &
+    \textsc{Ja} & \textsc{Nein} \\ [1ex]
+    
+    Wiederverwendung \\ [1ex]
+    
+    Aufwand für die Instandsetzung \\ [1ex]
+    
+    Aufwand für die Benutzung \\ [1ex]
+    
+    Genauigkeit der Beschreibung \\ [1ex]
+    
+    Synchronisierungsaufwand \\ [1ex]
+    
+    Aufwand für die Erstellung neuer Handbücher \\ [1ex] 
+    
+    Anwendungsszenarien & & physiche Umgebung\\ [1ex]
+    \hline
+  \end{tabular}
+  \label{table:tab1}
+\end{table}
+
+Eine Übersicht der Ansätze findet man in den Tabellen
+\ref{table:tab1} und \ref{table:tab1}.
+
+Genauigkeit der Beschreibung: kann das Garantiert werden wenn menschen das
+System intepretieren?
+
+% ===== Assembly
+Die Resultate der Studie die in \cite{Beckmann2004} durchgeführt wurde
+werden nicht detailliert behandelt und die Resultate die erwähnt
+werden dienen der Unterstützung bestimmter Folgerungen. Die Versionen
+der Handbücher werden kurz beschrieben und es wird nur eine in
+Abbildung \ref{fig:assembly-doku_c} dargestellte Variante gezeigt. Es
+wird erwähnt, dass es keine statistisch signifikanten Unterschiede,
+zwischen dem Erfolg der Installation im Zusammenhang mit den verschiedenen
+Dokumentationen gibt. Die Rohdaten wurden nicht in das Paper
+integriert und es gab auch keine Sensoren die interagieren mussten. Es
+musste auch nichts konfiguriert werden.
+
+Es kann passieren, dass Nutzer wichtige Anweisungen übersehen oder
+nicht befolgen, daher wäre es nützlich diese hervorzuheben.
+
+Metamodell sollte Assoziation und direktionalität in betracht nehmen
+um erstens detailiertere Angaben über die Insallation zu geben wenn
+ein Sensor kompliziert zu installieren ist oder viele Faktoren dort
+einfliessen. Aber auch um die nötigen Infomrationen zu enthalten um
+die Fehlerfindung und bewertung der Insallation durchführen zu können.
+Mass für komplexität:
+direktionalität.
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=0.8\textwidth]{img/assembly-doku_c.png}
+  \caption{Bild des Kits}
+  \label{fig:assembly-doku_c}
+\end{figure}
+
+Die Installation von Sensoren wird in \cite{Beckmann2004} als eine
+Aufgabe mit zwei Dimensionen betrachtet: Platzierung und Assoziation.
+Dies sind wichtige Anhaltspunkte um die Randbedinugnen des Modells zu
+definieren.
+
+
+%============================
+Expertenwissen wird bei jeder generierung von Dokumentation benötigt.
+Disadv: AR Handbook not linked to system model
+
+Die Vorteile:
+Sehr intuitiv
+Automatisch erlernte Dokumentation der Schritte
+Unterstützung bei der Verifikation der Arbeitsschritte
+Passt die Videoausgabe an den Nutzer an
+
+Probleme:
+Müssen wenigstens ein mal Aufgezeichnet werden
+Für Systeme mit vielen Varianten ein potenzielles Problem
+Änderung der Prozessschritte zieht ein neues Durchspielen nach sich
+Mit Software GUIs nicht ausprobiert
+Noch keine Nutzbarkeitsstudie
+Expertenwissen wird bei jeder generierung von Dokumentation benötigt.
+Disadv: AR Handbook not linked to system model
+
+Textuelle Handbücher genau so gut oder besser?

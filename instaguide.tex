@@ -1,0 +1,77 @@
+%% ==============
+\chapter{Leichtgewichtige Generierung mit InstaGuide}
+\label{ch:Instaguide}
+%% ==============
+
+Mit Hilfe von  Modell-zu-Modell-Transformationen kann der Zustand
+eines Systems in einer anderen Form dargestellt werden.
+
+Textuelle Handbücher automatisch generieren
+Modell der Systembeschreibung als Ausgangspunkt
+
+Meta-Informationen aus einem separaten Model entnehmen
+
+Automatisierungsgrad hoch halten
+
+
+Der Transformationsmechanismus ist automatisiert 
+
+Herausforderungen sind es eine Transformation zu erstellen die ein für
+den Menschen nutzbares Resultat liefert und auch schnell genug
+läuft um sie mit jeder Änderung neu generieren zu können.
+
+Die Erkundungsphase, in der ein Überblick über das System und dessen
+Komponenten gegeben wird, kann mit Hilfe eine Online-Konfigurators
+ersetzt werden. Dem Benutzer wird das System im ganzen Präsentiert und
+er hat die Möglichkeit die Komponenten auszuwählen die ihn
+interessieren. Wird der Konfigurator benutzt kann automatisch für
+jeden Kunden eine Feature-Liste erstellt werden. Aus dieser
+Feature-Liste entsteht eine Variante des Produktes aus der das
+Handbuch generiert werden soll.
+
+Relations between components on a meta level have do be defined, or do
+they?
+Consider having dependencies, they must be known within the system
+model (Uses relations)
+
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=0.8\textwidth]{img/instaguide-basic_overview.png}
+  \caption{Instaguide-Ansatz Überblick}
+  \label{fig:instaguide-ueberblick}
+\end{figure}
+
+In dem Beispielszenario
+
+
+\begin{table}
+  %\rowcolors{3}{green!25}{yellow!50}
+  \caption{Vergleich der Ansätze(unter dem Aspekt der Benutzbarkeit)}
+  \centering
+  \begin{tabular}{l c c c c c}
+    %heading
+    \hline\hline
+    
+    & Licht & \\ [1ex]
+
+    \hline
+    %heading end
+	
+	Heizkörper & $\times$ & \checkmark \\ [1ex]
+	LED Strang \\ [1ex]
+	Steckdosen \\ [1ex]
+	Server \\ [1ex]
+    \hline
+  \end{tabular}
+  \label{table:tab1}
+\end{table}
+
+
+User stories:
+User buys some of the gizmos we offer
+In the background the configuration has to check the constraints
+User gets the package and a QR code to read in with the app(offline for mounting when data connection available)
+
+
+Natürliche Sprache 
