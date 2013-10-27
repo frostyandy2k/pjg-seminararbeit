@@ -5,66 +5,239 @@
 \label{ch:Grundlagen}
 % % ==============
 
+Um den Kontext in dem sich diese Arbeit befindet zu verstehen werden
+im folgenden Kapitel die Grundlagen der modellgetriebenen
+Software-Entwicklung, der Software-Produktlinienen und der
+existierenden Technologien eingeführt.
+
+% % ===========================
+\section{Modellgetriebene Software-Entwicklung}
+\label{ch:Chapter1:sec:Section1}
+% % ===========================
+
+Aus \cite{Truyen2006, Mukerji2001, Miller2001} wird die Terminologie
+der modellgetriebenen Software-Entwicklung eingeführt.
+
+\begin{description}
+\item[Modell] Ein Modell ist eine formale Spezifikation der
+Funktionen, der Struktur und dem Verhalten eines Systems. Das System
+wird im Modell in einem bestimmten Kontext und aus einem
+bestimmten Sichtpunkt beschrieben. Eine Spezifikation wird formal
+genannt wenn sie auf einer Sprache basiert, dessen Elemente eine
+wohldefinierte Semantik besitzen. 
+
+%Ein Modell behält die wichtigen Eigenschaften des Modellierten
+% Originals. Pragmatismus, Homomorphismus, Abstraktion {Stahl oder
+% Stachowiak}?
+
+% Model A model is a formal specification of the function, structure and
+% behavior of a system within a given context, and from a specific point
+% of view (or reference point). A model is often represented by a
+% combination of drawings and text, typically using a formal notation
+% such as UML, augmented where appropriate with natural language
+% expressions.
+% A specification is said to be formal when it is based on a language
+% that has a well  defined  semantic  meaning  associated  with  each of
+%  its  constructs,  to distinguish  it  from  a  simple  diagram
+% showing  boxes  and  lines.  It  is  this formalism, which allows the
+% model to be expressed in a format such as XML, in accordance with a
+% well-defined schema (XMI).
+
+\item[Modellgetrieben] Unter Modellgetrieben versteht man einen Ansatz
+der Software-Entwicklung, worin Modelle als primäres Artefakt für
+Dokumentation, Analyse, Design, Bau, Deployement und Wartung dienen.
+
+% Model driven Describes an approach to software development whereby
+% models are used as the  primary  source  for  documenting, 
+% analyzing, designing,  constructing, deploying and maintaining a
+% system.
+
+\item[MDA] Die Model Driven Architecture (MDA) ist ein Ansatz zur
+Spezifizierung von Software-Systemen, der die Spezifizierung der
+Funktionalität von der Spezifizierung einer konkreten technologischen
+Plattform trennt. Die MDA definiert eine Architektur für Modelle, die
+eine Menge an Richtlinien zur Verfügung stellt um die in Modellen
+ausgedrückten Spezifikationen zu strukturieren. Die Entwicklung der
+MDA wird von der Object Management Group (OMG) vorangetrieben.
+
+
+% The MDA defines an approach to IT system specification that separates
+% the specification of system functionality from the specification of
+% the implementation of that functionality on a specific technology
+% platform. To this end, the MDA defines an architecture for models that
+% provides a set of guidelines for structuring specifications expressed
+% as models.
+% The MDA approach and the standards that support it allow the same
+% model specifying system functionality to be realized on multiple
+% platforms through auxiliary mapping standards, or through point
+% mappings to specific platforms, and allows different applications to
+% be integrated by explicitly relating their models, enabling
+% integration and interoperability and supporting system evolution as
+% platform technologies come and go.
+
+\item[Plattform] Die Plattform ist eine Menge an Untersystemen und
+Technologien die Grundaufgaben unterstützende Funktionalitäten
+bereitstelen. Implementierungsdetails der Plattform sind für dessen
+Klienten irrelevant.
+
+% In the MDA, the term platform is used to refer to technological and
+% engineering details that are irrelevant to the fundamental
+% functionality of a software component.
+
+% A platform is a set of subsystems and technologies that provide a
+% coherent set of  functionality  through  interfaces  and  usage 
+% patterns.  Clients  of  a  platform make  use  of  it  without 
+% concern  for  its  implementation  details.  Examples  of platforms
+% include operating systems, programming languages, databases, user
+% interfaces, middleware solutions etc.
+
+\item[Plattformmodell] Das Plattformmodell beschreibt die technischen
+Konzepte der Plattformelemente und der zur Verfügung gestellten
+Dienstleistungen. Einschränkungen bei der Benutzung der Elemente und
+Diestleistungen von anderen Teilen des Systems werden auch
+spezifiziert.
+
+% A  platform  model  describes  a  set  of  technical  concepts 
+% representing  its constituent elements and the services it provides.
+% It also specifies constraints on the use of these elements and
+% services by other parts of the system.
+
+\item[Sichtpunkt] Der Sichtpunkt (engl. Viewpoint) ist eine
+Abstraktionstechnik um bestimmte Teilaspekte eines Systems näher
+beobachten zu können, während alle irrelevanten Details ausgeblendet
+werden. Ein Sichtpunkt kann durch ein oder mehrere Modelle
+repräsentiert werden. Die MDA spezifiziert drei Standardsichtpuntke
+auf ein System: Computation Independent (CI), Platform
+Independent (PI), Platform Specific (PS).
+
+% A  viewpoint  is  an  abstraction technique for  focusing on  a 
+% particular  set  of concerns within a system while suppressing all
+% irrelevant detail. A viewpoint can be represented via one or more
+% models.
+% MDA viewpoints MDA  specifies  three  default  viewpoints  on  a 
+% system:  computation independent, platform independent and a platform
+% specific.
+
+\item[CI] Der Computation Independent Sichtpunkt konzentriert sich
+auf den Kontext und Anforderungen des Systems, ohne die Stuktur oder die
+Verarbeitung in betracht zu nehmen. Das Vokabular des CI Modells gehört der
+Domäne an, so dass Domänenexperten und Stakeholder verstanden wird.
+
+% The  computation  independent  viewpoint  focuses  on  the  context 
+% and requirements  of  the  system  without  consideration  for  its 
+% structure  or processing.
+
+\item[PI] Der plattformunabhängige Sichtpunkt konzentriert sich auf
+die operativen Fähigkeiten des Systems ohne eine bestimmte Plattform
+anzuvisieren
+
+% The platform independent viewpoint focuses on the operational
+% capabilities of a  system  outside  the  context  of  a  specific 
+% platform  (or  set  of  platforms)  by showing only those parts of a
+% complete specification that can be abstracted out of that platform.
+
+\item[PS] Der plattformspezifische Sichtpunkt erweitert den
+plattformunabhängigen Sichtpunkt mit Informationen über die
+Verwendung einer bestimmten Plattform.
+
+% A  platform  specific  viewpoint  augments  a  platform  independent 
+% viewpoint with details relating to the use of a specific platform.
+
+% \item[Sichttyp] Der Sichttyp (engl. View type)
+
+\item[Modelltransformation] Eine Modelltransformation ist der Prozess
+in dem ein Modell in ein anderes Modell überführt wird.
+
+% Model  transformation  is  the  process  of  converting  one  model  to  another
+% within  the  same  system.  The  transformation  combines  the  platform
+% independent  model  with  additional  information  to  produce  a  platform
+% specific model.
+
+% \item[OCL]
+
+\end{description}
+
+% % ===========================
+\subsection{Technologien der modellgetriebenen Software-Entwicklung}
+\label{ch:Chapter1:sec:Section1}
+% % ===========================
+
+Um die Transformationen und die Erstellung domänenspezifischer
+Sprachen zu unterstützen werden die Transformationssprachen QVT-O und
+QVT-R eingeführt sowie die XText und hmmm\ldots 
+
+\begin{description}
+  \item[QVT-O] 
+  \item[QVT-R] 
+  \item[XText] 
+\end{description}
+
+% % ===========================
+\subsection{xtUML}
+\label{ch:Chapter1:sec:Section1}
+% % ===========================
+
+[Scoate din carte introducerea in xtUML] 
+
 % % ===========================
 \section{Product Line Engineering}
 \label{ch:Chapter1:sec:Section1}
 % % ===========================
 
 Um den Begriff des \emph{Software-Product-Line-Engineering} (SPLE) zu
-erklären müssen zuerst ein paar andere Begriffe erläutert werden. Aus
-\cite{Pohl2005} ist \emph{Mass customisation} (kundenindividuelle
-Massenproduktion) die Großproduktion von Gütern die auf die
-individuellen Bedürfnisse der Kunden angepasst wurde. Die
+erklären werden zuerst die Begriffe der Hauptbestandteile erläutert.
+In \cite{Pohl2005} wird \emph{Mass customisation} (kundenindividuelle
+Massenproduktion) als die Großproduktion von Gütern die auf die
+individuellen Bedürfnisse der Kunden angepasst wurde definiert. Eine
 \emph{Plattform} ist eine Technologiebasis auf der andere Technologien
 oder Prozesse aufbauen. SPLE ist ein Paradigma um Software-Anwendungen
 mit Hilfe von Plattformen und kundenindividueller Massenproduktion zu
-erstellen. Um die individualisierte Massenproduktion
-[massenanfertigung] zu ermöglichen werden Artefakte benötigt die an
-die verschiedenen Systeme der Produktlinie angepasst werden können.
-Diese Flexibilität der Artefakte wird \emph{Variabilität} genannt. Die
-Aktivität, die als Ziel die Variabilität zu identifizieren und zu
-dokumentieren hat, heißt Variabilitätsdefinition. Im Prozess des
+erstellen.\\
+Um die individualisierte Massenproduktion [massenanfertigung] zu
+ermöglichen werden Artefakte benötigt die an die verschiedenen Systeme
+der Produktlinie angepasst werden können. Diese Flexibilität der
+Artefakte wird \emph{Variabilität} genannt. Die Aktivität, die als
+Ziel die Variabilität zu identifizieren und zu dokumentieren hat,
+heißt \emph{Variabilitätsdefinition}. Im Prozess des
 Produktmanagements werden gemeinsame und variable Merkmale  der
 Software-Entwicklungslinie identifiziert. Die Modellierung der
 Variabilität unterstützt die Entwicklung und die Wiederverwendung der
 Variablen Artefakte. Die Variabilität der Domänenanforderungen,
 -Architektur, -Komponenten und -Tests wird mit Hilfe des
-Variabilitätsmodells festgehalten.
+Variabilitätsmodells festgehalten.\\
+Ein \emph{Entscheidungsmodell }(Decision Model) beinhaltet die Beziehungen
+zwischen den Elementen einer Entscheidung und den prognostizierten
+Resultaten um Problemstellungen verstehen und kontrollieren zu können.
+Somit können die Resultate verschiedener Handlungen vorhergesagt
+werden \cite{DecModel}.
 
-\dots
-% % ===========================
-\subsection{Variability Modeling}
-\label{ch:Content1:sec:Section2}
-% % ===========================
+Weitere Begriffe die im Zusammenhang mit SPLE verwendet werden
+\cite{Pohl2005}:
+\begin{description}   
+ \item[Variabilitässubjekt] Ein Variabilitätssubjekt (Variability
+ Subject) ist ein variabler Gegenstand der reelen Welt oder eine
+ variable Eigenschaft eines solchen Gegenstands.
+ \item[Variabilitäsobjekt] Ein Variabilitätsobjekt (Variability
+ Object) ist eine Instanz eines bestimmten Variabilitätssubjekts.
+ \item[Variationspunkt] Der Variationspunkt (Variation Point) ist
+ eine Repräsentation des Variabilitätssubjektes innerhalb der
+ Domänenartefakte, das mit zusätzlichen Kontextinformationen
+ angereichert wurde.
+ \item[Variante] Eine Variante ist die Repräsentation eines
+ Variabilitätsobjektes innerhalb der Domänenartefakte.
+ \item[Interne Variabilität] ist die Variabilität eines
+ Domänenartefaktes, das vor den Kunden versteckt ist.
+ \item[Externe Variabilität] ist die Variabilität eines
+ Domänenartefaktes, das von den Kunden sichtbar ist.
+\end{description}
+  
+  
+% Variability Subject: Color 
+% Variability Object: Red, Green, Blue
+% 
+% Variation Point: Color of car 
+% Variants: red car, blue car
 
-
-
-Definition 4-2: Variability Object A variability object is a
-particular instance of a variability subject.
-
-Definition 4-2: Variability Object A variability object is a
-particular instance of a variability subject.
-
-
-Definition 4-3: Variation Point A  variation  point  is  a 
-representation  of  a  variability  subject  within domain artefacts
-enriched by contextual information.
-
-Definition 4-4: Variant A variant is a representation of a variability
-object within domain arte- facts.
-
-Variability Subject: Color Variability Object: Red, Green, Blue
-
-Variation Point: Color of car Variants: red car, blue car
-
-Definition 4-7: External Variability External variability is the
-variability of domain artefacts that is visible to customers.
-
-Definition 4-8: Internal Variability Internal variability is the
-variability of domain artefacts that is hidden from customers.
-
- 
-Decision Model definieren?!
 % ==================
 \section{DocBook}
 \label{sec:docBook}
@@ -100,25 +273,22 @@ in einer präsentationsneutralen Form die ihre logische Struktur
 erfasst, dargestellt werden.
 
 Das Markup ist ähnlich HTML mit Elementen die Bücher, Titel,
-Paragraphen oder Kapitel repräsentieren. Stylesheets
-die es erlauben die Inhalte in verschieden Formaten wiederzugeben sind
-auf \cite{DocBookSF} frei zugänglich.
-
-The other major advantage of DocBook is the set of free stylesheets
-that are available for it.these stylesheets enable anyone to publish
-their DocBook content in print and HTML. The stylesheets are now
-developed and maintained as an open-source project on SourceForge.
-
-Wie in \cite{Stayton2007} erwähnt wird gibt es viele
-Textverarbeitungssysteme die DocBook unterstützen. Für kleine,
-einmalige Dokumente wird das System nicht empfohlen. Es ist auch für
-Dokumente die stark Layout-getrieben sind nicht geeignet.
+Paragraphen oder Kapitel repräsentieren. Stylesheets die es erlauben
+die Inhalte in verschieden Formaten wiederzugeben sind auf
+\cite{DocBookSF} frei zugänglich. Wie in \cite{Stayton2007} erwähnt
+wird gibt es viele Textverarbeitungssysteme die DocBook unterstützen.
+Für kleine, einmalige Dokumente wird das System nicht empfohlen. Es
+ist auch für Dokumente die stark Layout-getrieben sind nicht geeignet.
 Da die Dateien in Klartext abgespeichert werden und nicht binär,
-können Versionskontrollsysteme bentuzt werden. 
- 
+können Versionskontrollsysteme bentuzt werden.
 
+% The other major advantage of DocBook is the set of free stylesheets
+% that are available for it.these stylesheets enable anyone to publish
+% their DocBook content in print and HTML. The stylesheets are now
+% developed and maintained as an open-source project on SourceForge.
+ 
 %% ==============
-\chapter{Szenario}
+\chapter{Szenario der Heimautomatisierung}
 \label{ch:Motivation:sec:Szenario}
 %% ===========================
  
@@ -140,8 +310,8 @@ die im Folgenden aufgeführten Komponenten in Betracht genommen:
   \item Server
   \item Installationsgerät (Smartphone, Tablet, Rechner)
 \end{itemize}
-[Graphik cu elemenetele care o sa le contina - fa-le dragutze, diagrame din
-carte ai putea refolosi]
+% [Graphik cu elemenetele care o sa le contina - fa-le dragutze, diagrame din
+% carte ai putea refolosi]
 Des Weiteren könnten Infrarotsensoren eingesetzt werden um Benutzer im
 Raum aufzuspüren, die dem Konfigurationssystem erlauben
 Raumempfehlungen zu geben. Es werden keine anderen Ausgabegeräte, wie
@@ -168,11 +338,11 @@ Systems (\emph{Sensoren, Aktuatoren, Kontrolleinheiten})
 abgespeichert:
 \begin{itemize}
   \item Informationen über die Art und Typ einer Komponenten
-  \item Physiche Position
+  \item Physische Position
   \item Semantische Assoziation
   \item Konfigurationsparameter
-  \item Regeln(workflows) [bazat pe paperu care inca nu l-ai citit, sau poate
-  gasesti ceva generic: k trebe sa existe reguli de control in absenta AI]
+ % \item Regeln(workflows) [bazat pe paperu care inca nu l-ai citit, sau poate
+ % gasesti ceva generic: k trebe sa existe reguli de control in absenta AI]
 \end{itemize}
 
 Variabilität in der Heimautomatisierung bedeutet, dass verschiedene
@@ -182,22 +352,31 @@ Die verschieden Möglichkeiten Sensoren und Aktuatoren zu kombinieren,
 kann die Assoziation und die verschiedenen Steuerungsalgorithmen
 ändern.
 
+\begin{figure}[htp]
+\begin{center}
+  \includegraphics[width=1\textwidth]{img/szenario.png}
+  \caption[labelInTOC]{figureCaption}
+  \label{figureLabel}
+\end{center}
+\end{figure}
+
 Die Erstellung der Assoziationen zwischen den Heimautomatiesierungsgeräten und
-en von ihnen beobachteten Subjekten ist die Aufgabe des Anwenders.
-
-Kontrolle des Systems durch Web-Oberflächen.
+den von ihnen beobachteten Subjekten wird die Aufgabe des Anwenders
+sein.
  
-Es ist wichtig den Benutzern zu erklären was die Geräte machen, was
-diese gemacht haben und wie sie kontrolliert werden können um das
-"debuggen" (z.B.
-fehlerhafte Assozierungen) durch den Benutzer zu ermöglichen
-\cite{Edwards2001}.
-Dies gilt besonders im Fall in dem neue Geräte dazukommen, alte
-entfernt werden oder die Geräte von unterschiedlichen Herstellern
-kommen.
+ % Design und Implementierungsentscheidungen werden oft gemacht weil\ldots
+ % din cartea cu design of everyday things 
  
+ 
+% Es ist wichtig den Benutzern zu erklären was die Geräte machen, was
+% diese gemacht haben und wie sie kontrolliert werden können um das
+% "debuggen" (z.B. fehlerhafte Assozierungen) durch den Benutzer zu
+% ermöglichen \cite{Edwards2001}.
+% Dies gilt besonders im Fall in dem neue Geräte dazukommen, alte
+% entfernt werden oder die Geräte von unterschiedlichen Herstellern
+% kommen.
 
-
+% Das System soll durch Web-Oberflächen kontrolliert werden.
 %% ==============
 \chapter{Verwandte Arbeiten}
 \label{ch:Arbeiten}
@@ -211,56 +390,7 @@ eine Dokumentengenerierungstechnik wie sie in industriellen Umgebungen
 praktiziert wird.
 
 \input{assembly}
+\input{installation}
 \input{ar_handbook}
 \input{document_generation}
-
-%% ==============
-\section{Usability of User Interfaces Generated with a Model-Driven
-Architecture Tool}
-\label{ch:Existierende}
-%% ==============
-
-\ldots??
-
-%% ==============
-\section{User comprehension performance for dataflow-based rules in smart
-Environments}
-\label{ch:Existierende}
-%% ==============
-
-???
-
-%% ==============
-\chapter{Ausblick}
-\label{ch:NextSteps}
-%% ==============
-
-Usability studies machen
-Am anfang um eine Hypothese zu erstellen und sehen was leute von so einem System
-erwarten
-
- !System definieren!
- 
-Punkte finden die interessant sind/interessant zu beschreiben sind.
-Formative studie - ?
-Qualitativ, qunatitative?
-
-Interviews erstellen -> Requirements sammeln -> Hypothese
-
-Studien erstellen um zu sehen ob eine statistisch signifikanter Unterschied
-zwischen den statisch erstellten und den dynamisch generierten besteht.
-
-Wizard of Oz studie => Referenzimplementierung machen
-
-Idee:
-	Seite erstellen die einen konfigurator darstellt. User konfigurieren lassen.
-	Nach einiger zeit den usern das ding in die Hand drücken und arbeten lassen.
-	
-2x5/7 Leute sollte man haben für eine Usability studie
-Gruppen Interviews sind nicht schlecht um Gruppendynamik zu fördern.
-Tutorium Users study?
-
-Methodik muss fest sitzen!
-
-Eriksson Semantic document approach
-Knuth Literate Programming
+\input{nl_generation}

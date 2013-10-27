@@ -1,123 +1,317 @@
 %% ==============
-\chapter{Vergleich der Ansätze}
+\chapter{Auswertung der verwandten Arbeiten}
 \label{ch:Vergleich}
 %% ==============
 
-\begin{table}
-  %\rowcolors{3}{green!25}{yellow!50}
-  \caption{Vergleich der Ansätze(unter dem Aspekt der Benutzbarkeit)}
-  \centering
-  \begin{tabular}{l c c c c c}
-    %heading
-    \hline\hline
-    
-    & \dopler & AR-Handbook & Modellgetriebene GUI & Regelbasiert &
-    Meine Idee
-    \\
-    [1ex]
+In diesem Kapitel werden die zuvor im Detail besprochenen Arbeiten auf
+Vor- und Nachteile analysiert und die Kontraste hervorgehoben, um
+Erkenntnisse über die notwendigen Eigenschaften und Randbedingungen
+des InstaGuide Ansatzes zu gewinnen.
 
-    \hline
-    %heading end
-    
-    %     DUdu & &&& \parbox[t]{5cm}{Sales and marketing
-    %     people \\ porduct managers} \\ [1ex]
-    
-    Ansatz &  Entscheidungs orientiert\\ [1ex] 
-    
-    Interaktionsmodus \\ [1ex]
-    
-    Quell-Artefakte \\ [1ex] 
-    
-    Generierte Artefakte & Fertige Dokumente & \\ [1ex] 
-    
-    End-Nutzer & Vertrieb, Marketing, & \\
-    & Produkt-Management &&&& \\ [1ex]
-    
-    Form der Unterstützung & Textuell & Graphisch, VR & Graphisch &&
-    \\ [1ex]
-     
-    Flexibilität \\ [1ex] 
-    
-    Domänenexperten & \textsc{Ja} & \textsc{Ja} & \textsc{Nein} &
-    \textsc{Ja} & \textsc{Nein} \\ [1ex]
-    
-    Wiederverwendung \\ [1ex]
-    
-    Aufwand für die Instandsetzung \\ [1ex]
-    
-    Aufwand für die Benutzung \\ [1ex]
-    
-    Genauigkeit der Beschreibung \\ [1ex]
-    
-    Synchronisierungsaufwand \\ [1ex]
-    
-    Aufwand für die Erstellung neuer Handbücher \\ [1ex] 
-    
-    Anwendungsszenarien & & physiche Umgebung\\ [1ex]
-    \hline
-  \end{tabular}
-  \label{table:tab1}
-\end{table}
+%% ==============
+\section{Studie zur Sensorinstallation}
+\label{ch:Vergleich:sec:assembly}
+%% ==============
 
-Eine Übersicht der Ansätze findet man in den Tabellen
-\ref{table:tab1} und \ref{table:tab1}.
+Die in \cite{Beckmann2004} durchgeführte Studie hat den Prozess der Installation
+von ubiquitären Systemen im Heimautomatisierungsbereich untersucht. Wertvolle
+Einsichten in die Anforderungen einer Installationsaufgabe und die Zusammenhänge
+zwischen dem Design des Systems und die Rolle, die es bei einer Installation
+hat, wurden verdeutlicht. Die Resultate der Studie zeigen, dass die Anwender
+Unterstützung bei der Installationsaufgabe von Seiten der Systemdesigner
+benötigen. Die Installation von Sensoren wird als eine Aufgabe mit zwei Dimensionen
+betrachtet: Platzierung und Assoziation. Dies sind wichtige Anhaltspunkte
+um eine korrekte Installation definieren zu können und um die Randbedingugen
+des Modells zu definieren.
 
-Genauigkeit der Beschreibung: kann das Garantiert werden wenn menschen das
-System intepretieren?
-
-% ===== Assembly
-Die Resultate der Studie die in \cite{Beckmann2004} durchgeführt wurde
-werden nicht detailliert behandelt und die Resultate die erwähnt
-werden dienen der Unterstützung bestimmter Folgerungen. Die Versionen
-der Handbücher werden kurz beschrieben und es wird nur eine in
-Abbildung \ref{fig:assembly-doku_c} dargestellte Variante gezeigt. Es
-wird erwähnt, dass es keine statistisch signifikanten Unterschiede,
-zwischen dem Erfolg der Installation im Zusammenhang mit den verschiedenen
-Dokumentationen gibt. Die Rohdaten wurden nicht in das Paper
-integriert und es gab auch keine Sensoren die interagieren mussten. Es
-musste auch nichts konfiguriert werden.
-
-Es kann passieren, dass Nutzer wichtige Anweisungen übersehen oder
-nicht befolgen, daher wäre es nützlich diese hervorzuheben.
-
-Metamodell sollte Assoziation und direktionalität in betracht nehmen
-um erstens detailiertere Angaben über die Insallation zu geben wenn
-ein Sensor kompliziert zu installieren ist oder viele Faktoren dort
-einfliessen. Aber auch um die nötigen Infomrationen zu enthalten um
-die Fehlerfindung und bewertung der Insallation durchführen zu können.
-Mass für komplexität:
-direktionalität.
-
-\begin{figure}[htb]
-  \centering
-  \includegraphics[width=0.8\textwidth]{img/assembly-doku_c.png}
-  \caption{Bild des Kits}
-  \label{fig:assembly-doku_c}
-\end{figure}
-
-Die Installation von Sensoren wird in \cite{Beckmann2004} als eine
-Aufgabe mit zwei Dimensionen betrachtet: Platzierung und Assoziation.
-Dies sind wichtige Anhaltspunkte um die Randbedinugnen des Modells zu
-definieren.
+Auch wenn die Studie drei Varianten von Handbüchern eingesetz hat,
+wurden die Daten über deren Auswirkung auf die Installationsergebnisse nicht
+publiziert. Die Versionen der Handbücher werden kurz beschrieben und es wird nur ein
+Ausschnitt einer Variante näher gezeigt. Es wird erwähnt, dass es keine
+statistisch signifikanten Unterschiede, zwischen dem Erfolg der Installation im
+Zusammenhang mit den verschiedenen Dokumentationen gibt. Die Rohdaten wurden
+nicht in das Paper integriert, da auch das Paper eine andere Fragestellung, als
+die Eignung der Handbücher, verfolgt hat. Diese Information wäre im Rahmen
+dieser Arbeit sehr wichtig gewesen. Da in \cite{Beckmann2004} nur Mock-Up
+Sensoren bentuzt wurden, gab es auch keine Konfigurationsaufgaben und alle Sensoren wurden einzeln betrachtet. Die
+Interaktion der Sensoren und die Reihenfolge der Sensoranbringun [zusammenspiel]
+wurden auch nicht betrachtet.
 
 
-%============================
-Expertenwissen wird bei jeder generierung von Dokumentation benötigt.
-Disadv: AR Handbook not linked to system model
+% hat die sample size eigentlich gereicht um so eine Aussage machen zu könnnen
 
-Die Vorteile:
-Sehr intuitiv
-Automatisch erlernte Dokumentation der Schritte
-Unterstützung bei der Verifikation der Arbeitsschritte
-Passt die Videoausgabe an den Nutzer an
+%% ==============
+\section{AR-Handbücher}
+\label{ch:Vergleich:sec:ar}
+%% ==============
 
-Probleme:
-Müssen wenigstens ein mal Aufgezeichnet werden
-Für Systeme mit vielen Varianten ein potenzielles Problem
-Änderung der Prozessschritte zieht ein neues Durchspielen nach sich
-Mit Software GUIs nicht ausprobiert
-Noch keine Nutzbarkeitsstudie
-Expertenwissen wird bei jeder generierung von Dokumentation benötigt.
-Disadv: AR Handbook not linked to system model
+Die Augmented-Reality-Ansätze sind vielversprechend und bieten eine sehr gute
+Lösung für physische Installationsaufgaben. Die Benutzung ist sehr intuitiv und
+kann so von einer breiten Masse von Anwendern benutzt werden. Durch das visuelle
+Vorführen der Aufgabe bleibt auch wenig Raum für fehlerhafte Interpretationen
+der Arbeitsschritte. Besonders der in \cite{Niels2013} beschriebene Ansatz
+unterstützt die sofortige Verifikation der durchzuführenden Schritte und erlaubt
+es den Nutzern wichtiges Feedback zu liefern. Die automatische Anpassung der
+Ausgabe ist ein wichtiger Faktor der die Nutzbarkeit dieses Ansatzes stark
+verbessert. Das zentrale Feature des Ansatzes ist das automatische Lernen der
+durchzuführenden Schritte aus einer Beispieldurchführung die vom System
+aufgenommen wird.
+Man kann trotzdem ein paar Schwachpunkte dieser Art von Ansätzen identifiziert.
+Für Systeme mit vielen Varianten kann es ein potenzielles Problem werden wenn
+jede Arbeitsabfolge einmal durchgespielt werden muss. Auch Änderungen in den
+Prozessschritten müssen durch ein neues Durchspielen in die Dokumentation
+aufgenommen werden. In diesen Fällen muss wieder Expertenwissen in die
+Generierung der Dokumentation einfließen. Falls dieses Wissen nicht direkt von
+den Entwicklern des Systems kommt, kann so viel Zeit zwischen den
+Systemänderungen und dem Update der Dokumentation.
+Bei Änderungen im System könnte es auch zu Inkonsistenzen kommen, da das
+AR-Handbuch nicht mit dem Systemmodell gekoppelt ist. Um die Effektivität des
+Ansatzes zu belegen wurden noch keine Studien durchgeführt, ob der Ansatz die
+Arbeit erleichtert oder die Qualität steigt. Da der Ansatz mit graphischen
+Benutzeroberflächen noch nicht getestet wurde, könnten auch dort eventuelle
+Probleme bei der Bedienung auftreten, wegen der geringen größe der zu
+manipulierenden Objekte.
 
-Textuelle Handbücher genau so gut oder besser?
+Bei dem Second-sighted Glasses Ansatz in \cite{Yone2011} gelten die vorher
+beschriebenen Probleme. Dazu kommt noch, dass die Animationen der \emph{Futures}
+noch manuell erstellt werden müssen und dass Marker anwesend oder eine
+Assoziation zwischen den Objekten und ihren virtuellen Repräsentaten erstellt
+werden muss. Dies erschwert zusätzlich die Anwendung und bringt mehr Kompexität
+in das Szenario ein.
+
+Bis die Hardware (AR-Brille, Marker) breite Anwendung findet,
+wird eine so unterstützte Installation erstens teuerer und zweitens würde es die Anschafung
+der für das System notwendigen Geräte komplizieren.
+
+% Genauigkeit der Beschreibung: kann das Garantiert werden wenn menschen das
+% System intepretieren?
+
+%% ==============
+\section{\dopler Ansatz}
+\label{ch:Vergleich:sec:docgen}
+%% ==============
+
+\texttt{In Bearbeitung.}
+
+Der in \cite{Rabiser2010} beschriebene Ansatz wurde konzipiert um die
+Aufgabe der Dokumentenerstellung im industriellen Umfeld zu
+erleichtern. Durch die Werkzeugkette, die besonders für die Bedienung
+durch nicht-technisches Personal konzipiert wurde, eignet sich der
+Ansatz sehr gut für die Unterstützung und Erleichterung der manuellen
+Arbeit.
+
+% 
+% Das Ziel des
+% Ansatzes ist es schwergewichtige Dokumente 
+% 
+% Treiber für die erstellung
+% des Ansatzes waren die
+% 
+% Der Ansatz wird im Gedanken an
+% Schwergewichtige Dokumente und in Benutzung mit Software-Produktlinien erstellt worden. 
+% % Esti sigur k nu ii mai mult un guideline cum ar trebui sa iti
+% % construiesti tu propriu stuff.
+% 
+% Der Ansatz ist gedacht um die Generierung in Kooperation mit 
+% Domänenexperten durchzuführen.
+% 
+% 
+
+- Schwergewichtige Dokumente
+
+- Benötigt viel Experteninput
+
+- basiert auf großen Text-Templates
+ 
+% 
+% Mit dem Variabilitätsmodell verknüpft, das Systemmodel könnte sich ändern.
+% Gedacht für SPLE, ein Variabilitäsmodell erstellen für Systeme ohne
+% Variabilität würde noch ein Artefakt das gewartet muss verlangen.
+% 
+% eignet er sich sehr gut und nicht-technischem
+% .als Unterstützung und Erleichterung bei der Erstellung von Dokumenten gemacht. Das Nicht-TEchnische
+% 
+% Template basiert, die Informationen in den Templates können
+% Inkonsistent mit der eigentlichen SW werden.
+%  Statische
+% Textfragmente
+% 
+% 
+% Bei der Generierung industrieller Dokumentation für den Endkunden  
+
+Laut der systematischen Literaturrecherche aus \cite{Nicolas2009} gibt
+es ähnliche Ansätze aber diese betrachten nur einen Typen von
+Dokumenten, nähmlich Anforderungsspezifikationen. Der in
+\cite{Rabiser2010} beschriebene Ansatz kann jede Art von Dokumenten
+unterstützen.
+
+% Es werden Entscheidungsmodelle benutzt die 
+
+% Most importantly, we use end- user customization tools based on
+% decision models to resolve variability.
+% 
+% DocLine
+
+
+% important insights because of the industrial studies, but not much
+% detail given
+
+% Ist gedacht um in kooperation mit der Arbeit von Domänenexperten.
+% Braucht Experteninput. 
+
+%% ==============
+\section{Kontraste zwischen den Ansätzen}
+\label{ch:Vergleich:sec:vergleich}
+%% ==============
+
+\texttt{In Bearbeitung.}
+
+Die AR-Ansätze und der \dopler Ansatz unterscheiden sich in der
+Gewinnung der Informationen. Bei dem AR-Ansatz werden die
+durchzuführenden Schritte vom System erlernt, wobei beim \dopler
+Ansatz die Informationen durch ein Expertensystem gewinnt.
+
+% Dopler wird generiert (ii modellgetrieben sau nu ? - probabil modell si sple
+% getrieben) Die Anderen sind modellgetrieben unterwegs
+Bei dem AR-Handbuch und dem \dopler Ansatz Falls beim \dopler Ansatz
+das Variabilitätsmodell manuell auf dem neuesten Stand gehalten werden
+muss und des nicht mit dem Systemmodell automatisch synchronisiert
+wird, können wie bei dem AR-Handbuch Inkonsistenzen zwischen den
+Anleitungen auftreten. Bei dem AR-Handbuch Ansatz könnte die Behebung
+der Inkonsistenzen mehr Zeit in Anspruch nehmen, da Experten die
+veränderten Schritte durchführen müssen.
+
+Das AR-Handbuch des DFKI ähnelt stark der Version C Dokumentation aus
+der Studie in \cite{Beckmann2004} da sie sich beide auf
+Richtlinieninformationen beschränken. Das Konzeptuelle Modell des
+Benutzers kann deshalb schwach sein, weshalb die Lösung unerwartetenr
+Situationen schwerer fallen würde und das Risiko von unbewussten
+fehlerhaften Ausführungen steigen könnte. Eventuelle Informationen zur
+unterstützung des konzeptuellen Modells der Benutzer müssten Manuell
+in die eingeblendete Sequenz eingearbeitet werden.
+
+Der in dieser Arbeit erstellte Überblick der Ansätze zur Unterstützung
+von Benutzern und Generierung von Dokumenten zeigt, dass eine
+automatische Generierung von textuellen Beschreibung der Systeme mit
+dem Zweck der Benutzerunterstüzung relevant und in dem hier
+präsentierten Rahmen noch nicht behandelt wurde.
+
+Articulate Modelling kann eine deutliche Erleichterung bei der
+Generierung von natürlichsprachigen Beschreibung des Modells bewirken.
+Da die Verbphrasen schon von einem Menschen erstellt wurden, bietet
+sich eine einfache auf Templates basierende Lösung an.
+
+% Die wesentlichen Unterschiede zwischen den Ansätzen beziehen sich
+% auf:
+% Benutzbarkeit? Eher nicht
+% Generierung
+% Generierte Artefakte
+% Similarity Expertenwissen für die Generierung notwendig
+
+% Der Vergleich der Ansätze nimmt folgende Kriterien in acht:
+% \begin{enumerate}
+%   \item \textbf{Quell-Artefakte}\\
+%   Aus welchen Artefakten werden die Nutzeranleitungen
+%   generiert?
+%   \item \textbf{Ziel-Artefakte}\\
+%   Welche Artefakte werden vom Ansatz geliefert?
+%   \item \textbf{Form der generierten Artefakte}\\
+%   Wie sind werden die generierten Artefakte dargestellt?
+%   \item \textbf{Aufwand der Neuerstellung}
+%   \item \textbf{Aufwand für die Benutzung}
+%   \item \textbf{Interaktionsmodus}
+%   Wie wird mit dem System interagiert
+%   \item \textbf{Zielgruppe der Anwendung}\\
+%   Werden Entwickler oder nicht-technische Domänenexperten oder Endnutzer
+%   den Ansatz benutzen?
+%   \item \textbf{Zielgruppe der Benutzer}\\
+%   Werden Entwickler oder nicht-technische Domänenexperten oder Endnutzer
+%   gebrauch von den generierten Lösung machen
+%   \item \textbf{Flexibilität bei Systemänderungen}
+%   \item \textbf{Benutzung von Expertenwissen}
+%   \item \textbf{Benötigte Experten}
+%   \item \textbf{Erstbenutzungsaufwand}
+%   \item \textbf{Synchronisationsaufwand mit den Hauptartefakten}\\
+%   Was geschieht bei einer Änderung der Systembeschreibung (Anforderungen,
+%   Software-Updates)? Mit wie viel Aufwand kann Konsistenz wiederhergestellt
+%   werden
+%   \item \textbf{Genauigkeit der Beschreibung}
+%   \item \textbf{Anwendungsszenarien}
+%   \item \textbf{Wiederverwendung}
+% \end{enumerate}
+% 
+% Die Kriterien die Herangezogen wurden werden in Tabelle \ref{table:tab1}
+% gezeigt.
+
+% 
+% \newcounter{magicrownumbers}
+% \newcommand\rownumber{\stepcounter{magicrownumbers}\arabic{magicrownumbers}}
+% \begin{table}[htb]
+%   \caption{Vergleich der Ansätze(Artefakte, Endnutzer, Form der Darstellung)}
+%   \centering
+%   \begin{tabular}{l c c c}
+%     %heading
+%     \hline\hline
+%     
+%    & \dopler & AR-Handbook & InstaGuide
+%     \\  [1ex]
+% 
+%     \hline
+%     
+%      \rownumber  &  \\ [1ex] 
+%     
+%      \rownumber  &\\ [1ex]
+%     
+%      \rownumber  & \\ [1ex] 
+%     
+%      \rownumber  & Schwerg. Dokumente & Leichtgew.
+%      Dokumente & AR eingeblendete Doku. \\
+%     [1ex]
+%     
+%     \rownumber & End-Nutzer & Vertrieb, Marketing & \\ [1ex]
+%     
+%     \rownumber & Textuell & Graphisch, VR & Graphisch
+%     \\ [1ex]
+%      
+%     \hline
+%   \end{tabular}
+%   \label{table:tab1}
+% \end{table}
+% 
+% Lore Ipsum
+% 
+% 
+% \addtocounter{magicrownumbers}{-\value{magicrownumbers}}
+% \begin{table}[htb]
+%   %\rowcolors{3}{green!25}{yellow!50}
+%   \caption{Vergleich der Ansätze(unter dem Aspekt der \ldots, des
+%   Anwendungszenarios)}
+%   \centering
+%   \begin{tabular}{l c c c}
+%     %heading
+%     \hline\hline
+%     
+%    & \dopler & AR-Handbook & InstaGuide
+%     \\  [1ex]
+% 
+%     \hline
+%     %heading end
+%     
+%     %     DUdu & &&& \parbox[t]{5cm}{Sales and marketing
+%     %     people \\ porduct managers} \\ [1ex]
+%     
+%      \rownumber  &  \\ [1ex] 
+%     
+%      \rownumber  & Schwerg. Dokumente & Leichtgew.
+%      Dokumente & AR eingeblendete Doku. \\
+%     [1ex]
+%     
+%      \rownumber  & \\ [1ex] 
+%     
+%      \rownumber & alle Umgebungen & physiche Umgebung & alle Umgebungen\\ [1ex]
+%      
+%     \hline
+%   \end{tabular}
+%   \label{table:tab1}
+% \end{table}
+

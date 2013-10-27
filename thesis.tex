@@ -21,16 +21,16 @@
 %% | Information about the thesis  |
 %% ---------------------------------
 
-\newcommand{\myname}{Name}
-\newcommand{\mytitle}{End-User Installation Guide Generation\\ 
-											Based on a Model Driven Approach}
-\newcommand{\myinstitute}{Institute for Program Structures\\
-													and Data Organization (IPD)}
+\newcommand{\myname}{Andrei Miclaus}
+\newcommand{\mytitle}{Modellgetriebene Generierung \\ 
+											von natürlichsprachlichen
+Benutzeranleitungen}
+\newcommand{\myinstitute}{Institut für Telematik}
 
-\newcommand{\reviewerone}{?}
-\newcommand{\reviewertwo}{?}
-\newcommand{\advisor}{?}
-\newcommand{\advisortwo}{?}
+\newcommand{\reviewerone}{Dr. Till Riedel}
+\newcommand{\reviewertwo}{}
+\newcommand{\advisor}{Dr. Till Riedel}
+\newcommand{\advisortwo}{Prof. Dr. Michael Beigl}
 
 \newcommand{\timestart}{XX. Monat 20XX}
 \newcommand{\timeend}{XX. Monat 20XX}
@@ -40,7 +40,8 @@
 %% ---------------------------------
 %% | Topic specific commands       |
 %% ---------------------------------
-\newcommand{\dopler}{\textsc{Dopler}}
+\newcommand{\dopler}{\textsc{Dopler}\ } % "\ " used for separation
+\hyphenation{Dopler} % preven hyphenation
 
 %% ---------------------------------
 %% | ToDo Marker - only for draft! |
@@ -96,11 +97,10 @@ titlepage,
 declaration,
 introduction,
 content,
-%document_generation,
 instaguide,
-%evaluation,
-%conclusion,
-appendix
+vergleich
+%ausblick,
+%appendix
 }
 
 
@@ -135,8 +135,8 @@ appendix
 \include{content}
 %\include{document_generation}
 \include{instaguide}
-\include{evaluation}
-\include{conclusion}
+\include{vergleich}
+\include{ausblick}
 
 
 %% --------------------

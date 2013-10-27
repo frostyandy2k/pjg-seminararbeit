@@ -3,75 +3,109 @@
 \label{ch:Instaguide}
 %% ==============
 
-Mit Hilfe von  Modell-zu-Modell-Transformationen kann der Zustand
-eines Systems in einer anderen Form dargestellt werden.
+Die vorläufigen Resultate der AR-Ansätze bieten eine vielversprechende
+Lösung um die Installation ubiquitärer Systeme zu erleichtern (vgl.
+Kapitel \ref{sec:arhandbook})[Sau mai bine Kapitel Vergleich]. Der in
+\ref{sec:documentGeneration} beschriebene Ansatz leidet darunter, dass
+Expertenwissen für jede Variante benötigt wird. Der dort beschriebene
+Ansatz dient auch der Generierung schwergewichtiger Dokumente.
+Man kann sich aber die Frage stellen ob die Nachteile solcher Ansätze
+behoben, die Vorteile aber beibehalten werden können.
+Eine leichtgewichtige, textuelle Beschreibung die aus das System
+beschreibenden Modellen, automatisch generiebar ist, könnte Lücken
+füllen. Dazu wird ein Ansatz zur dynamischen Generierung
+natürlichsprachlicher Anleitungen für die Installation von Geräten in
+Ubiquitären Umgebungen präsentiert. Modell-zu-Modell-Transformationen
+eignen sich gut, um verschiedene Sichten (Modelle) auf ein System
+voneinander abzuleiten. Auf Basis einer formalen Funktionsbeschreibung
+und des aktuellen Kontextes (z.B. Zusammenhänge zwischen Geräten,
+Zustand der Geräte) soll mittels modellgetriebener Transformationen
+automatisiert eine aktuelle, situationsadaptive, deskriptive,
+informelle Sicht auf die Benutzung erzeugt werden. Das Modell der
+Systembeschreibung dient als Ausgangspunkt der Generierung. Des
+weiteren sollte die Variabilität des Systems bekannt und in einem
+Modell festgehalten sein. Falls dies nicht der Fall ist kann wie in
+\cite{Beckmann2004} (vgl. Kapitel \ref{sec:documentGeneration})
+vorgegangen werden um diese zu bestimmen.
 
-Textuelle Handbücher automatisch generieren
-Modell der Systembeschreibung als Ausgangspunkt
+Die Schritte die in der Implementierung des Ansatzes automatisiert
+ablaufen sollen sind folgende (vgl. auch Abbildung
+\ref{fig:instaguide-ueberblick}:
+\begin{enumerate}
 
-Meta-Informationen aus einem separaten Model entnehmen
+  \item \textbf{Ein filtriertes Modell des Systems erstellen}\\
+  Mit Hilfe eine Modelltransformation sollen die für das Handbuch
+  relevanten Entitäten aus dem formalen Modell des Systems extrahiert.
+  Diese werden in das filtrierte Modell gespeichert. Falls das System
+  durch mehrere Modelle beschrieben wird, um verschiedene Sichten
+  darauf zu erlauben, kann diese Modelltransformation diese vereinen
+  und die relevanten Daten aus allen Modellen extrahieren.
+  
+  \item \textbf{Ein für Handbücher semantisch reiches Modell
+  erstellen}\\
+  Das filtrierte Systemmodell wird weiter in ein Modell überführt, das
+  sich für die Generierung von natürlicher Sprache eignet. In diesem
+  Schritt wird ein zweites Modell herangezogen, das mit Hilfe von
+  Meta-Informationen über das System ausgestattet ist. Diese
+  Meta-Informationen können Satz-Templates, Prioritäten der
+  Komponententypen oder weitere Abhängigkeiten enthalten.
+  
+  \item \textbf{Generierung von natürlicher Sprache}\\
+  Durch eine weitere Transformation soll aus dem semantisch reichen
+  Modell das natürlichsprachliche Handbuch generiert werden. Die
+  Generierung von natürlicher Sprache ist komplex, deshalb wird sich
+  dieser Ansatz zuerst auf einfache grammatikalische Konstrukte
+  konzentrieren und es wird versucht ohne ein grammatikalisches
+  Framework auszukommen.
+  
+\end{enumerate}
 
-Automatisierungsgrad hoch halten
+Ontologien wurden in \cite{Eriksson2007} benutzt um textuelle
+Dokumente zu erweitern. Die so entstandenen semantischen Dokumente
+erlauben es den Benutzern auf mehreren Arten auf das Wissen
+zuzugreifen. Der hier beschrieben Ansatz soll auch eine Art der
+Wissensrepräsentation, wie zum Beispiel Ontologien, verwenden um damit
+die Modelltransformationen zu erweitern. So können Meta-Informationen,
+die nicht in dem formalen Modell des Systems gespeichert werden
+herangezogen werden um ein semantisch reicheres Modell zu erhalten,
+das auch die Umsetzung in natürlicher Sprache erleichtert.
 
-
-Der Transformationsmechanismus ist automatisiert 
-
-Herausforderungen sind es eine Transformation zu erstellen die ein für
-den Menschen nutzbares Resultat liefert und auch schnell genug
-läuft um sie mit jeder Änderung neu generieren zu können.
-
-Die Erkundungsphase, in der ein Überblick über das System und dessen
-Komponenten gegeben wird, kann mit Hilfe eine Online-Konfigurators
-ersetzt werden. Dem Benutzer wird das System im ganzen Präsentiert und
-er hat die Möglichkeit die Komponenten auszuwählen die ihn
-interessieren. Wird der Konfigurator benutzt kann automatisch für
-jeden Kunden eine Feature-Liste erstellt werden. Aus dieser
-Feature-Liste entsteht eine Variante des Produktes aus der das
-Handbuch generiert werden soll.
-
-Relations between components on a meta level have do be defined, or do
-they?
-Consider having dependencies, they must be known within the system
-model (Uses relations)
-
-
+% ==========
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=0.8\textwidth]{img/instaguide-basic_overview.png}
+  \includegraphics[width=0.8\textwidth]{img/instaguide-overview.png}
   \caption{Instaguide-Ansatz Überblick}
   \label{fig:instaguide-ueberblick}
 \end{figure}
+% ==========
 
-In dem Beispielszenario
+Ein Vorteil dieses Ansatzes ist der hohe Automatisierungsgrad und die
+Unabhängigkeit vom Expertenwissen.
+Diese Eigenschaften sind gegeben, da die Modelltransformationen
+automatisch ablaufen und nach der Erstellung der Domänenspezifischen
+Modelle kein Expertenwissen in die Generierung der Handbücher für die
+unterschiedlichen Varianten der Software einfließen muss.
 
+Die Herausforderung ist es Transformationen zu erstellen die ein für
+den Menschen nutzbares Resultat liefern und auch schnell genug laufen
+um mit jeder Änderung das Neugenerieren in kurzer Zeit zu ermöglichen.
+Studien über die Eignung einer solchen Lösung sind notwendig um den
+Nutzen und die Effektivität der Lösung zu testen.
 
-\begin{table}
-  %\rowcolors{3}{green!25}{yellow!50}
-  \caption{Vergleich der Ansätze(unter dem Aspekt der Benutzbarkeit)}
-  \centering
-  \begin{tabular}{l c c c c c}
-    %heading
-    \hline\hline
-    
-    & Licht & \\ [1ex]
-
-    \hline
-    %heading end
-	
-	Heizkörper & $\times$ & \checkmark \\ [1ex]
-	LED Strang \\ [1ex]
-	Steckdosen \\ [1ex]
-	Server \\ [1ex]
-    \hline
-  \end{tabular}
-  \label{table:tab1}
-\end{table}
+\texttt{Hier werden noch ein paar Stücke aus dem SWC Antrag
+eingepflegt}
 
 
-User stories:
-User buys some of the gizmos we offer
-In the background the configuration has to check the constraints
-User gets the package and a QR code to read in with the app(offline for mounting when data connection available)
+Um ein finales Handbuch zu erhalten, dass auch für nicht-technische Endnutzer
+geignet ist werden die automatisch erstellten Fragmenten in eine vorher
+definierte Struktur eingebettet. Diese Struktur kann mittels DocBook definiert
+werden und ermöglicht die unabhängige Integration von Präsentationsteilen der
+Marketing Abteilung (Bilder, Adressen etc.) als auch die Einbindung von
+legislativ vorgesehenen Plichteinträgen.
 
+Eine Kombination aus Template-basierten und automatische Generierung von
+Texten.
 
-Natürliche Sprache 
+Der Kern des Benutzerhandbuches, der den Nutzer in seiner Problemstellung
+bezüglich des zu installierenden Systems soll gänzlich automatisiert generiert
+werden.

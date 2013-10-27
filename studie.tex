@@ -3,6 +3,25 @@
 \label{ch:UserStudie}
 %% ==============
 
+Die Erkundungsphase, in der ein Überblick über das System und dessen
+Komponenten gegeben wird, kann mit Hilfe eine Online-Konfigurators
+ersetzt werden. Dem Benutzer wird das System im ganzen Präsentiert und
+er hat die Möglichkeit die Komponenten auszuwählen die ihn
+interessieren. Wird der Konfigurator benutzt kann automatisch für
+jeden Kunden eine Feature-Liste erstellt werden. Aus dieser
+Feature-Liste entsteht eine Variante des Produktes aus der das
+Handbuch generiert werden soll.
+
+%% ==============
+\section{User Stories}
+\label{ch:UserStudie}
+%% ==============
+User buys some of the gizmos we offer
+In the background the configuration has to check the constraints
+User gets the package and a QR code to read in with the app(offline for mounting when data connection available)
+
+
+
 %===========PPT
 Wizard of Oz
 Standard Handbuch vs. individuell zugeschneidertes
@@ -29,12 +48,20 @@ http://www.surveysystem.com/
 Referenzimplementierung der Handbücher muss gemacht werden.
 Ein Handbuch, das mit einem solchen System kommt erhalten und bei einer Gruppe einsetzen
 
+Ziel
+Erfahren ob Nutzer ein Custom Handbook interessieren würde
+Personenbefragungen 
+Das Einsatzszenario einer Intelligente Heimautomatisierung erklären mit einer Individuell zugeschneiderten Bedienungsanleitung
+Die emotionale Reaktion könnte signifikant sein
+Bewertung des Interesses an einer solchen Technologie
 
-%==============Aufbau Metamodell
-There are two major types of control devices: devices that are produced to be 
-flexibly adaptable to a wide range of tasks, and devices that are dedicated to 
-a special purpose.
-
+\begin{figure}[htp]
+\begin{center}
+  \includegraphics[width=1\textwidth]{img/studie-flowchart.png}
+  \caption[labelInTOC]{figureCaption}
+  \label{figureLabel}
+\end{center}
+\end{figure}
 
 %============Wizard of Oz
 Um eine Wizard of Oz Studie durchzuführen wird 
@@ -53,8 +80,37 @@ generiert werden.
 
  
 %============Aufbau des Handbuches
+Handbuch Metamodell?
+Prioritäten
+Header/Footer
+Struktur
+IBM Decision Tree
+I/O Felder
+Hyperlinking
+Welche Struktur sollte ein Handbuch haben
+IBM Manual decision tree structure
+How should the user be guided?
+Hyperlinking?
+
+%==============Aufbau Metamodell
+There are two major types of control devices: devices that are produced to be 
+flexibly adaptable to a wide range of tasks, and devices that are dedicated to 
+a special purpose.
+
+Es kann passieren, dass Nutzer wichtige Anweisungen übersehen oder
+nicht befolgen, daher wäre es nützlich diese hervorzuheben.
+
+Metamodell sollte Assoziation und direktionalität in betracht nehmen
+um erstens detailiertere Angaben über die Insallation zu geben wenn
+ein Sensor kompliziert zu installieren ist oder viele Faktoren dort
+einfliessen. Aber auch um die nötigen Infomrationen zu enthalten um
+die Fehlerfindung und bewertung der Insallation durchführen zu können.
+Mass für komplexität:
+direktionalität.
+
 
 %============Durchzuführende Aufgaben
+ Die Aufgaben die bei der Installation durchzuführen sind:
  Home-Server platzieren,
  einschalten, Sensoren platzieren, assoziieren
  
