@@ -1,45 +1,38 @@
 %% ===========================
-\section{Intelligente Augmented-Reality-Handbücher}
+\section{Intelligente Augmented-Reality-Anleitungen}
 \label{sec:arhandbook}
 %% ===========================
 
-Ein Augmented-Reality-Handbuch ist ein digitales Handbuch, dass
-Schritt für Schritt Anleitungen auf einem Head-Mounted-Display (HUD)
-in das Blickfeld des Benutzers projiziert. Jeder Schritt wird dem
-Benutzer vorgezeigt bis dieser erfolgreich durchgeführt wurde. 
-
 \subsection{DFKI AR-Handbuch}
 
-Der Augmented-Reality-Forschungsbereich des DFKI (Deutsches
-Forschungszentrum für Künstliche Intelligenz) arbeitet an der
-Entwicklung und Verbesserung von Augmented-Reality-Handbüchern, mit
-Hilfe von KI, um sie eines Tages in reelen Szenarien einsetzen zu
-können \cite{Niels2013}.
+Das Augmented-Reality-Handbuch ist ein digitales Handbuch, dass am DFKI
+(Deutsches Forschungszentrum für Künstliche Intelligenz) entwickelt wird und
+Anleitungen mit Hilfe eines Head-Mounted-Display (HUD) in das Blickfeld des
+Benutzers projiziert. Jeder Schritt wird dem Benutzer vorgezeigt bis dieser
+erfolgreich durchgeführt wird \cite{Niels2013}.
 
-Die Erstellung von Material, das so genannte \emph{Authoring}, für
-AR-Handbücher ist komplex und leidet unter hohen Zeit- und
-Geldaufwänden. Dieses Problem wird mit Hilfe des \emph{programming by
-demonstration Ansatzes} gelöst. Das Authoring-Tool kann eine einmal
-gesehene Video-Sequenz in einzelne Handlungsabläufe zerlegen und kann
-diese mit einem stochastischen Übergangsmodell kombinieren (vgl.
-Abbildung \ref{fig:ar-authoring}). Mit Hilfe einer auf der Brille
-integrierten Kamera wird die Durchführung der Aufgabe analysiert und
-auf dem HUD werden die nächsten durchzuführenden Schritte
-eingeblendet. Dieses System ist leichtgewichtig in dem Sinne, dass
-keine speziellen Marker benötigt werden und das Erlernen der
-durchzuführenden Schritte automatisch passiert. Die transparenten
-Einblendungen der zu durchführenden Schritte werden auch automatisch
-von der Software erstellt.
+Die Erstellung von Material, das so genannte \emph{Authoring}, für AR-Handbücher
+ist komplex und leidet unter hohen Zeit- und Geldaufwänden. In der Arbeit von
+\cite{Niels2013} wird dieses Problem wird mit Hilfe des \emph{programming by
+demonstration Ansatzes}, einer Technik aus dem Gebiet der künstlichen
+Intelligenz, gelöst.
 
-In Abbildung \ref{fig:ar-authoring} wird das Authoring gezeigt. Die
-einzelnen Handlungsabläufe werden aus der Video-Sequenz extrahiert und
-damit werden Klassifikatoren trainiert. Die Sequenz wird in Teile
-aufgespalten die Eigenschaften wie \emph{statisch, sich wiederholend,
-nicht wiederholend} haben. Die Einblendungen werden automatisch von der
-Software genriert und es besteht die Möglichkeit manuelle
-Annotierungen, wie Pfeile oder andere graphische Symbole, einzufügen. Die
-Automatischen Annotierungen werden synchron mit den Handlungen des
-Benutzers eingeblendet.
+Das Authoring-Tool kann eine einmal aufgenommene Video-Sequenz automatisch in
+einzelne Handlungsabläufe mit unterschiedlichen Merkmalen wie \emph{statisch,
+sich wiederholend, nicht wiederholend} zerlegen. Mit einem stochastischen
+Übergangsmodell werden die Handlungsabläufe wieder zueinander in verknüpfung
+gesetzt. Nach diesem Vorverarbeitungsschritt können mit dem Authoring-Tool (vgl.
+\ref{fig:ar-authoring}) neben den automatisch eingeblendeten Elementen auch
+manuelle Annotierungen, wie Pfeile oder andere graphische Symbole, eingefügt
+werden, um zusätzliche Informationen darzustellen.
+ 
+Mit Hilfe einer auf der Brille integrierten Kamera wird die Durchführung der
+Aufgabe überwacht und auf dem HUD werden die nächsten durchzuführenden Schritte
+synchron mit den Handlungen des Benutzers eingeblendet.
+Dieses System ist leichtgewichtig in dem Sinne, dass keine speziellen Marker
+benötigt werden und das Erlernen der durchzuführenden Schritte automatisch
+passiert. Die transparenten Einblendungen der zu durchführenden Schritte werden
+auch automatisch von der Software erstellt.
 
 Mit diesem Ansatz können Techniker Referenzabläufe aufnehmen um
 sicherzustellen, dass alle zukünftigen Aktivitäten in derselben Art
@@ -50,7 +43,8 @@ und Weise durchgeführt werden.
 \begin{figure}[htb]
   \centering
   \includegraphics[width=0.8\textwidth]{img/ar-authoring.png}
-  \caption{Authoring für das AR-Handbuch, aus
+  \caption{Authoring für das AR-Handbuch nach dem automatischen
+  Vorbearbeitungsschritt, aus
   \cite{Niels2013}}
   \label{fig:ar-authoring}
 \end{figure}
@@ -86,42 +80,63 @@ Durchführung.
 \end{figure}
 %% ==============
 
-Das AR System soll in Zunkunft auch auf Android Geräte laufen. Dies bedeutet,
+Das AR-Handbuch soll in Zunkunft auch auf Android Geräte laufen. Dies bedeutet,
 dass auch private Anwender, z.B. bei der Installation von Haushaltsgeräten,
 davon Gebrauch machen könnten.
 
 % =======
-\subsection{Second-sighted Glasses}
+\subsection{Second-Sighted Glasses}
 % =======
 
-Ein ähnlicher Ansatz, genannt Second-sighted Glasses, wird in
-\cite{Yone2011} vorgestellt. Hierbei handelt es sich um die
-Einblendung in das Sichtfeld des Nutzer von Varianten die er in der
-Interaktion mit verschiedenen Objekten haben kann. Das Ziel ist es dem
-Benutzer zu zeigen mit welchen Aktionen ein bestimmter Kontext erfüllt
-werden kann. Die Varianten, auch \emph{Futures} genannt, werden
+Ein ähnlicher Ansatz, genannt Second-Sighted Glasses, wird in \cite{Yone2011}
+vorgestellt. Hierbei handelt es sich um die visuelle Einblendung von
+Möglichkeiten die ein Nutzer in der Interaktion mit verschiedenen Objekten haben
+kann.
+Das Ziel ist es dem Benutzer zu zeigen mit welchen Aktionen ein bestimmter
+Kontext erfüllt werden kann. Die Varianten, auch \emph{Futures} genannt, werden
 abhängig vom Kontext in dem sich der Benutzer befindet angezeigt.
-Diese repräsentieren mögliche Abläufe die vom Kontextsensitiven
-Systemen definiert werden. Um den Objekten der Umgebung Intelligenz
-(Smartness) zu verleihen werden Sensoren oder Marker angebracht. Auch
-hier wird eine Assoziation zwischen den Sensoren der Realwelt und
-ihren Virtuellen Semantik erstellt. Diese Assoziationen können mit
-Hilfe einer Kamera erstellt werden. Da der Kontext eines Objektes
-schwer zu definieren ist wurde die Smart Object Event Modeling
-Language \cite{Yone2009} entwickelt. Diese erlaubt es trotz ihrer
-Einfachheit die Lesbarkeit, Portabilität, Expressivität und die
-Unabhängigkeit zwischen Modell und Zielobjekt zu wahren. Temporale
-folgen können so definiert werden um komplexe Abläufe darzustellen.
-Auch eine graphische Oberfläche für die Modellierung von SOEML wird
-angeboten.
+Diese repräsentieren mögliche Abläufe die vom Kontextsensitiven Systemen
+definiert werden. Um den Objekten der Umgebung Intelligenz (Smartness) zu
+verleihen werden Sensoren oder Marker angebracht. Es werden Assoziation zwischen
+den Sensoren der Realwelt und ihrer virtuellen Semantik erstellt. Da der Kontext
+eines Objektes schwer zu definieren ist wurde die Smart Object Event Modeling
+Language \cite{Yone2009} entwickelt. Diese erlaubt es trotz ihrer Einfachheit
+die Lesbarkeit, Portabilität, Expressivität und die Unabhängigkeit zwischen
+Modell und Zielobjekt zu wahren. Temporale folgen können so definiert werden um
+komplexe Abläufe darzustellen.
+
+[Bild SecSighGlasses?]
+
+%% SOEML
+%% Cum integrez nu prea stiu .. usable as task description language?
+% Install this before that? Wait ten seconds
+% Take some more shit from robotics?
+This paper proposes a smart object event modeling language. By attaching sensor nodes to 
+everyday objects, users can augment the objects digitally and apply the objects into various 
+services.  When  creating  such  smart  object  services,  users  should  define  events,  such  as 
+beverage of a cup turns cold or someone sits down on a chair, using physical values from 
+sensors. The  most common event definition for end-users  is simply describing threshold of 
+sensor values and boolean operation. When they want to define more complex events, such as 
+multiple people sit down on chairs or a user starts to study using a pen and a notebook, they 
+need to use a programming language. To define such complex event easily without complex 
+programming language, we present a new event description language called SOEML based 
+on  temporal  relation  among  simple  events.  We  also  provide  users  a  visual  interface  to 
+support users defining or reusing events
+ easily. [??REF]
+
+% Auch eine graphische Oberfläche für die Modellierung von SOEML wird angeboten.
 
 Die Autoren identifizieren bei diesem Ansatz die Notwendigkeit eine
-Benutzerstudie durchzuführen um zu klären ob die Benutzer die smarte
+Benutzerstudie durchzuführen, um zu klären ob die Benutzer die smarte
 Umgebung gut genug verstehen können und ob die Installation von den
-Entwicklern gut durchgeführt werden kann. Weitere Forschung muss noch
+Entwicklern gut durchgeführt werden kann.  Weitere Forschung muss noch
 betrieben werden um die Generierung von Animationen aus den
 Kontextdefinitionen zu erlauben und um die Zusammenarbeit mit anderen
 Kontextsensitiven Systemen zu erlauben.
+
+Der Unterschied bezüglich der Nutzergruppen des AR-Handbuchs und Second-Sighted
+Glasses ist, dass das AR-Handbuch auf die Installation und der Second-Sighted
+Glasses Ansatz auf die Benutzung einer Umgebung spezialisiert sind.
 
 AR-Technologien werden noch nicht in der breiten Masse angewendet. Es
 werden aber zunehmend vielverspechende Ansätze entwickelt. CastAR
@@ -133,3 +148,29 @@ schnell in den Nutzermarkt einsteigen und breite Anwendung zu finden.
 Die Vorteile dieser Ansätze sind die hohe Intuitivität und die
 Präzision der Aufgabenbeschreibung, da jeder Schritt dem Benutzer
 so Angezeigt wird wie er durchzuführen ist.
+
+
+%% ==================================================
+%% Authoring of a Mixed Reality Assembly Instructor for Hierarchical Structures
+
+%% Asta ar veni in addition to VR-Handbook
+
+Benutzen Marker und Authoring Tools um die Inhalte zu generieren.
+They argue that Mixed Reality allows a smooth combination of the real and the
+virtual world. Thereby, the user doesn't have to make a logical connection
+between the physical world and the virtual description of the instructions,
+which would greatly hinder him/her.
+They also mention a tablet PC may be used for MR.
+They proposed a State diagram of the Mixed Reality Assembly Instruction which
+ uses a stack. Elements are pushed on the stack if they are composed of other
+ elements. After the base elements have been found and assembled they are poped
+ from the stack.
+ When the user has to find an element a 2D user interface
+is used,
+ Our approach for this problem is to aug-
+ment reality with a small animation of the placement pro-
+cess.
+More detailed installlation instructions visually and via audio
+Hierarchicall component structure: Composed components, base components
+
+%% Vor candva sa aplice tehnica si pe masiniarii industriale. 

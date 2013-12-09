@@ -4,136 +4,141 @@
 \label{sec:assemblyRequired}
 %% ==============
 
-% =======
-\subsection{Eigenschaften einer Sensorinstallation}
-% =======
-
-Die Installation von Sensoren wird in \cite{Beckmann2004} als eine Aufgabe mit
-zwei Dimensionen betrachtet: Platzierung und Assoziation.
-Die Platzierung ist wichtig um den Sensorknoten zu erlauben die korrekte
-physikalische Größe mit ausreichender Qualität zu messen. Die Positionierung
-wird weiterhin in zwei Unterfaktoren aufgeteilt: \emph{Direktionalität} und
-\emph{Proximität}.
-Unter dem Direktionalitätsfaktor versteht man wie sensibel der Sensor auf
-Fehlern in seiner Ausrichtung reagiert. Eine Kamera ist zum Beispiel sehr darauf
-angewiesen, dass sie die richtige Szene aufnimmt, ein Mikrofon hingegen ist
-nicht so sensibel auf seine Ausrichtung. Der Proximitätsfaktor gibt an wie nahe
-der Sensor an sein Messziel angebracht werden muss.
-Die Assoziation bezieht sich auf die semantische verbindung zwischen dem
-Datenstrom eines Sensors und des gemessenen Objektes in der realen Welt. Eine
-Eins-zu-Eins Assoziation ist für Menschen die einfachste Variante und kann viel
-leichter nachvollzogen werden. Die Präzision einer Assoziation wird als Funktion
-der KnotenPlazierung und dessen zu messenden Subjekts beschrieben.
-Es wird betont, dass die Assoziation eines proximitäts Sensors leichter
-durchzuführen ist als die eines direktionalen Sensors. Außerdem ist auch das
-Beobachten von Objekten leichter als das Monitoring von Räumen weil die
-Reichtweite eines Sensors schwer einzugrenzen ist.
+Um Design-Prinzipien für die Verbesserung der Installation von ubiquitären
+Systemen zu erstellen, wurde in \cite{Beckmann2004} eine explorative Studie in
+15 Haushalten aus den Vereinigten Staaten durchgeführt. 
 
 % =======
 \subsection{Ablauf der Studie}
 % =======
 
-Die Studie wurde in 15 Haushalten aus den Vereinigten Staaten
-durchgeführt. Die Teilnehmer wurden als repräsentative Gruppe von
-einer Marktforschungsfirma ausgesucht und es wurde darauf geachtet,
-dass sich keine Experten unter den Teilnehmern befinden sollen. Als
-Entlohnung bekamen die Teilnehmer eine Geldsumme. Die Daten der
-Installationsdurchführung, die im Durchschnitt etwa 84 Minuten
-gedauert hat, wurden von zwei Mitarbeitern gesammelt. Diese haben mit
-Hilfe von Notizen und Fotos jeden Installationsversuch dokumentiert.
-Ein Fragebogen wurde von jedem Teilnehmer ausgefüllt.
+Die Teilnehmer der Studie wurden als repräsentative Gruppe für Endanwender von
+einer Marktforschungsfirma ausgesucht und es wurde darauf geachtet, dass sich
+keine Experten unter den Teilnehmern befinden. Als Entlohnung bekamen die
+Teilnehmer eine Geldsumme. Die Daten der Installationsdurchführung, die im
+Durchschnitt etwa 84 Minuten gedauert hat, wurden von zwei Mitarbeitern
+gesammelt. Diese haben mit Hilfe von Notizen und Fotos jeden
+Installationsversuch dokumentiert. Zu Ende der Studie musste von jedem
+Teilnehmer ein Fragebogen ausgefüllt werden.
 
 Der Ablauf einer Installation hatte vier Phasen: \emph{Einleitung,
 Erkundung, Installation der Sensoren und ein Interview}.
 In der Einleitung wurde eine Freigabeform und ein Fragebogen
 ausgeteilt (die Inhalte dieser Dokumente wurde nicht publiziert). Die
-Erkundungsphase diente um eine Übersicht des Konzepts hinter dem
+Erkundungsphase diente dazu, eine Übersicht des Konzepts hinter dem
 Ubicomp-System und dem Installationskit zu geben. In der
 Installationsphase wurden die Teilnehmer gebeten jeden der
 mitgelieferten Sensoren einzeln an ein Gerät oder in einem Raum
 aufzustellen. Die Evaluatoren haben während der Installationphase
-keine Fragen mehr über den Prozess beantwortet und haben versucht kein
+keine Fragen über den Prozess beantwortet und haben versucht kein
 Feedback über die Handlungen der Teilnehmer zu geben um die
 Resultate der Studie nicht zu verfälschen.
 
-Nach der Installationsphase wurde ein Interview durchgeführt. Die
-Fragen dienten dazu das Verstehen der Teilnehmer über die
-verschiedenen Installationsschritte und Komponenten des Systems zu
-erfassen und um die Probleme zu identifizieren würde das System einen
-Monat lang angebracht bleiben. Es wurde auch gefragt wie sie die
-Sensoren davon abbringen würden Daten zu sammeln.
+Nach der Installationsphase wurde ein Interview durchgeführt. Die Fragen dienten
+dazu das Verstehen der Teilnehmer über die verschiedenen Installationsschritte
+und Komponenten des Systems zu erfassen und um die Probleme einer
+längerfristigen Benutzung zu identifizieren. Die Teilnehmer wurden auch befragt
+ob sie wissen würden wie die Sensoren davon abgebracht werden können Daten zu
+sammeln.
 
 % =======
-\subsection{Aufbau des Kits}
+\subsection{Eigenschaften einer Sensorinstallation}
 % =======
 
-Das Kit wurde so konzipiert, dass die Installation keine komplexen Schritte, wie
-Änderungen an dem elektrischen Sicherungskasten, enthält. Der
-Inhalt des Kits ist wie folgender gewesen (siehe auch Abbildung
-\ref{fig:assembly-kit}):
-\begin{itemize}
+Die Autoren betrachten die Installation von Sensoren als eine Aufgabe mit zwei
+Dimensionen: \emph{Platzierung} und \emph{Assoziation}.
+Die \emph{Platzierung} ist wichtig, um dem Sensorknoten das Auslesen der
+physikalischen Größe mit ausreichender Qualität zu erlauben. Die Positionierung
+wird weiterhin in zwei Unterfaktoren aufgeteilt: \emph{Direktionalität} und
+\emph{Proximität}.
+Unter dem Direktionalitätsfaktor versteht man die Sensibilität eines Sensors auf
+Fehler in seiner Ausrichtung. Eine Kamera ist zum Beispiel stark darauf
+angewiesen, dass sie die richtige Szene aufnimmt. Ein Mikrofon hingegen ist
+nicht so sensibel auf seine Ausrichtung. Der Proximitätsfaktor gibt an wie nahe
+der Sensor an sein Messziel angebracht werden muss.
+Die \emph{Assoziation} bezieht sich auf die semantische Verbindung zwischen dem
+Datenstrom eines Sensors und des gemessenen Objektes in der realen Welt. Eine
+Eins-zu-Eins Assoziation ist für Menschen die einfachste Variante und kann viel
+leichter nachvollzogen werden. Die \emph{Präzision} einer Assoziation wird als
+Funktion der Knotenplatzierung und dessen zu messenden Subjekts beschrieben.
+Es wird betont, dass die Assoziation eines proximitäts Sensors leichter
+durchzuführen ist als die eines direktionalen Sensors. Das Beobachten von
+Objekten ist zudem leichter als das Beobachten von Räumen, weil die Reichweite
+eines Sensors schwer einzugrenzen ist.
+
+% =======
+\subsection{Umfang der Installation}
+% =======
+
+Das Installations-Kit des Ubicomp-Systems wurde so konzipiert, dass die
+Installation keine komplexen Schritte, wie Änderungen an dem elektrischen
+Sicherungskasten, enthält. Folgende Gegenstände waren bestandteil des
+Installations-Kits (siehe auch Abbildung \ref{fig:assembly-kit}):
+
+\begin{itemize}   
   \item Mock-Up-Sensoren (Vibration, Strom, Bild, Geräusch)
   \item Ein Katalog mit Gegenständen 
-  \item Ein kompakter Computer
-  \item PDA Gerät für Barcodes
-  \item Anweisungen der Version A,B und C (vgl. Tabelle \ref{tab:assembly_doku})
+  \item Ein kompakter Computer 
+  \item PDA mit einem Barcode-Lesegerät 
+  \item Anweisungen der Version A,B und C (vgl. Tabelle
+  \ref{tab:assembly_doku})
 \end{itemize}
 
-Ein Teil der mitgelieferten Sensoren wurden konzipiert um die
-Aktivität von Haushaltsgeräten zu messen (Vibration, Strom,
-Geräusche). Bewegungssensoren und Kameras wurden benutzt um die
+Ein Teil der mitgelieferten Sensoren wurden konzipiert, um die
+Aktivität von Haushaltsgeräten zu messen (Vibration, Stromverbrauch,
+Geräusche). Die Bewegungssensoren und Kameras wurden benutzt, um die
 Aktivität der Menschen und das elektrische Licht zu überwachen.
 Die Sensoren wurden je nach Typ Farbkodiert und es wurden nur 2
 Sensoren von jedem Typ, insgesamt 10, mitgeliefert. In Realität würde
 eine solche Ubicomp-Anwendung mehr als 50 Sensoren beinhalten. Nur die
-Platiezunrung und Assoziation der Sensoren wurde in betracht genommen.
-Zusammenarbeit oder Korrelation der Sensoren wurde nicht betrachtet,
+Platzierung und Assoziation der Sensoren wurde in betracht genommen.
+Die Zusammenarbeit oder Korrelation der Sensoren wurde nicht betrachtet,
 daher konnte die Installation jedes einzelnen Sensors unabhängig
 betrachtet werden.
 
 \begin{figure}[htb]
   \centering
   \includegraphics[width=0.8\textwidth]{img/assembly-kit.png}
-  \caption{Das Kit für die Installation mit Sensoren,
-  Klebematerial, einem PDA und Gegenstandskatalog und der
+  \caption{Das Kit der Sensorinstallation mit Sensoren,
+  Klebematerial, einem PDA, dem Gegenstandskatalog und der
   Dokumentation}
   \label{fig:assembly-kit}
 \end{figure}
 
-Der Katalog mit Gegenständen enthielt Barcodes für alle möglichen
-Gerätetypen die in einem Haushalt auftreten können, wie z.B.
-Kühlschränke oder Waschmaschienen. Dieser Katalog in Zusammenhang mit
-den Barcodes auf den Sensoren und dem Barcodereader wurden benutzt um
-die Assoziation zwischen den Sensoren und ihren Subjekten
-durchzuführen. Der kompakte Computer sollte Daten von den
-Wireless-Sensoren auslesen. Die einzige Interaktion die der Nutzer mit
-dem Computer hatte war es ihn mit Strom zu versorgen.\\
-Ein Scanner und gedruckte Anweisungen wurden den Nutzern überreicht um
-sie durch den Installationsprozess zu führen. Es wurden verschiedene
-Anweisungen ausgeteilt um zu vermeiden, dass die Studie die Qualität
-der Nutzeranleitung bewertet. Das Ziel der Studie war es die
-Sensorinstallation zu betrachten. In Tabelle \ref{tab:assembly_doku}
-werden die Unterschiede zwischen den Dokumentationstypen aufgezeigt.
-Die Namen der Sensoren in Dokumentation A und B waren gleich
-(\emph{Strom, Vibration, Bewegung, Bild, Geräusch}). In version C der
-Dokumentation wurden nur Farben benutzt um zwischen den Sensoren zu
-unterscheiden. Alle Sensoren mussten mit Hilfe des PDAs assoziiert
-werden in dem der Sensor und das zu messende Objekt aus dem Katalog
-eingescannt wurden. Eine richtige Installation wurde nach den
-Positionierungs- und Assoziationsfaktoren bewertet. Es wird erwähnt,
-dass es keine statistisch signifikanten Unterschiede, zwischen dem
-Erfolg der Installation im Zusammenhang mit den verschiedenen
-Dokumentationen, gab. Von den 5 Nutzern mit Dokumentation C haben sich
-3 solche Informationen aber gewünscht. Abbildung
-\ref{fig:assembly-doku_c} zeigt einen Ausschnitt aus Dokumentation C.
-Man bemerkt, dass die Dokumentation sehr wenig Informationen enthält
-und auch die Sensoren werden nach ihren Farben benannt.
+Der Katalog mit Gegenständen enthält Barcodes für alle möglichen Gerätetypen die
+in einem Haushalt auftreten können, wie z.B.
+Kühlschränke oder Waschmaschienen. Dieser Katalog in Zusammenhang mit den
+Barcodes auf den Sensoren und dem Barcode-Lesegerät wurden benutzt, um die
+Assoziation zwischen den Sensoren und ihren Subjekten durchzuführen. Der
+kompakte Server sollte Daten von den Wireless-Sensoren auslesen. Die einzige
+Interaktion die der Nutzer mit dem Server hatte war es ihn mit Strom zu
+versorgen.\\
+Ein Scanner und gedruckte Anweisungen wurden den Nutzern überreicht, um sie
+durch den Installationsprozess zu führen. Es wurden verschiedene Anweisungen
+ausgeteilt um zu vermeiden, dass die Studie die Qualität der Nutzeranleitung
+bewertet. Das Ziel der Studie war es die Sensorinstallation zu betrachten. In
+Tabelle \ref{tab:assembly_doku} werden die Unterschiede zwischen den
+Dokumentationstypen aufgezeigt.
+Die Namen die den Sensoren in Dokumentation A und B verliehen wurden, haben die
+gemessene Größe repräsentiert (\emph{Strom, Vibration, Bewegung, Bild,
+Geräusch}).
+In version C der Dokumentation wurden nur Farben benutzt, um zwischen den
+Sensoren zu unterscheiden. Alle Sensoren mussten mit Hilfe des PDAs assoziiert
+werden, in dem der Sensor und das zu messende Objekt aus dem Katalog eingescannt
+wurden. Eine richtige Installation wurde nach den Positionierungs- und
+Assoziationsfaktoren bewertet. Es wird erwähnt, dass es keine statistisch
+signifikanten Unterschiede, zwischen dem Erfolg der Installation im Zusammenhang
+mit den verschiedenen Dokumentationen, gab. Drei von fünf Nutzern mit
+Dokumentation C haben sich solche Informationen aber gewünscht.
+Abbildung \ref{fig:assembly-doku_c} zeigt einen Ausschnitt aus Dokumentation C.
+Man bemerkt, dass die Dokumentation sehr wenig Informationen enthält und auch
+die Sensoren nur nach ihren Farben unterscheidet.
 
 \begin{figure}[htb]
   \centering
   \includegraphics[width=0.8\textwidth]{img/assembly-doku_c.png}
   \caption{Ausschnitte aus der Dokumentation C, die auf dem PDA
-  angezeigt werden}
+  angezeigt werden \cite{Beckmann2004}}
   \label{fig:assembly-doku_c}
 \end{figure}
 
@@ -149,7 +154,7 @@ und auch die Sensoren werden nach ihren Farben benannt.
     %heading end
 	Installationsanleitung & \checkmark & \checkmark & \checkmark \\
 	[1ex] 
-	Gesammelte Daten & \checkmark & \checkmark & x \\ [1ex]
+	Gesammelte Sensordaten & \checkmark & \checkmark & x \\ [1ex]
 	Funktion der Sensoren & \checkmark & x & x \\ [1ex] 
     \hline
   \end{tabular}
@@ -163,28 +168,29 @@ und auch die Sensoren werden nach ihren Farben benannt.
 Die Resultate der Evaluierung werden im Folgenden
 zusammengefasst.
 
-Von den 150 Sensorinstallationsaufgaben (15 Teilnehmer x 10 Sensoren)
-wurden 112 (75\%) erfolgreich durchgeführt. Nur 5 Teilnehmer (30\%)
-haben alle Aufgaben korrekt durchgeführt. Das Einlesen mit dem
-Barcode-Scanner wurde von 13 aus 15 (86\%) Teilnehmern korrekt
-durchgeführt. Zwei der fünfzehn Teilnehmer konnten keine der Aufgaben
-erfüllen und haben auch die Assoziation mit Hilfe des Barcodes nicht
-verstanden. Dieselben konnten weder den Anweisungen auf dem PDA
-folgen, noch wussten sie wie die Sensoren zu deaktivieren sind. Nur 5
-aus den 10 Teilnehmern, die Beschreibungen der von den Sensoren
-aufgenommenen Daten erhalten haben (Dokumentation A und B), konnten
-den konkreten Anwendugsfall der Sensoren nennen. Der am meisten
-fehlerhaft installierte Sensor war der Geräuschsensor, mit 67\%
-Erfolgsrate, gefolgt von dem Bildsensor, mit 70\% Erfolgsrate. Im
-Vergleich dazu wurde der Stromsensor (ein Steckdosenaufsatz) in 87\%
-der Fälle erfolgreich installiert (korrekte Assoziation 87\% und
-korrekte Platzierung 93\%). 8 von den 15 Teilnehmern (53\%) haben
-wenigstens einen, aber nicht alle Sensoren korrekt installiert.
-Vier der neun fehlerhaften Bildsensorinstallationen folgten aus dem
-Übersehen oder nicht folgen der Ausrichtungsanweisungen.
-Mit Hilfe der Information über die Sensoren konnte ein Nutzer einen
-Sensor erfolgreich an seinen nicht standardkonformen Kühlschrank
-anbringen.
+Von den 150 Sensorinstallationsaufgaben (15 Teilnehmer x 10 Sensoren) wurden 112
+(75\%) erfolgreich durchgeführt. Nur 5 Teilnehmer (30\%) haben alle Aufgaben
+korrekt durchgeführt. Das Einlesen mit dem Barcode-Scanner wurde von 13 aus 15
+(86\%) Teilnehmern korrekt durchgeführt. 2 der 15 Teilnehmer konnten keine der
+Aufgaben erfüllen und haben auch die Assoziation mit Hilfe des Barcodes nicht
+verstanden. Dieselben konnten weder den Anweisungen auf dem PDA folgen, noch
+wussten sie wie die Sensoren zu deaktivieren sind. Nur 5 aus den 10 Teilnehmern
+(50\%), die Beschreibungen der von den Sensoren aufgenommenen Daten erhalten
+haben (Dokumentation A und B), konnten den konkreten Anwendugsfall der Sensoren
+nennen. Der am meisten fehlerhaft installierte Sensor war der Geräuschsensor,
+mit 67\% Erfolgsrate, gefolgt von dem Bildsensor, mit 70\% Erfolgsrate. 4 der 9
+fehlerhaften Bildsensorinstallationen folgten aus dem Übersehen oder nicht
+folgen der Ausrichtungsanweisungen. Die Autoren motivieren die schlechten
+Erfolgsraten mit dem Problem der Anwendung von bekannten Technologien in
+ungewohnten Situationen.
+Im Vergleich dazu wurde der Stromsensor (ein Steckdosenaufsatz) in 87\% der
+Fälle erfolgreich installiert (korrekte Assoziation 87\% und korrekte
+Platzierung 93\%). 8 von den 15 Teilnehmern (53\%) haben wenigstens einen, aber
+nicht alle Sensoren korrekt installiert.
+
+Neben den dokumentierten Installationen konnte ein Nutzer, mit Hilfe
+der zusätzlichen Sensorinformationen, einen Sensor erfolgreich an seinen nicht
+standardkonformen Kühlschrank anbringen.
 
 Obwohl vor der Studie alle Teilnehmer über die Datenerfassung
 unterrichtet wurden und der Aspekt, dass die Daten das Haus nicht
@@ -197,19 +203,19 @@ Sensoren kommen könnten.
 
 
 % =======
-\subsection{Design Prinzipien}
+\subsection{Design-Prinzipien}
 % =======
 
-Im folgenden werden die 5 in \cite{Beckmann2004} erhobenen
-Design-Prinzipien für die Endnutzerinstallation von Sensoren
-aufgeführt und erläutert. Die ersten zwei Prinzipien lehnen sich an
-traditionelle Prinzipien aus der Mensch-Maschine-Interaktion. Die
-letzten drei sind Erkenntnisse die aus der Studie gewonnen wurden.
+Im folgenden werden die 5 in \cite{Beckmann2004} erhobenen Design-Prinzipien für
+die Endnutzerinstallation von Sensoren aufgeführt und erläutert. Die ersten zwei
+Prinzipien lehnen sich an traditionelle Prinzipien aus der
+Mensch-Maschine-Interaktion und wurden auch durch die Studie bestätigt.
+Die letzten drei sind Erkenntnisse die nur aus der Studie gewonnen wurden.
 \begin{enumerate}
-  \item \textbf{Das Konzeptuelle Modell des Benutzer bei bekannten
+  \item \textbf{Das konzeptuelle Modell des Benutzer bei bekannten
   Technologien angemessen nutzen}\\ Sensortypen deren Funktionalität
   ähnlich ist wie in anderen Anwendungsszenarien können die Benutzer
-  beim Verständnis unterstützen, da die Konzeptuellen Modelle der
+  beim Verständnis unterstützen, da die konzeptuellen Modelle der
   Nutzer nicht mehr redefiniert werden müssen. Man muss aber darauf
   achten, dass vertraute Technologie nicht anders angewendet wird als
   im Normalfall. Falls dies dennoch auftritt, kann der Sensor sowohl
@@ -217,59 +223,211 @@ letzten drei sind Erkenntnisse die aus der Studie gewonnen wurden.
   \item \textbf{Nutzbarkeit der Installation mit den häuslichen
   Anliegen im Gleichgewicht halten} \\
   Designer und Anwender müssen Faktoren der Ästhetik und der Umgebung
-  unter Betracht nehmen. Wenn Benutzer aus pragmatischen Gründen die
+  in Betracht nehmen. Wenn Benutzer aus pragmatischen Gründen die
   Installation nicht durchführen wollen, können Technische Aspekte
   leicht in den Hintergrund treten. Ein System, dass die
   Privatsphäre oder das Eigentum des Besitzers verletzt kann genauso
-  in der Box liegen gelassen werden wie ein System, das schwer zu
+  in der Verpackung stehen gelassen werden wie ein System, das schwer zu
   installieren ist.
   \item \textbf{Die Anwendung von Kameras, Mikrophonen und
   hochdirektionalen Sensoren vermeiden}\\
-  Nicht nur die Sensitiven Daten die solche Sensoren aufnehmen können
+  Nicht nur die Sensitiven Daten die solche Sensoren aufnehmen können,
   sondern auch die verschiedenen Installationsmöglichkeiten in
   Verbindung mit unterschiedlichen Layouts der Wohnungen können diese
   Art von Sensoren problematisch machen.
-  \item \textbf{Inkorrekte Installationnen sollten erkannt werden
+  \item \textbf{Inkorrekte Installationen sollten erkannt werden
    und auch Teilinstalltionen sollten einen Mehrwert bieten}
    \\
    Endnutzer wollen vielleicht einige Senoren, die zum Beispiel sensivite Daten
-   aufnehemen könnten, nicht installieren, obwohl sie einen Mehrwert in der
-   ganzen Ubicomp-Anwendung sehen. Kann die Anwendung eine Teilinstalltion
-   entdecken und erlauben so kann trotzdem ein Mehrwert geboten werden. 
-  \item \textbf{Den Nutzer über die Datensammlung, -speicherung und
-  -übertragung unterrichten} \\
-  Benutzer die wissen was für Daten die Sensoren aufnehmen und wie
-  diese Daten benutzt werden können mit Problemen bei der Installation
-  besser umgehen. Für die Akzeptanz der Anwendung ist es kritisch, dem
-  Benutzer zu erklären wie die Daten benutzt werden und ob diese das
+   aufnehemen können, nicht installieren, obwohl sie einen Mehrwert in der
+   ganzen Ubicomp-Anwendung sehen. Kann die Anwendung eine Teilinstallation
+   entdecken und erlauben, so kann trotzdem ein Mehrwert geboten werden. 
+  \item \textbf{Der Nutzer sollte über die Datensammlung, -speicherung und
+  -übertragung unterrichtet werden} \\
+  Benutzer, die über die aufgenommenen Daten und deren Benutzung informiert
+  sind, können mit Problemen bei der Installation besser umgehen. Für die
+  Akzeptanz der Anwendung ist es kritisch, dem Benutzer zu erklären wie die Daten benutzt werden und ob diese das
   Haus verlassen.
 \end{enumerate}
-Die Autoren erläutern auch weiter Aspekte die eine solche
-Anwendung in ihrer Akzeptanz und Installation unterstützen könnte. Für
-die Erkennung einer Fehlinstalltion könnten Daten, die die
-Sensoren produzieren, analysiert werden um festzustellen ob der Sensor
-keine Daten oder stark korrelierte Daten mit einem anderen Sensor
-liefert. Dies kann geschehen wenn der Sensor falsch gerichtet ist
-oder die Abstände bei der physischen Platzierung eine
-ungewünschte Messung anderer Phänomene erlauben. Die Anwendung sollte
-daher ein Model der sinnvollen Daten enthalten und entweder falsch angebrachte Sensoren
-ignorieren oder den Nutzer darauf aufmerksam machen und ihn bei der
-Fehlerbehebung unterstützen. Real-Time-Feedback der Sensoren kann das
-Konzeputelle Modell des Nutzers verbessern und damit auch
-die Installation.
 
-Die Einsatzgebiete die von einer Endnutzerinstallation profitieren
-könnten wären zum Beispiel Anwendung für die Unterstütztung von
-älteren Personen. Das System könnte von dem Pfleger, der weiß was für
-spezielle Bedürfnisse seine Patienten haben, installiert werden.
-Auch Heim-Automatisierungssysteme würden durch die geringeren
-Anschaffungskosten erschwinglicher werden. Auch Feldstudien die
-normalerweise technisches Personal für die Inbetriebnahme des Systems
-benötigt werden könnten leichter und konstengünstiger aufgesetzt
-werden. Die Endnutzerinstallation gibt den Nutzern auch das Gefühl
-mehr Kontrolle über die Anwendung zu haben.
+Die Autoren erläutern auch weiter Aspekte die eine Ubicomp-Anwendung in ihrer
+Akzeptanz und Installation unterstützen könnte. Für die Erkennung einer
+Fehlinstalltion könnten Daten, die die Sensoren produzieren, analysiert werden,
+um festzustellen ob der Sensor keine Daten oder stark korrelierte Daten mit
+einem anderen Sensor liefert. Dies kann geschehen wenn der Sensor falsch
+gerichtet ist oder die Abstände bei der physischen Platzierung eine ungewünschte
+Messung anderer Phänomene erlauben. Die Anwendung sollte daher ein Modell der
+sinnvollen Daten enthalten und entweder falsch angebrachte Sensoren ignorieren
+oder den Nutzer darauf aufmerksam machen und ihn bei der Fehlerbehebung
+unterstützen. Real-Time-Feedback der Sensoren kann das Konzeputelle Modell des
+Nutzers verbessern und damit auch die Installation.
+
+Die Einsatzgebiete, die von einer Endnutzerinstallation profitieren könnten,
+wären Anwendungen für die Unterstütztung von älteren Personen. Das System
+könnte von dem Pfleger, der die speziellen Bedürfnisse seiner Patienten kennt,
+installiert werden.
+Auch Heim-Automatisierungssysteme würden durch die geringeren Anschaffungskosten
+erschwinglicher werden. Feldstudien, die normalerweise technisches Personal
+für die Inbetriebnahme des Systems benötigen, könnten leichter und
+konstengünstiger aufgesetzt werden. Die Endnutzerinstallation gibt den Nutzern
+auch das Gefühl einer größeren Kontrolle über die Anwendung.
 
 Die Autoren unterstreichen die Notwendigkeit einer sorgfältigen
 Dokumentation der Speicherung, Nutzung und Auswertung der gesammelten
-Daten. Auch wie dieser Prozess von den Nutzern kontrolliert werden
-kann sollte Teil der Dokumentation sein.
+Daten. Auch wie die Kontrolle dieses Prozesses durch die Nutzer sollte Teil der
+Dokumentation sein.
+
+% =======
+\subsection{Weiter Einflußfaktoren bei einer Installtion}
+% =======
+
+%% Asta intra la verschiedene Ansätze
+%% Sinteza introducere
+% \cite{Antifakos2002} Proactive Instructions for Furniture Assembly (IKEA)
+
+%% Abstract
+% Tennenhouse [1] coined the term proactive computing where humans get out of the
+% interaction loop and may be serviced specifically according to their needs and
+% current situation. In this paper we propose a framework for proactive guidance
+% which aims to overcome limitations of today's printed instructions. By
+% attaching computing devices and multi- ple sensors onto different parts of the
+% assembly the system can recognize the actions of the user and determine the
+% current state of the assembly. The system can suggest the next most
+% appropriate action at any point in time. In an experimental case study with
+% the IKEA PAX wardrobe we show the feasibility of the proposed approach. At the
+% end important issues are discussed and future directions are outlined. 
+
+Es ist wichtig den Benutzeren eine deren Erfahrungsstufe geignete Anleitung zur
+verfügung zu stellen, die den Status, in den sich die Installation befindet,
+reflektiert.
+
+Zwei Felder in denen der Benutzer von besseren Anleitungen profitieren kann,
+werden von den Autoren identifiziert:
+\begin{enumerate}
+  \item Das weite Feld der Selbstmontage und -konfiguration aus dem
+  'Do-It-Yourself'-Verbrauchermarkt
+  \item Das Feld der Anwendungen wo, das erreichen eines bestimmten Zustandes
+  ist aus Sicherheitsgründen kritisch.
+\end{enumerate}
+
+Das wichtige bei einer Anleitung ist es, so erklären die Autoren, den
+gewünschten Zustand zu erreichen und nicht eine bestimmte Reihenfolge der
+Schritte zu beachten. Diese Aussage stimmt auch mit der in \cite{Beckmann2004}
+gemachten Beobachtung, dass ein gutes konzeputuelles Modell, dem Benutzer
+ermöglichen kann bestimmte Zustände des Systems ohne die Befolgung einer
+Anweisung zu erreichen.
+
+Die Anleitungen die heutzutage in Gebrauch sind, präsentieren dem Nutzer nur
+einen eingeschränkten Lösungsraum, können einen kognitiven Overhead erzeugen und
+sind nicht an die individuellen Fähigkeiten und Erfahrungen der Benutzer
+angepasst.
+
+Es werden drei Aspekte identifiziert die bei der Unterstützung der
+Installationsaufgabe einen mehrwert bieten können. Erstens Die Anleitungen
+sollen den Nutzer nicht eingrenzen eine bestimmte Folge von Schritten
+auszuführen, falls es andere Varianten gibt die für den Nutzer angenehmer sind.
+Zweitens, die kognitive Anstrengung die durch die konstante Relation zwischen
+virtueller(im Handbuch beschriebener) Welt und reeler Welt kann kontraproduktiv
+sein. Drittens, verschiedene Skills und Expertise der Nutzer verlangen
+unterschiedliche Arten der Interaktion und Intervention um eine geignete
+Unterstützung zu bieten.
+
+Es werden Nutzungsmodelle vorgestellt um diese Aspekte/Probleme zu adressieren. 
+%% Sa descrii metodica
+
+Die von den Autoren herauskristallisierten Nutzungsmodelle werden im Folgenden beschrieben.
+Der 'Full-walk-through' richtet sich an Anfänger, die wenig Erfahrung und wenig
+Wissen über die zu erfüllende Aufgabe besitzen. Das Anleitungssystem liefert
+dieser Gruppe volle Unterstützung bei allen durchzuführenden Schritten. Die
+'Assistance-on-demand' richtet sich an Benutzer deren Wissenstand höher als der
+eines Anfängers ist, aber dennoch kleiner als den eines Experten. Diese Gruppe
+bevorzugt es eine Installation ohne Anleitung zu starten und bestimmen die
+Reihenfolge der durchzuführenden Schritte selber. Diese Benutzer sind sich aber
+bewusst, dass sie jederzeit auf die Anleitung zurückgreifen können. Der
+'Rescue-from-Trap' Gruppe gehören Domänenexperten an, die nur selten eine
+Anleitung ru rate ziehen. Bei dieser Gruppe muss aber das System darauf achten,
+dass wichtige Sicherheitsregeln beachtet und der Nutzer bei deren gefährdung
+gewarnt wird.
+
+% Full-walk-through is tailored to beginners. Beginners have very limited
+% experience and knowledge about the task. The system therefore provides full
+% guidance through the entire sequence of actions to perform.
+% Assistance-on-demand is introduced for users who are neither beginners
+% nor experts. They have some expertise and prefer to start without any instruc-
+% tions. They choose their preferred order of performing actions but they know
+% that they have the possibility to inquire instructions at any point.
+% Rescue-from-trap is designed for users who actually know how to solve a
+% certain task. They are experts and do not want to be annoyed with any guidance
+% at all. The only time the system may intervene is if the user violates important
+% safety rules. The user also has the possibility to ask for assistance, if he feels he
+% cannot proceed on his own.
+
+% With these three different usage modes we want to empower the user
+% to choose the way of interaction with our system that suits him best.
+
+Um die verschiedenen .. der Unterstützung und strukturierung der anpassbaren
+Anleitung, wurde der IKEA PAX Kleiderschrank ausgesucht, weil 
+
+Der in der Aufbauanleitung identifizierte Schwachpunkt war der Bruch zwischen
+den reelen Welt und der graphischen Skizze in der Anleitung und der lineare
+Ablauf der Anleitung.
+
+% The IKEA PAX was chosen, a simple, multi-purpose Wardrobe with a low number of
+% parts and needed tools for the assembly. The hindering aspects identified in the
+% IKEA instructions was the linear sequence of operations and the connection
+% betweeen the physical world and the virtual domain of the instructions.	
+
+% Die IKEA Anleitung besteht aus 6 Bildern die in Reihenfolge die
+% Assembly-Schritte beschreiben, in denen die Teile und Aktionen dargestellt
+% werden. Menschliche Akteure werden auf der Anleitung auch Dargestellt um
+% die Abbildung des virtuellen Assembly-Raums auf die physische Welt zu
+% erleichtern. Außer der Nummerierung gibt es keinen Text auf der Anleitung.
+
+Ein voller Plan der möglichen Assembly-Zustände wurde erstellt und dead-ends
+identifiziert. Die Anzahl an möglichen Schritten ist in dem Beispiel um Faktor
+10 größer als in der IKEA Answeisung vorgestellt.
+
+%% Chestia asta poate fi combinata 
+%% imi trebe oare detalii despre senzori and shit?
+
+%% Au astia un medium prin care sa ghideze useru? Sau numa se strang date? ->
+% Numa se strang date si se identifica actiuni 
+% sa pui la inceput asta oare ?
+
+Installationsdaten: Aus den Experimenten geht hervor, dass die Teilschritte
+leicht identifiziert werden können, Unstimmigkeiten können während der Interpretation
+trotzdem auftreten. Die Qualität der identifizierung, hängt auch von der
+Qualität, Typ und Anzahl der Sensoren ab.
+
+%Perceiving user actions with sensors
+%zici cam ce tipuri de senzori o folosit baietii
+ 
+Verwendete Sensoren waren Accelerometer und Kraftmesser, sowie ein Gyroskop auf
+dem Schraubenzieher. Als alternative Sensoren wurden \emph{Accelerometer auf dem
+Hammer} oder \emph{Kontaktsensoren auf den Nägeln} identifiziert, sowie
+\emph{Distanzsensoren} um die Distanz zwischen den Seintenplatten zu messen.
+
+Grobe Schritte wie "Seitenwand vorbereiten" wurden in Teilschritte aufgeteilt:
+"2 schrauben einschrauben", "1 Dübel einschrauben"
+
+
+%Detecting Partial Actions
+Die Erkennung der Teilschritte
+
+Durch das Ausschlagen der Sensoren an bestimmten stellen
+%Detecting complete Actions
+
+%Conclusion
+With the IKEA example we showed that it is possible to determine which
+actions the user has completed.
+We envision several
+possibilities such as the parts of the furniture giving notice of themselves at the
+right moment (lights flashing, beeping)
+ PDA
+or wearable computer the user carries on him as presented in [10-12], which we
+would rather want to avoid.
+ The main restriction is that we assume we can fully model the task
+at hand (closed world assumption)
+
+
+

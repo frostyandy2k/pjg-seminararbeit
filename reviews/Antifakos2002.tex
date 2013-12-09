@@ -1,0 +1,319 @@
+% % installation.tex %
+
+
+%%=============================================================
+%% IKEA
+
+%% ==============
+\section{Proactive Instructions for Furniture Assembly}
+\label{ch:}
+%% ==============
+
+%% Asta intra la verschiedene Ansätze
+%% Sinteza introducere
+\cite{Antifakos2002}
+
+%% Abstract
+% Tennenhouse [1] coined the term proactive computing where humans get out of the
+% interaction loop and may be serviced specifically according to their needs and
+% current situation. In this paper we propose a framework for proactive guidance
+% which aims to overcome limitations of today's printed instructions. By
+% attaching computing devices and multi- ple sensors onto different parts of the
+% assembly the system can recognize the actions of the user and determine the
+% current state of the assembly. The system can suggest the next most
+% appropriate action at any point in time. In an experimental case study with
+% the IKEA PAX wardrobe we show the feasibility of the proposed approach. At the
+% end important issues are discussed and future directions are outlined. 
+
+Es ist wichtig den Benutzeren eine deren Erfahrungsstufe geignete Anleitung zur
+verfügung zu stellen, die den Status, in den sich die Installation befindet,
+reflektiert.
+
+Zwei Felder in denen der Benutzer von besseren Anleitungen profitieren kann,
+werden von den Autoren identifiziert:
+\begin{enumerate}
+  \item Das weite Feld der Selbstmontage und -konfiguration aus dem
+  'Do-It-Yourself'-Verbrauchermarkt
+  \item Das Feld der Anwendungen wo, das erreichen eines bestimmten Zustandes
+  ist aus Sicherheitsgründen kritisch.
+\end{enumerate}
+
+Das wichtige bei einer Anleitung ist es, so erklären die Autoren, den
+gewünschten Zustand zu erreichen und nicht eine bestimmte Reihenfolge der
+Schritte zu beachten. Diese Aussage stimmt auch mit der in \cite{Beckmann2004}
+gemachten Beobachtung, dass ein gutes konzeputuelles Modell, dem Benutzer
+ermöglichen kann bestimmte Zustände des Systems ohne die Befolgung einer
+Anweisung zu erreichen.
+
+Die Anleitungen die heutzutage in Gebrauch sind, präsentieren dem Nutzer nur
+einen eingeschränkten Lösungsraum, können einen kognitiven Overhead erzeugen und
+sind nicht an die individuellen Fähigkeiten und Erfahrungen der Benutzer
+angepasst.
+
+Es werden drei Aspekte identifiziert die bei der Unterstützung der
+Installationsaufgabe einen mehrwert bieten können. Erstens Die Anleitungen
+sollen den Nutzer nicht eingrenzen eine bestimmte Folge von Schritten
+auszuführen, falls es andere Varianten gibt die für den Nutzer angenehmer sind.
+Zweitens, die kognitive Anstrengung die durch die konstante Relation zwischen
+virtueller(im Handbuch beschriebener) Welt und reeler Welt kann kontraproduktiv
+sein. Drittens, verschiedene Skills und Expertise der Nutzer verlangen
+unterschiedliche Arten der Interaktion und Intervention um eine geignete
+Unterstützung zu bieten.
+
+Es werden Nutzungsmodelle vorgestellt um diese Aspekte/Probleme zu adressieren. 
+%% Sa descrii metodica
+
+Die von den Autoren herauskristallisierten Nutzungsmodelle werden im Folgenden beschrieben.
+Der 'Full-walk-through' richtet sich an Anfänger, die wenig Erfahrung und wenig
+Wissen über die zu erfüllende Aufgabe besitzen. Das Anleitungssystem liefert
+dieser Gruppe volle Unterstützung bei allen durchzuführenden Schritten. Die
+'Assistance-on-demand' richtet sich an Benutzer deren Wissenstand höher als der
+eines Anfängers ist, aber dennoch kleiner als den eines Experten. Diese Gruppe
+bevorzugt es eine Installation ohne Anleitung zu starten und bestimmen die
+Reihenfolge der durchzuführenden Schritte selber. Diese Benutzer sind sich aber
+bewusst, dass sie jederzeit auf die Anleitung zurückgreifen können. Der
+'Rescue-from-Trap' Gruppe gehören Domänenexperten an, die nur selten eine
+Anleitung ru rate ziehen. Bei dieser Gruppe muss aber das System darauf achten,
+dass wichtige Sicherheitsregeln beachtet und der Nutzer bei deren gefährdung
+gewarnt wird.
+
+% Full-walk-through is tailored to beginners. Beginners have very limited
+% experience and knowledge about the task. The system therefore provides full
+% guidance through the entire sequence of actions to perform.
+% Assistance-on-demand is introduced for users who are neither beginners
+% nor experts. They have some expertise and prefer to start without any instruc-
+% tions. They choose their preferred order of performing actions but they know
+% that they have the possibility to inquire instructions at any point.
+% Rescue-from-trap is designed for users who actually know how to solve a
+% certain task. They are experts and do not want to be annoyed with any guidance
+% at all. The only time the system may intervene is if the user violates important
+% safety rules. The user also has the possibility to ask for assistance, if he feels he
+% cannot proceed on his own.
+
+% With these three different usage modes we want to empower the user
+% to choose the way of interaction with our system that suits him best.
+
+Um die verschiedenen .. der Unterstützung und strukturierung der anpassbaren
+Anleitung, wurde der IKEA PAX Kleiderschrank ausgesucht, weil 
+
+Der in der Aufbauanleitung identifizierte Schwachpunkt war der Bruch zwischen
+den reelen Welt und der graphischen Skizze in der Anleitung und der lineare
+Ablauf der Anleitung.
+
+% The IKEA PAX was chosen, a simple, multi-purpose Wardrobe with a low number of
+% parts and needed tools for the assembly. The hindering aspects identified in the
+% IKEA instructions was the linear sequence of operations and the connection
+% betweeen the physical world and the virtual domain of the instructions.	
+
+% Die IKEA Anleitung besteht aus 6 Bildern die in Reihenfolge die
+% Assembly-Schritte beschreiben, in denen die Teile und Aktionen dargestellt
+% werden. Menschliche Akteure werden auf der Anleitung auch Dargestellt um
+% die Abbildung des virtuellen Assembly-Raums auf die physische Welt zu
+% erleichtern. Außer der Nummerierung gibt es keinen Text auf der Anleitung.
+
+Ein voller Plan der möglichen Assembly-Zustände wurde erstellt und dead-ends
+identifiziert. Die Anzahl an möglichen Schritten ist in dem Beispiel um Faktor
+10 größer als in der IKEA Answeisung vorgestellt.
+
+%% Chestia asta poate fi combinata 
+%% imi trebe oare detalii despre senzori and shit?
+
+%% Au astia un medium prin care sa ghideze useru? Sau numa se strang date? ->
+% Numa se strang date si se identifica actiuni 
+% sa pui la inceput asta oare ?
+
+Installationsdaten: Aus den Experimenten geht hervor, dass die Teilschritte
+leicht identifiziert werden können, Unstimmigkeiten können während der Interpretation
+trotzdem auftreten. Die Qualität der identifizierung, hängt auch von der
+Qualität, Typ und Anzahl der Sensoren ab.
+
+%Perceiving user actions with sensors
+%zici cam ce tipuri de senzori o folosit baietii
+ 
+Verwendete Sensoren waren Accelerometer und Kraftmesser, sowie ein Gyroskop auf
+dem Schraubenzieher. Als alternative Sensoren wurden \emph{Accelerometer auf dem
+Hammer} oder \emph{Kontaktsensoren auf den Nägeln} identifiziert, sowie
+\emph{Distanzsensoren} um die Distanz zwischen den Seintenplatten zu messen.
+
+Grobe Schritte wie "Seitenwand vorbereiten" wurden in Teilschritte aufgeteilt:
+"2 schrauben einschrauben", "1 Dübel einschrauben"
+
+
+%Detecting Partial Actions
+Die Erkennung der Teilschritte
+
+Durch das Ausschlagen der Sensoren an bestimmten stellen
+%Detecting complete Actions
+
+%Conclusion
+With the IKEA example we showed that it is possible to determine which
+actions the user has completed.
+We envision several
+possibilities such as the parts of the furniture giving notice of themselves at the
+right moment (lights flashing, beeping)
+ PDA
+or wearable computer the user carries on him as presented in [10-12], which we
+would rather want to avoid.
+ The main restriction is that we assume we can fully model the task
+at hand (closed world assumption)
+
+
+
+%% ==============
+%% IKEA Bilder vom Aufbau 
+\begin{figure}[h]
+\centering
+\subfigure[]{
+   	\includegraphics[scale=0.15]{img/ikea-sensors.png}
+	\label{fig:ar-outside}
+}
+\subfigure[]{
+   \includegraphics[scale=0.15]{img/ikea-schraubenzieher.png}
+   \label{fig:ar-overlay}
+}
+\subfigure[]{
+   \includegraphics[scale=0.15]{img/ikea-regal.png}
+   \label{fig:ar-glove_green}
+}
+\caption{(a) Horizontal board equipped with 2d-accelerometer and a vertical board
+equipped with a force sensor (b) Screwdriver enhanced with gyroscope (c) Fully as-
+sembled IKEA PAX wardrobe}
+\label{fig:}
+\end{figure}
+%% ==============
+
+%% ==================================================
+%% Authoring of a Mixed Reality Assembly Instructor for Hierarchical Structures
+
+%% Asta ar veni in addition to VR-Handbook
+
+Benutzen Marker und Authoring Tools um die Inhalte zu generieren.
+They argue that Mixed Reality allows a smooth combination of the real and the
+virtual world. Thereby, the user doesn't have to make a logical connection
+between the physical world and the virtual description of the instructions,
+which would greatly hinder him/her.
+They also mention a tablet PC may be used for MR.
+They proposed a State diagram of the Mixed Reality Assembly Instruction which
+ uses a stack. Elements are pushed on the stack if they are composed of other
+ elements. After the base elements have been found and assembled they are poped
+ from the stack.
+ When the user has to find an element a 2D user interface
+is used,
+ Our approach for this problem is to aug-
+ment reality with a small animation of the placement pro-
+cess.
+More detailed installlation instructions visually and via audio
+Hierarchicall component structure: Composed components, base components
+
+%% Vor candva sa aplice tehnica si pe masiniarii industriale. 
+%% Pot face ceva cu object detection? 
+%% ==================================================
+%% Position Paper: m2n-A Tool for Translating Models to Natural Language
+% Descriptions
+
+%% SOEML
+%% Cum integrez nu prea stiu .. usable as task description language?
+% Install this before that? Wait ten seconds
+% Take some more shit from robotics?
+This paper proposes a smart object event modeling language. By attaching sensor nodes to 
+everyday objects, users can augment the objects digitally and apply the objects into various 
+services.  When  creating  such  smart  object  services,  users  should  define  events,  such  as 
+beverage of a cup turns cold or someone sits down on a chair, using physical values from 
+sensors. The  most common event definition for end-users  is simply describing threshold of 
+sensor values and boolean operation. When they want to define more complex events, such as 
+multiple people sit down on chairs or a user starts to study using a pen and a notebook, they 
+need to use a programming language. To define such complex event easily without complex 
+programming language, we present a new event description language called SOEML based 
+on  temporal  relation  among  simple  events.  We  also  provide  users  a  visual  interface  to 
+support users defining or reusing events
+ easily. 
+
+%% ==================================================
+%% 2008 Diss Auto Generierung von Arbeitsablaeufen fur den Service an Produktionssystemen
+%% Zice despre problema care o sa o 'rezolv' eu in SWC deci atentie!
+% Formulare si idei pot fi preluate
+*Generierung von Arbeitsanweisungen aus Modellen*
+
+Die Arbeit beinhaltet keine Studie oder Industriestudie?
+
+Es wird auf eine Domäne konzentriert und nähmlich unterstützung von
+Servicetechnikern bei Montagearbeiten.
+
+\begin{description}
+  \item[Dokumentation] Die Strukturierte Weitergabe von Produkt- und
+  Prozesswissen
+\end{description}
+ 
+Aus Agrawala: Die Überprüfung gegenseitiger Beinflussung von
+Bauteilen (interference) und die Möglichkeit, ein Bauteil mit einem
+anderen zu verbinden (Attachement)
+
+% Agrawal Abstract
+% Visions of smart homes have long caught the attention of
+% researchers and considerable effort has been put toward enabling home
+% automation. However, these technologies have not been widely adopted despite
+% being available for over three decades. To gain insight into this state of
+% affairs, we conducted semi-structured home visits to 14 households with home
+% automation. The long term experience, both positive and negative, of the
+% households we interviewed illustrates four barriers that need to be addressed
+% before home automation becomes amenable to broader adoption. These barriers
+% are high cost of ownership, inflexibility, poor manageability, and difficulty
+% achieving security. Our findings also provide several directions for further
+% research, which include eliminating the need for structural changes for
+% installing home automation, providing users with simple security primitives
+% that they can confidently configure, and enabling composition of home devices.
+% Author
+
+Taskflows sind Arbeitsabläufe und ermöglichen ein schrittweises
+Erfüllen der erforderlichen Aufgaben.
+In der Arbeit von \cite{} werden Taskflows in Fragmente unterteilt.
+Ein Fragment stellt eine logische Einheit von Szenen bzw. Tätigkeiten
+dar. Fragmente lösen nach ihrer Durchführung eine Zustandsänderung
+aus, i.e, sie bringen das System aus einen definierten Zustand in den
+nächsten.
+Fragmente sind wiederrum in Szenen unterteilt, die Unterstützung für
+eine einzelne Tätigkeit darstellen. Sie enthalten die eigentlichen
+Anweisungen für den Servicetechniker.
+
+Taskflow - Aufgabenebene
+Fragmenete - Zustandsebene
+Szenen - Tätigkeitsebene
+
+Deklaratives Wissen vs Prozedurales Wissen
+Begriffe, Objekte, Relationen, Constraints, Regeln VS
+handlungsleitend, Algorithmen
+
+Meta-Daten Ontologie Duplin-Core DCMI 2000
+
+'Ein Reasoner die die definierten Bedingungen interpretiert und die
+Klassenhierarchie normalisiert' pg 61
+
+Inca nu prea am inteles cum naiba face generarea asta: prima data
+cauta fragmente goale si apoi le umple ? 
+
+Er baut Regeln die er dann mit Hilfe der Ontologie prüft/enforced 
+
+mereotopologisch - mereologisch und topologisch
+mereologisch - behandelt Teile und die Ganzen die daraus gebildet werden
+
+Formalisierung von mereotopologischen Beziehungen mit Hilfe von
+Predikaten (S. 69) - kann nützlich sein denn diese Beziehungen gibt es
+auch in Software-Komponenten
+
+Ontologie aus Prädikaten aufgebaut
+
+Benutzt OWL
+
+Modelliert die Ontologie und generiert regeln die spezifisch für
+Zusammengesetzte Bauteile sind. Es ist möglich diesen Ansatz zu
+generalisieren in dem man ein System als ein Zusammengesetztes ganzes
+
+Was ist nochmal genau die Anreichrung?
+
+Positions vs Beziehungsabhängigkeit
+sieht?
+ 
+
+ Benutzt prädikatenlogik. Benutzt Planungsalgorithmen. In Kapitel 5.1
+ werden Randbedingungen aufgeführt
+

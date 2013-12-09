@@ -11,59 +11,69 @@ Das Thema der Generierung von natürlicher Sprache aus Software-Modellen wurde im
 Detail durch eine systematische Literaturrecherche in \cite{Nicolas2009}
 analysiert.
 Die Studie wurde im Hinblick auf das Requirements-Engineering durchgeführt und
-hatte den Fokus auf die Beantwortung zweier Fragen.
-Erstens wurde der Frage nachgegangen wie viel Wissen die aktuelle Literatur über
-die Generierung von mit den Anforderungsspezifikationen konsistenten Texten aus
-Softwaremodellen enthält.
-Die zweite Frage der nachgegangen wurde war es die in diesem Themenfeld zum
-Einsatz kommenden Techniken zu durchleuchten.
+hatte den Fokus auf die Beantwortung zweier Fragen. Erstens wurde der Frage
+nachgegangen wie viel Wissen die aktuelle Literatur über die Generierung von mit
+den Anforderungsspezifikationen konsistenten Texten aus Softwaremodellen
+enthält. Die zweite Frage der nachgegangen wurde war es die in diesem Themenfeld
+zum Einsatz kommenden Techniken zu durchleuchten.
 Zusammengefasst, schlussfolgern die Autoren, dass dieses Thema auf der einen
 Seite durchaus von Relevanz ist, auf der anderen Seite aber wenig Arbeit in dem
 Sinne getätigt wurde. Die Tendenz in dieser Richtung ist aber steigend, vor
-allem weil natürliche Sprache allen beteiligten Interessengruppen die
+allem, weil natürliche Sprache allen beteiligten Interessengruppen die
 Möglichkeit bietet am Entwicklungsprozess teilzunehmen. Somit können Fehler
 leichter gefunden werden und auch das Management der Anforderungen wird
 erleichtert, da dies als gute Vertragsbasis zwischen Kunden und Entwicklern
-dienen kann. Besonders der Ansatz des Literate Modeling (vgl.
-\ref{ch:sec:literate-modeling}) wird in verschiedenen Arbeiten verfolgt.\\
+dienen kann.
+In den folgenden Kapiteln werden Arbeiten vorgestellt, deren Forschungsfragen
+sich an die Generierung von natürlichsprachlichen Text aus formallen Modellen
+richtet.
 
 %% ==============
 \subsection{Literate Modeling}
 \label{ch:sec:literate-modeling}
 %% ==============
 
-Unter \emph{Literate Modeling} versteht man einen von \cite{Arlow1999}
-eingeführten Methode der ein Anforderungsdokument vorsieht in dem Systemmodelle
-zusammen mit narativem Text ein Gesamtbild des zu entwickelnden Systems geben.
+Unter \emph{Literate Modeling} versteht man die von \cite{Arlow1999} eingeführte
+Methode, in der das Anforderungsdokument Systemmodelle zusammen mit narativem
+Text vorsieht, um ein Gesamtbild des zu entwickelnden Systems zu geben.
 Das so entstandene Dokument, auch \emph{Business Context Document (BCD)}
-genannt, beinhaltet neben dem visuellen Modell auch natürlichsprachige
+genannt, beinhaltet neben dem visuellen Modell auch natürlichsprachliche
 Beschreibungen der UML Syntax, den Gedankengang der zu Entscheidungen führte,
 Beispiele zur Illustration bestimmter Aspekte und eine Umschreibung in
-natürlicher Sprache des Modells.\\
+natürlicher Sprache des Modells.
+
 Die Autoren arbeiteten zur Zeit der Entwicklung dieser Methode bei British
 Airways. Während der Systementwicklung trat ein Problem, dass die Autoren als
-\emph{trivialisation of business requirements by visual modelling} nannten, auf.
-Die Autoren haben beobachtet, dass nach der Formalisierung der Anforderungen
-wichtige Kernaspekte der Domäne zwischen anderen unwichtigeren Details
-untergingen. Ein Beispiel dessen war das Cross-Selling von Flugtickets zwischen
-British Airways und den Allianzpartnern, ein Markt der Umsätze in Millionenhöhe
-tätigt. Diese Geschäftsanforderung wurde in dem UML Modell, korrekterweise,
-durch eine mit dem * Symbol dargestellte Multiplizität an dem Assoziationsende
-zwischen den Modellklassen Flug und Flugnummer dargestellt.
-Dadurch verlor diese Anforderung an Bedeutung bei der Darstellung im Formalen
-Modell. Nach der Einführung von BCD konnten die Geschäftsanforderungen enger an
-die Formalen Modelle gekoppelt werden und die berichten in \cite{Arlow1999},
-dass die Anwendung der Literate Programming Methode zu einer Verbesserung in der
-Umsetzung der Projekte geführt hat.\\
-Um diese Methode aber effizient zu nutzen, wird eine gute Werkzeugunterstützung
-benötigt. Aus diesem Grund wurde in \cite{Schulze2012} ein Ansatz entwickelt um
-die Synchronisation zwischen den Diagrammelement und den Ihnen Beschreibenden
-natürlichsprachigen Texten zu erfüllen. Der dort beschriebene Ansatz basiert auf
-die Annotierung des Textes und einem Synchronisationsalgorithmus, der natürliche
-Sprache in Verbindung mit OCL Ausdrücken verarbeitet. Um den Ansatz prototypisch
-zu testen wurde das Tool LiMonE\footnote{LiMonE:
+\emph{'trivialisation of business requirements by visual modelling'} nannten,
+auf. Die Autoren haben beobachtet, dass nach der Formalisierung der
+Anforderungen wichtige Kernaspekte der Domäne zwischen anderen unwichtigeren
+Details untergehen. Ein Beispiel dieses Problems ist das Cross-Selling von
+Flugtickets zwischen British Airways und den Allianzpartnern, ein Markt der
+Umsätze in Millionenhöhe tätigt und somit sehr wichtig für das Geschäft ist.
+Diese Geschäftsanforderung wurde in dem UML Modell, korrekterweise, durch eine
+mit dem * Symbol dargestellte Multiplizität an dem Assoziationsende zwischen den
+Modellklassen Flug und Flugnummer dargestellt (vgl. Abbildung
+\ref{fig:articulate-model}. Dadurch verlor diese Anforderung an Bedeutung bei
+der Darstellung im formalen Modell. Nach der Einführung von BCD konnten die
+Geschäftsanforderungen enger an die Formalen Modelle gekoppelt werden und in
+\cite{Arlow1999} wird berichtet, dass die Anwendung der Literate-Programming
+Methode zu einer Verbesserung in der Umsetzung der Projekte geführt hat.
+
+Um diese Methode effizient zu nutzen, so merken die Autoren in \cite{Arlow1999}
+an, wird eine gute Werkzeugunterstützung benötigt, die die Konstistenz zwischen
+Modellen und dem beschreibenden Text gewährleistet. Aus diesem Grund wurde in
+\cite{Schulze2012} ein Ansatz entwickelt, um die Synchronisation zwischen den
+Diagrammelement und den Ihnen Beschreibenden natürlichsprachlichen Texten
+durchzuführen. Der dort beschriebene Ansatz basiert auf die Annotierung des
+Textes und einem Synchronisationsalgorithmus, der natürliche Sprache in
+Verbindung mit OCL Ausdrücken verarbeitet. Um den Ansatz prototypisch zu testen
+wurde das Tool LiMonE\footnote{LiMonE:
 http://squam.info/limone}, als Adapter für die Eclipse UML2 Tools und den
 Papyrus Editor, in einer Masterarbeit, entwickelt.
+
+% Besonders der Ansatz des Literate Modeling (vgl.
+% \ref{ch:sec:literate-modeling}) wird in verschiedenen Arbeiten verfolgt.
+
 
 %% ==============
 \subsection{Articulate Modelling}
@@ -81,31 +91,31 @@ Formale Systemmodell übernommen werden.
  What I am defining as an ''articulate'' class model is one
 that expresses critical system rules with transparent, unambiguous precision.
 
-The model should express the application's true require-
-ments, as minimally and precisely as possible without telling the programmer how to write code.
-
-DEFINING A PLATFORM INDEPENDENT CLASS
-WHAT QUESTIONS CAN THIS CLASS ANSWER?
-
-ENFORCING THE IDENTITY CONSTRAINT
-
-RELATIONSHIPS
-All relationships in the Good Model are glued together with referential
-attributes. % asta nu prea am inteles
-
-VERB Pharases
-In fact, since the role name often matches the associated class name, you can usually drop them alto-
-gether without affecting a model's expressiveness.
-
-To read an association named using verb phrases, start on one side of the association and read the
-phrase, multiplicity and class name on the opposite side as shown.
-
-Main Idea: does the model express all the business rules? AND
-Behavioral constraints satisfied? Can you answers certain questions of
-situations that might arise during runtime?
-
-Generic, all-inclusive verb phrases such as ''contains'', ''is a group of'',
-''has'' and my favorite  ''is associated with'' are to be avoided.
+% The model should express the application's true require-
+% ments, as minimally and precisely as possible without telling the programmer how to write code.
+% 
+% DEFINING A PLATFORM INDEPENDENT CLASS
+% WHAT QUESTIONS CAN THIS CLASS ANSWER?
+% 
+% ENFORCING THE IDENTITY CONSTRAINT
+% 
+% RELATIONSHIPS
+% All relationships in the Good Model are glued together with referential
+% attributes. % asta nu prea am inteles
+% 
+% VERB Pharases
+% In fact, since the role name often matches the associated class name, you can usually drop them alto-
+% gether without affecting a model's expressiveness.
+% 
+% To read an association named using verb phrases, start on one side of the association and read the
+% phrase, multiplicity and class name on the opposite side as shown.
+% 
+% Main Idea: does the model express all the business rules? AND
+% Behavioral constraints satisfied? Can you answers certain questions of
+% situations that might arise during runtime?
+% 
+% Generic, all-inclusive verb phrases such as ''contains'', ''is a group of'',
+% ''has'' and my favorite  ''is associated with'' are to be avoided.
 
 
 
@@ -188,16 +198,15 @@ Anforderung hervorgehoben.
 
 
 % % 2010 Position Paper m2n - A Tool for Translating Models to NL
-Anstatt eine Grammatik zu verwenden, wurde in \cite{Brosch2010} ein
-Ansatz entwickelt mit dem Textuelle Spezifikationen aus einem UML
-Klassen-Modell mit Hilfe von Satz-Templates erstellt werden. Die
+Anstatt eine Grammatik zu verwenden, wurde in dem in \cite{Brosch2010}
+präsentierten System, ein Ansatz entwickelt mit dem Textuelle Spezifikationen
+aus einem UML Klassen-Modell mit Hilfe von Satz-Templates erstellt werden. Die
 Autoren zielen mit dem Ansatz auf pädagogische Anwendungsszenarien wie
-e-Learning oder Übungsbetrieb. Ein interessanter Beitrag dieser Arbeit
-ist, dass auch Überlegungen gemacht über die Traversierungsstrategie
-der Klassenmodelle wurden. Das wichtigste Element im Modell wird mit
-Hilfe eine Heuristik bestimmt, die Assoziationen und Generalisierungen
-auswertet, um von dort aus mit einer Tiefensuche das Diagramm zu
-bearbeiten.
+e-Learning oder Übungsbetrieb. Ein interessanter Beitrag dieser Arbeit ist, dass
+auch Überlegungen gemacht über die Traversierungsstrategie der Klassenmodelle
+wurden. Das wichtigste Element im Modell wird mit Hilfe eine Heuristik bestimmt,
+die Assoziationen und Generalisierungen auswertet, um von dort aus mit einer
+Tiefensuche das Diagramm zu bearbeiten.
  
 \begin{figure}[htp]
 \begin{center}

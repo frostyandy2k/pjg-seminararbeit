@@ -15,6 +15,11 @@ existierenden Technologien eingeführt.
 \label{ch:Chapter1:sec:Section1}
 % % ===========================
 
+% % ===========================
+\subsection{Begriffe der Modellgetriebenen Software-Entwicklung}
+\label{ch:Chapter1:sec:Section1}
+% % ===========================
+
 Aus \cite{Truyen2006, Mukerji2001, Miller2001} wird die Terminologie
 der modellgetriebenen Software-Entwicklung eingeführt.
 
@@ -145,42 +150,52 @@ Verwendung einer bestimmten Plattform.
 
 % \item[Sichttyp] Der Sichttyp (engl. View type)
 
-\item[Modelltransformation] Eine Modelltransformation ist der Prozess
-in dem ein Modell in ein anderes Modell überführt wird.
+\item[Modelltransformation] Eine Modelltransformation ist der Prozess in dem ein
+Modell in ein anderes Modell überführt wird. Eine Modelltransformation kann ein
+Modell mit zusätzlichen Informationen austatten oder es in ein Modell
+überführen, dass durch ein anderes Metamodell definiert ist.
 
-% Model  transformation  is  the  process  of  converting  one  model  to  another
-% within  the  same  system.  The  transformation  combines  the  platform
-% independent  model  with  additional  information  to  produce  a  platform
-% specific model.
-
-% \item[OCL]
+\item[Constraint-Sprachen] Eine Constraint-Sprache biete die Möglichkeit Regeln
+zu definieren die die Konsistenz der Modellinstanzen sichern. Eine verbreitete
+Constraint-Sprache ist die von der UML Standardisierete Object Constraint
+Language (OCL).
 
 \end{description}
 
 % % ===========================
-\subsection{Technologien der modellgetriebenen Software-Entwicklung}
+\subsection{Einsetzbare Technologien}
 \label{ch:Chapter1:sec:Section1}
 % % ===========================
 
-Um die Transformationen und die Erstellung domänenspezifischer
-Sprachen zu unterstützen werden die Transformationssprachen QVT-O und
-QVT-R eingeführt sowie die XText und hmmm\ldots 
+Unter den in der modellgetriebenen Entwicklung eingesetzten Technologien, um
+Transformatioen zu unterstützen, zählen unter anderen auch QVT-O und ATL. Für
+die Erstellung und Handhabung von Domänenspezifischen Sprachen bietet sich das
+Xtext Projekt an und Modell zu Text Traksformationen werden von dem XPand
+Projekt unterstützt. Die oben erwähnten Technologien sind Teil des Eclipse
+Modelling Projekts und genießen eine starke Unterstützung durch die
+Entwickler-Community\footnote{http://www.eclipse.org/modeling/}.
 
-\begin{description}
-  \item[QVT-O] 
-  \item[QVT-R] 
-  \item[XText] 
-\end{description}
+Die Epsilon Plattform\footnote{http://www.eclipse.org/epsilon/} bietet eine
+Alternative zu den oben genannten Technologien, kann jedoch auch in die Ecplise
+Umgebung eingebunden werden. Epsilon ist eine erweiterbare Plattform, die
+Unterstützung für die Erstellung und Interoperabilität von Domänenspezifischen
+Sprachen und für Modell-Management Aufgaben wie Transformation,
+Code-Generierung, Vergleich, Validierung und Veränderung von Modellen.
 
 % % ===========================
-\subsection{xtUML}
+\subsection{Executable UML}
 \label{ch:Chapter1:sec:Section1}
 % % ===========================
 
 [Scoate din carte introducerea in xtUML] 
 
 % % ===========================
-\section{Product Line Engineering}
+\section{Produktlinien-Engineering}
+\label{ch:Chapter1:sec:Section1}
+% % ===========================
+
+% % ===========================
+\subsection{Begriffe des Produktlinien-Engineering}
 \label{ch:Chapter1:sec:Section1}
 % % ===========================
 
@@ -390,7 +405,6 @@ eine Dokumentengenerierungstechnik wie sie in industriellen Umgebungen
 praktiziert wird.
 
 \input{assembly}
-\input{installation}
 \input{ar_handbook}
 \input{document_generation}
 \input{nl_generation}
