@@ -1,38 +1,59 @@
 % % ==============
-\chapter{Motivation}
+\chapter{Einleitung}
 \label{ch:Motivation}
 %% ==============
 
-Die Systeme die uns umgeben werden flexibler, enthalten mehr Intelligenz und
-sind größtenteils rekonfigurierbar. Fortschritte in der Technologie haben
-Appliances die mit Sensoren und Aktuatoren ausgestattet sind, kostengünstiger
-gemacht und somit ihre Anwendung in der breiten Masse erlaubt.
-Diese Fortschritte reduzieren die technologische Barriere für die Installation
-von Ubicomp-Systemen, es bleibt jedoch der Menschliche Faktor bestehen.
-Laut \cite{Beckmann2004} beschränkt sich der Installationsprozess auf korrekte
-Platzierung und semantische Assoziation zwischen den Knoten der Anwendung und
-den Teil der physikalischen Welt den sie beobachten, Aufgaben die auch ein
-gewöhnlicher Nutzer bewältigen kann. Existieren in den Systemen auch
-Interkationen zwischen den Sensoren und Aktuatoren, so können aber durch die
-große Anzahl an Appliances und Konfigurationsmöglichkeiten komplexe
-Interaktionsmuster auftreten, die einen normalen Benutzer bei der Installation,
-Konfiguration oder Wartung überfordern.
+
+Smart-Environments enthalten Appliances die mit Sensoren, Aktuatoren und
+Netzwerkfähigkeit ausgestattet sind \cite{Atzori2010}. Diese Systeme sind
+flexibel, intelligent und größtenteils rekonfigurierbar.
+Dank Fortschritten in der Techonlogie sind diese Systeme kostengünstiger und
+ihre vielfältige Anwendung ist in der breiten Masse möglich.\\
+Die Heimautomatisierung ist eines der Anwendungsgebiete dieser neuen
+Möglichkeiten. Sie hat als Ziel die Komfortsteigerung der Nutzer, durch die
+Austattung des Eigenheims mit intelligenten, vernetzten Appliances.
+Neben den verschiedenen Appliances beinhaltet eine Heimautomatisierung im
+Regelfall ein Heim-Gateway. Dieses dient als zentraler Verwaltungspunkt des
+intelligenten Hauses und übernimmt die Steuerung des Interaktionsflusses.\\
+Dank der im System existierenden Interkationen zwischen Appliances und der
+großen Anzahl an Konfigurationsmöglichkeiten, entstehen komplexe
+Interaktionsmuster, die eine hohe kognitive Last erzeugen. Die Installation
+eines solchen Systems überfordert daher den normlen Benutzer.\\
+In einer Studie zur Installation von Heimautomatisierungstechnologie bemerken
+Beckamnn et al. \cite{Beckmann2004}, dass das konzeptuelle Modell, das sich in
+den Gedanken der Nutzer während der Installation bildet, besonders wichtig bei
+der Durchführung von komplexen Aufgaben ist. Laut \cite{Beckmann2004} ist der
+Installationsprozess durch korrekte Platzierung und semantische Assoziation,
+zwischen den Knoten der Anwendung und den Teil der physikalischen Welt den sie
+beobachten, charakterisiert. Die Autoren nennen Design-Prinzipien für die
+Erstellung von Anweisungen, um die Aufgabe der Installation zu erleichtern,
+damit sie auch von gewöhnlichen Benutzern bewältigt werden kann.\\
 Professionelle Installationen sind im Vergleich zu den Kosten der Anschaffung
-sehr groß und können die Ausbreitung solcher Systeme negativ beeinflussen. Die
-Endnutzerinstalltion bringt mehrere Vorteile. Sie ist billiger und kann einem
-Ubicomp-System helfen schneller in der breiten Masse benutzt zu werden.
+sehr groß und können die Ausbreitung solcher Systeme negativ beeinflussen. Im
+Gegensatz dazu, bringt die Endnutzerinstallation mehrere Vorteile.
+Sie ist schneller, kostengünstiger und hat einen kleinen Organisatorischen
+Overhead. Dies hilft dabei, das System leichter zu verbreiten.
 Des weiteren lernen Benutzer das System besser kennen, haben dadurch mehr
 Kontrolle darüber und können das System an ihre speziellen Bedürfnisse anpassen.
-Auch die Leichtigkeit mit der Feldstudien in der Forschung durchgeführt werden
-können, kann dadurch positiv beeinträchtigt werden.
+Auch Feldstudien in der Forschung profitieren von der Erleichterung der
+Installation, da die Kosten senken und kein spezialisiertes Personal benötigt
+wird.
 
+\cite{Antifakos2002} und \cite{Zauner2003} analysieren Möglichkeiten der
+Nutzerunterstützung während einer Installation und weisen darauf hin, dass
+erarbeitete Konzepte und Losungen in der Benutzerunterstutzung durch
+verschiedene Technologien dem Benutzer prasentiert werden müssen. Unter diesen
+Technologien nennen die Autoren zukunftige Augmented-Reality Anwendungen,
+erwagen aber auch die Moglichkeit diese in dynamischen textuellen Dokumenten
+festzuhalten.\\
 Die Unterstützung der Benutzer bei physichen Aufgaben durch Augmented-Reality
-Systeme, wie das AR-Handbuch \cite{Niels2013} zum Beispiel, sind im Aufkommen.
-Forschung in der Hinsicht wurde auch 2003 in \cite{Zauner2003} getätigt. Dieser
-Ansatz bleibt jedoch noch weitesgehend ungenutzt, da die benötigte Hardware noch
-keine Massentauglichkeit erreicht hat. Forschung in dem Sinne wird jedoch in
-\cite{CastAR2013, PS4VR} getätigt.
-
+Systeme, wie das AR-Handbuch aus \cite{Niels2013}, bieten eine intuitive
+Möglichkeit solche Installationsaufgaben zu unterstzützen. Dieser Ansatz bleibt
+jedoch noch weitesgehend ungenutzt, da die benötigte Hardware noch keine
+Massentauglichkeit erreicht hat. Forschung in dem Sinne wird jedoch in
+\cite{CastAR2013, PS4VR} getätigt. Auch das Authoring der Augmented-Reality
+Anleitung kann sich bei Systemen mit einer großen Zahl an Konfigurationen als
+schwierig herausstellen.\\
 Textuelle Beschreibungen werden hingegen in fast allen Produkten und Systemen
 mitgeliefert. Wie in \cite{Antifakos2002} aber angedeutet wird, sind heutige
 Benutzerhandbücher nicht in der Lage auf die verschiedenen Bedürfnisse oder auf
@@ -40,9 +61,31 @@ die schon vorhandene Erfahrung der Benutzer einzugehen.
 Des weiteren werden nur eingeschränkte Lösungsräume voregestellt die linear
 abgearbeitet werden müssen und meistens mit viel kognitiver Last verbunden sind.
 
-Um den Nutzern eine Hilfestellung zu leisten könnte man individuell angepasste
-Handbücher erstellen. Dieser Ansatz kann jedoch nur effizient sein wenn es eine
-automatisierte Lösung gibt. Laut dem Erfahrungsbericht in \cite{Arlow1999}
+Ein weiterer Aspekt ist der große Konfigurations- und Interaktionsraum bei
+Anwendungen der Heimautomatisierung. Laut \cite{Pohl2005} ist die
+Heimautomatisierung eine Komplexe Anwendung, die dank der vielen Interaktions-
+und Konfigurationsmöglichkeiten einer Produktlinie ähnelt. Die Anpassung an den
+Kundenwunsch, verschiedene Kombinationen von Heimautomatisierungsprodukten (wie
+z.B. Heizungs-, Licht-, Fenstersteuerung o.ä.) anzuschaffen, verkörpert die
+Variabilität im Sinne von Produktlinien.
+Je nach Konfigurationswunsch sind diese verschiedenen Varianten des
+Heimautomatisierungsproduktes auszuliefern und in verschiedenen Arten zu
+installieren und zu warten. Der Kontext des Benutzers spielt dabei eine
+wesentliche Rolle. Der Vergleich zwischen der Heimautomatisierung und
+Produklinien von \cite{Pohl2005} erlaubt es Prinzipien aus den
+Software-Produktlinien auf das Szenario der Heimautomatisierung anzuwenden.
+Rabiser et al. setzen für die Erstellung von produkspezifischer Dokumentation in
+der Industrie  auf einen produktlienenbasierten Ansatz
+ \cite{Rabiser2010}. Ein Generator erstellt das Dokument mit Hilfe des
+ Variabilitätsmodells des Software-Produktes.
+
+
+Die verschieden Möglichkeiten Elemente zu kombinieren, kann die Assoziation und
+die verschiedenen Steuerungsalgorithmen ändern.
+
+
+
+Laut dem Erfahrungsbericht in \cite{Arlow1999}
 ergibt sich eine große Notwendigkeit textuelle Beschreibungen für
 Software-Modelle bereitzustellen, da sonst eine Trivialisierung bestimmter
 Kernaspekte geschehen kann, die in der späteren Implementierung und Einsatz
@@ -61,6 +104,9 @@ Abfolge zu erstellen, die dem Benutzer Unterstützung bietet, müssen neben den
 strukturbeschreibenden Modellen auch dynamische Modelle in betracht genommen
 werden.
 
+Um den Nutzern eine Hilfestellung zu leisten kann man individuell angepasste
+Handbücher erstellen. Dieser Ansatz kann jedoch nur effizient sein wenn es eine
+automatisierte Lösung gibt. 
 Das Ziel dieser Arbeit ist es die Machbarkeit und Relevanz eines Ansatzes zur
 Unterstützung der Benutzer bei Aufgaben wie Instllation und Wartung, durch das
 Generieren einer Textuellen Benutzeranleitung, zu untersuchen. Zu diesem Zweck
@@ -74,6 +120,3 @@ es auch den Entwicklern möglich eine andere Perspektive auf das von ihnen
 Entwickelte System zu erhalten und auch den anderen Stakeholdern ist eine
 Einsicht auf das zukünftige System möglich.
 
-% 
-% Was ist der Vorteil ihres Lösungsansatzes? (auch ggü.anderen Ansätzen)
-% Aktionen (Action): Welche Schritte wollen Sie gehen?
