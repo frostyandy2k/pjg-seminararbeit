@@ -1,0 +1,92 @@
+
+
+%% ==============
+\chapter{Szenario der Heimautomatisierung}
+\label{ch:Motivation:sec:Szenario}
+%% ===========================
+ 
+Das hier genannte Szenario wird an das Home Automation System Szenario
+aus \cite{Pohl2005} angelehnt. Der Komfort der Nutzer sollte sich
+durch die Heimautomatisierung steigern. Daraus folgt, dass auch der
+Installationsaufwand gering gehalten werden sollte. Der Nutzer ist in
+diesem Szenario der einzige Stakeholder, es wird davon ausgegangen,
+dass er die Initiative für die Anschaffung des Systems hat. Die
+Heimautomatisierung deckt viele Bereiche des Lebens und des Hauses. Um
+das Anwendungsfeld zu begrenzen wird ein Ausschnitt aus einer
+Ubiquitären Anwendung für das eigene Heim betrachtet. Es werden nur
+die im Folgenden aufgeführten Komponenten in Betracht genommen:
+\begin{itemize}
+  \item Regelgeräte für Heizkörper
+  \item Sensoren und Aktuatoren für Fenster
+  \item Ein LED-Strang
+  \item Steckdosenaufsätze
+  \item Server
+  \item Installationsgerät (Smartphone, Tablet, Rechner)
+\end{itemize}
+% [Graphik cu elemenetele care o sa le contina - fa-le dragutze, diagrame din
+% carte ai putea refolosi]
+Des Weiteren könnten Infrarotsensoren eingesetzt werden um Benutzer im
+Raum aufzuspüren, die dem Konfigurationssystem erlauben
+Raumempfehlungen zu geben. Es werden keine anderen Ausgabegeräte, wie
+z.B. Bildschirme, benutzt, außer der Web-Oberfläche die von
+verschiedenen Geräten ansteuerbar ist. Eine weitere Randbedingung ist,
+dass keine Entertainment Funktionen, wie zum Beispiel Multi-Media
+Streaming, betrachtet werden. Es werden keine Sicherheitsaspekte wie
+das Nutzer-Management in Betracht gezogen. Das heißt alle Benutzer in
+diesem Szenario haben vollen Zugriff auf das System.
+Es werden keine Sicherheitskritischen Anwendungen wie
+Gesundheitsmonitoring oder Heimsicherung. Das Sytem hat als Haupt
+Anwendungspunkt das Monitoring und Kontrolliern von Temperaturen und Stromfluss. Die Installation laut
+dem Generierten Handbuch ist die Forschungsfrage.
+
+Das Heim-Gateway ist der Zentrale Server des Intelligenten Hauses
+\cite{Pohl2005}. Anstatt einen Cloud-basierten Ansatz zu fahren wird
+der Gateway-Server als zentraler Server für die Kommunikation,
+Koordination und Datenhaltung dienen. Auf diesem Server kann das
+Modell der Anwendung, so wie sie auf den Benutzer zugeschnitten ist
+gespeichert und verwaltet werden. Des weiteren soll das Home Gateway
+den Code verteilen, die Dokumentation auf dem neuesten Stand halten?
+Auf dem Home-Gateway Server werden folgende Daten über alle Komponenten des
+Systems (\emph{Sensoren, Aktuatoren, Kontrolleinheiten})
+abgespeichert:
+\begin{itemize}
+  \item Informationen über die Art und Typ einer Komponenten
+  \item Physische Position
+  \item Semantische Assoziation
+  \item Konfigurationsparameter
+ % \item Regeln(workflows) [bazat pe paperu care inca nu l-ai citit, sau poate
+ % gasesti ceva generic: k trebe sa existe reguli de control in absenta AI]
+\end{itemize}
+
+Variabilität in der Heimautomatisierung bedeutet, dass verschiedene
+Varianten des Produkets an die Endkunden kommen und diese auf
+unterschiedliche Weise Installiert werden müssen.
+Die verschieden Möglichkeiten Sensoren und Aktuatoren zu kombinieren,
+kann die Assoziation und die verschiedenen Steuerungsalgorithmen
+ändern.
+
+\begin{figure}[htp]
+\begin{center}
+  \includegraphics[width=1\textwidth]{img/szenario.png}
+  \caption[labelInTOC]{figureCaption}
+  \label{figureLabel}
+\end{center}
+\end{figure}
+
+Die Erstellung der Assoziationen zwischen den Heimautomatiesierungsgeräten und
+den von ihnen beobachteten Subjekten wird die Aufgabe des Anwenders
+sein.
+ 
+ % Design und Implementierungsentscheidungen werden oft gemacht weil\ldots
+ % din cartea cu design of everyday things 
+ 
+ 
+% Es ist wichtig den Benutzern zu erklären was die Geräte machen, was
+% diese gemacht haben und wie sie kontrolliert werden können um das
+% "debuggen" (z.B. fehlerhafte Assozierungen) durch den Benutzer zu
+% ermöglichen \cite{Edwards2001}.
+% Dies gilt besonders im Fall in dem neue Geräte dazukommen, alte
+% entfernt werden oder die Geräte von unterschiedlichen Herstellern
+% kommen.
+
+% Das System soll durch Web-Oberflächen kontrolliert werden.
