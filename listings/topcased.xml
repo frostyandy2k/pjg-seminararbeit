@@ -1,0 +1,9 @@
+<context model=’${model}’ importedBundles=’topcased’ searchMetamodels=’true’/>
+<gendoc> 
+	[for (p:Package|self.ownedElement->filter(Package))]
+		[p.name/]
+		[if (p.getAllDiagrams()->size() > 0)] 
+			<image object=’[self.getDiagram()/]’></image>
+		[/if]
+	[/for]
+</gendoc>

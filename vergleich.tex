@@ -12,6 +12,11 @@ des InstaGuide Ansatzes zu gewinnen.
 \section{Studie zur Sensorinstallation}
 \label{ch:Vergleich:sec:assembly}
 %% ==============
+ANFORDERUNGEN
+% % %
+Nicht nur die Systeme an sich, sondern auch die Anleitung ist mit einer gewissen
+Variabilität ausgestattes
+% % %
 
 Die in \cite{Beckmann2004} durchgeführte Studie hat den Prozess der Installation
 von ubiquitären Systemen im Heimautomatisierungsbereich untersucht. Wertvolle
@@ -40,6 +45,19 @@ keine Interaktionen zwischen den installierten Sensoren oder ihrer
 Anbringungsreihenfolge, auf die der Nutzer acht geben musste.
 
 % hat die sample size eigentlich gereicht um so eine Aussage machen zu könnnen
+
+
+In \cite{Antifakos2002} werden:
+Es werden drei Aspekte identifiziert die bei der Unterstützung der
+Installationsaufgabe einen mehrwert bieten können. Erstens Die Anleitungen
+sollen den Nutzer nicht eingrenzen eine bestimmte Folge von Schritten
+auszuführen, falls es andere Varianten gibt die für den Nutzer angenehmer sind.
+Zweitens, die kognitive Anstrengung die durch die konstante Relation zwischen
+virtueller(im Handbuch beschriebener) Welt und reeler Welt kann kontraproduktiv
+sein. Drittens, verschiedene Skills und Expertise der Nutzer verlangen
+unterschiedliche Arten der Interaktion und Intervention um eine geignete
+Unterstützung zu bieten.
+
 
 %% ==============
 \section{AR-Handbücher}
@@ -89,6 +107,15 @@ der für das System notwendigen Geräte komplizieren.
 % Genauigkeit der Beschreibung: kann das Garantiert werden wenn menschen das
 % System intepretieren?
 
+Der Unterschied bezüglich der Nutzergruppen des AR-Handbuchs und Second-Sighted
+Glasses ist, dass das AR-Handbuch auf die Installation und der Second-Sighted
+Glasses Ansatz auf die Benutzung einer Umgebung spezialisiert sind.
+
+
+Die Vorteile dieser Ansätze sind die hohe Intuitivität und die
+Präzision der Aufgabenbeschreibung, da jeder Schritt dem Benutzer
+so Angezeigt wird wie er durchzuführen ist.
+
 %% ==============
 \section{\dopler Ansatz}
 \label{ch:Vergleich:sec:docgen}
@@ -102,6 +129,177 @@ erleichtern. Durch die Werkzeugkette, die besonders für die Bedienung
 durch nicht-technisches Personal konzipiert wurde, eignet sich der
 Ansatz sehr gut für die Unterstützung und Erleichterung der manuellen
 Arbeit.
+
+
+% Aur Pohl05 din introducere k se poate folosi si la 
+% Aber Statische textfragmente, viel expertenwissen
+
+\newcounter{magicrownumbers}
+\newcommand\rownumber{\stepcounter{magicrownumbers}\arabic{magicrownumbers}}
+\begin{table}[htb]
+  %\rowcolors{3}{green!25}{yellow!50}
+  \caption{Vergleich der Ansätze(unter dem Aspekt der \ldots, des
+  Anwendungszenarios)}
+  \centering
+  \begin{tabular}{l c c c c}
+    %heading
+    \hline\hline
+
+   & AR-Handbook & \dopler & LiMonE & Gendoc \\  [1ex]
+
+    \hline
+    %heading end
+
+    %     DUdu & &&& \parbox[t]{5cm}{Sales and marketing
+    %     people \\ porduct managers} \\ [1ex]
+
+     \rownumber.Eignung im Szenario & ++ & x & - & -   \\ [1ex]
+
+     \rownumber.Verlangtes Expertenwissen & ++ & x & - & -
+     \\[1ex]
+
+     \rownumber.Verhalten bei Veränderung des Systems & ++ & x & - & - \\ [1ex]
+
+    \hline
+  \end{tabular}
+  \label{table:tab1}
+\end{table}
+
+
+Vergleichsfaktoren:
+Eignung Szenario
+Verlangtes Expertenwissen in der Benutzung
+
+Verhalten bei Veränderung des Systems
+	dopler: ok, aber wenn sich die KOmponenten die statische textfragmente
+	zugeordnet haben, muss manuell nachgebessert werden
+	vr: neuaufnahme des veränderten teils und 
+	
+Struktur modellierung/dokumentierung
+
+
+
+zusammenhänge darstellen
+\begin{description}
+  \item[LiMonE] Literate Modelling
+  \item[TopCased] UML might suffer from trivialisation of Requirements
+  \item[Dopler] DocBook Markup als  
+\end{description}
+verhalten
+(dynamisches verhalten bei AR), Realität zu modellmaping, product line support,
+mehrere Modelle vs mehrere dokumente(übertragbarkeit der Modelle), Eigenschaften
+die alle gerne hätten, Endnutzerperspektive (Attraktivität), Entwickleraufwand,
+Verhalten-> Auswertungskapitel, Kriterien erklären
+ 
+One-way oder auch Back Propagation vom Dokument zum Modell
+
+Unterschied in der Erstellung der Tempaltes bei Dopler und TopCased
+\begin{description}
+  \item[NL] Grammar based oder einfache Templates (mit einer abfragesprache?)
+  \item[TopCased] Skript direkt in ODT oder DOCX (mit custom tags?)
+  \item[Dopler] DocBook Markup als  
+\end{description}
+
+Informationsextraktion
+\begin{description}
+  \item[NL] extraga cumva din model informatia (nici nu stiu daca zice cum)
+  \item[TopCased] folosesc OCL(Acceleo - ii modeldriven)
+  \item[Dopler] DocBook erweiterung si interbari (Custom)
+\end{description}
+
+Konfiguration des Dokumentes
+
+Verantwortlichkeit für die Erstellung des Dokumentes
+
+
+Anwendbarkeit des Ansatzes während des Entwicklungszyklus
+AR nur gegen ende, sonst sind die Aufnahmen nicht mehr aktuell
+
+Erstellung des Content für Systeme mit großer Variabilität
+AR schlecht
+
+
+Dopler higher level than Topcased aber lower level als AR und Limone?
+
+Authoring Werkzeuge (Wie erstelle ich den Content?)
+\begin{description}
+  \item[LiMonE] Literate Modelling (Natürliche Sprache + UML Modellierung)
+  (Logik passiert im Hintergrund)
+  \item[TopCased] UML Modellierung + Templateerstellung. Keine
+  Unterstützungsfunktionen wie Sytax Checking oder autocompletion in den
+  Templates. Vermischen der Query-Logik des Systemmodells und dem Text wird sehr
+  unübersichtlich. Code wird durch Textformattierungen mitformatiert
+  \item[Dopler] Als Kommentare. Erlaubt eine bessere Separierung von Code und
+  Beschreibungstext
+\end{description}
+
+Kontext der Erstellung
+\begin{description}
+  \item[LiMonE] Referenziert das Entwicklungsmodell ()
+  \item[TopCased] Modell der Anwendung
+  \item[Dopler] DocBook erweiterung si interbari (Custom)
+\end{description}
+
+Anwendungen von Nicht-Entwicklern
+\begin{description} 
+  \item[AR-Handbuch] Sehr leicht, aufnehmen der Gewünschten Sequenz und
+  anschließend optionale Annotierung in einem Visuellen Editor. 
+  \item[LiMonE] Textuelle Beschreibung muss sich an die Einschränkungen der
+  Grammatik halten. Leicht.
+  \item[TopCased] Komplexe Logik in den Dokumenten enthalten
+  \item[Dopler] Augmentierung der Dokumente mit spezifischem Markup nur für eine
+  eingeschränkte Klasse von Fragmenttypen. Stört den Lesefluss nicht 
+\end{description}
+
+Variabilitäts-Management
+\begin{description}
+  \item[LiMonE] N/A (wegen consistency checking?)
+  \item[TopCased] Modelle müssen Variabilität unterstützen (in
+  UML ohne erweiterungen keine produktfamilien modellierung) und
+  Modellvariabilität muss vorher in den Modellen aufgelöst werden
+  \item[Dopler] DocBook erweiterung si interbari (Custom)
+\end{description}
+
+Standardkonformität des Modells
+  \item[LiMonE] ??
+  \item[TopCased] UML
+  \item[Dopler] Spezialisiertes Modell (nicht standard konform - prea riscant
+  sa zici ?)
+
+Anwendungsgebiete
+\begin{description}
+  \item[LiMonE] ?? wurde in einer Masterarbeit erstellt
+  \item[TopCased] Konsortium von Industriepartnern in der aktiven Entwicklung
+  von kritischen Anwendungen
+  \item[Dopler] Industrielle Anwendung bei Siemens VAI und Siemens AG
+\end{description}
+
+Generalisierbarkeit (Erweiterbarkeit auf andere Domänen(versch. Meta-Modelle))
+großer/kleiner Aufwand
+
+Topcased: alle von Papyrus unterstützten Diagramme + zusätzliche
+LiMonE: nur Klassendiagramme (also keine dynamischen Aspekte)
+
+Visuelle Unterstützung durch Einbindung von graphischen Elementen 
+\begin{description}
+  \item[LiMonE] ?? beschränkt auf Klassendiagramme und die synchronisation
+  bricht wahrscheinlich?!
+  \item[TopCased] Automatisches Einfügen eines Renderings der Systemmodelle
+  \item[Dopler] Manuell erstellte Dokumentenfragmente
+\end{description}
+
+
+Weitere nicht qualitative Unterscheidungskriterien (Unterschiede)
+
+Ziele der generierten Artefakte
+\begin{description}
+  \item[LiMonE] Requirements Dokumente
+  \item[TopCased] Architekturbeschreibung
+  \item[Dopler] Produktbeschreibungsdokumente
+\end{description}
+
+Open Source vs Proprietär vs nicht Released
+
 
 % 
 % Das Ziel des
@@ -203,6 +401,8 @@ Articulate Modelling kann eine deutliche Erleichterung bei der
 Generierung von natürlichsprachigen Beschreibung des Modells bewirken.
 Da die Verbphrasen schon von einem Menschen erstellt wurden, bietet
 sich eine einfache auf Templates basierende Lösung an.
+
+
 
 % Die wesentlichen Unterschiede zwischen den Ansätzen beziehen sich
 % auf:
