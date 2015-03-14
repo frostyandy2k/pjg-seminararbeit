@@ -1,304 +1,370 @@
-%% ==============
-\chapter{Auswertung der verwandten Arbeiten}
+% % ==============
+% \chapter{Auswertung der beschriebenen Ansätze}
+\chapter{Gegenüberstellung der Ansätze}
 \label{ch:Vergleich}
-%% ==============
+% % ==============
 
-In diesem Kapitel werden die zuvor im Detail besprochenen Arbeiten auf
-Vor- und Nachteile analysiert und die Kontraste hervorgehoben, um
-Erkenntnisse über die notwendigen Eigenschaften und Randbedingungen
-des InstaGuide Ansatzes zu gewinnen.
+% Aus den in der Literatur  In diesem Kapitel werden die in der Literatur
+% aufgetretenen Anforderungen an eine Installationsunterstützung   zuvor
+% beschriebenen Arbeiten gegenübergestellt und die Kontraste hervorgehoben, um
+% Erkenntnisse über die notwendigen Eigenschaften und Randbedingungen eines
+% Installationsunterstützenden Systems zu gewinnen.
+%  hinsichtlich der abgeleitenen Faktoren
 
-%% ==============
-\section{Studie zur Sensorinstallation}
-\label{ch:Vergleich:sec:assembly}
-%% ==============
-ANFORDERUNGEN
-% % %
-Nicht nur die Systeme an sich, sondern auch die Anleitung ist mit einer gewissen
-Variabilität ausgestattes
-% % %
-
-Die in \cite{Beckmann2004} durchgeführte Studie hat den Prozess der Installation
-von ubiquitären Systemen im Heimautomatisierungsbereich untersucht. Wertvolle
-Einsichten in die Anforderungen einer Installationsaufgabe und die Zusammenhänge
-zwischen dem Design des Systems und die Rolle, die es bei einer Installation
-hat, wurden verdeutlicht. Die Resultate der Studie zeigen, dass die Anwender
-Unterstützung bei der Installationsaufgabe von Seiten der Systemdesigner
-benötigen. Die Installation von Sensoren wird als eine Aufgabe mit zwei
-Dimensionen betrachtet: Platzierung und Assoziation. Dies sind wichtige
-Anhaltspunkte um eine korrekte Installation definieren zu können und um die
-Randbedingugen des Modells zu definieren.
-
-Auch wenn die Studie drei Varianten von Handbüchern eingesetz hat, wurden die
-Daten über deren Auswirkung auf die Installationsergebnisse nicht publiziert.
-Die Versionen der Handbücher werden kurz beschrieben und es wird nur ein
-Ausschnitt einer der Handbuchvarianten gezeigt. Es wird erwähnt, dass es keine
-statistisch signifikanten Unterschiede zwischen dem Erfolg der Installation im
-Zusammenhang mit den verschiedenen Dokumentationen gibt. Die Rohdaten wurden
-nicht in das Paper integriert, da auch das Paper eine andere Fragestellung, als
-die Eignung der Handbücher, verfolgt hat. Diese Information wäre im Rahmen
-dieser Arbeit sehr wichtig gewesen. 
-
-Da in \cite{Beckmann2004} nur Mock-Up Sensoren bentuzt wurden, gab es auch keine
-Konfigurationsaufgaben und alle Sensoren wurden einzeln betrachtet. Auch gab es
-keine Interaktionen zwischen den installierten Sensoren oder ihrer
-Anbringungsreihenfolge, auf die der Nutzer acht geben musste.
-
-% hat die sample size eigentlich gereicht um so eine Aussage machen zu könnnen
-
-
-In \cite{Antifakos2002} werden:
-Es werden drei Aspekte identifiziert die bei der Unterstützung der
-Installationsaufgabe einen mehrwert bieten können. Erstens Die Anleitungen
-sollen den Nutzer nicht eingrenzen eine bestimmte Folge von Schritten
-auszuführen, falls es andere Varianten gibt die für den Nutzer angenehmer sind.
-Zweitens, die kognitive Anstrengung die durch die konstante Relation zwischen
-virtueller(im Handbuch beschriebener) Welt und reeler Welt kann kontraproduktiv
-sein. Drittens, verschiedene Skills und Expertise der Nutzer verlangen
-unterschiedliche Arten der Interaktion und Intervention um eine geignete
-Unterstützung zu bieten.
-
-
-%% ==============
-\section{AR-Handbücher}
-\label{ch:Vergleich:sec:ar}
-%% ==============
-
-Die Augmented-Reality-Ansätze sind vielversprechend und bieten eine sehr gute
-Lösung für physische Installationsaufgaben. Die Benutzung ist sehr intuitiv und
-kann so von einer breiten Masse von Anwendern benutzt werden. Durch das visuelle
-Vorführen der Aufgabe bleibt auch wenig Raum für fehlerhafte Interpretationen
-der Arbeitsschritte. Besonders der in \cite{Niels2013} beschriebene Ansatz
-unterstützt die sofortige Verifikation der durchzuführenden Schritte und erlaubt
-es den Nutzern wichtiges Feedback zu liefern. Dies sind wichtige Elemente laut
-der Studie in \cite{Antifakos2002}. Die automatische Anpassung der Ausgabe ist
-ein wichtiger Faktor der die Nutzbarkeit dieses Ansatzes stark verbessert. 
-
-Das zentrale Feature des Ansatzes ist das automatische Lernen der
-durchzuführenden Schritte aus einer Beispieldurchführung die vom System
-aufgenommen wird. Man kann trotzdem ein paar Schwachpunkte dieser Art von
-Ansätzen identifiziert.
-Für Systeme mit vielen Varianten kann es ein potenzielles Problem werden wenn
-jede Arbeitsabfolge einmal durchgespielt werden muss. Auch Änderungen in den
-Prozessschritten müssen durch ein neues Durchspielen in die Dokumentation
-aufgenommen werden. In diesen Fällen muss wieder Expertenwissen in die
-Generierung der Dokumentation einfließen. Falls dieses Wissen nicht direkt von
-den Entwicklern des Systems kommt, kann so viel Zeit zwischen den
-Systemänderungen und dem Update der Dokumentation.
-Bei Änderungen im System könnte es auch zu Inkonsistenzen kommen, da das
-AR-Handbuch nicht mit dem Systemmodell gekoppelt ist. Um die Effektivität des
-Ansatzes zu belegen wurden noch keine Studien durchgeführt, ob der Ansatz die
-Arbeit erleichtert oder die Qualität steigt. Da der Ansatz mit graphischen
-Benutzeroberflächen noch nicht getestet wurde, könnten auch dort eventuelle
-Probleme bei der Bedienung auftreten, wegen der geringen größe der zu
-manipulierenden Objekte.
-
-Bei dem Second-sighted Glasses Ansatz in \cite{Yone2011} gelten die vorher
-beschriebenen Probleme. Dazu kommt noch, dass die Animationen der \emph{Futures}
-noch manuell erstellt werden müssen und dass Marker anwesend oder eine
-Assoziation zwischen den Objekten und ihren virtuellen Repräsentaten erstellt
-werden muss. Dies erschwert zusätzlich die Anwendung und bringt mehr Kompexität
-in das Szenario ein.
-
-Bis die Hardware (AR-Brille, Marker) breite Anwendung findet,
-wird eine so unterstützte Installation erstens teuerer und zweitens würde es die Anschafung
-der für das System notwendigen Geräte komplizieren.
-
-% Genauigkeit der Beschreibung: kann das Garantiert werden wenn menschen das
-% System intepretieren?
-
-Der Unterschied bezüglich der Nutzergruppen des AR-Handbuchs und Second-Sighted
-Glasses ist, dass das AR-Handbuch auf die Installation und der Second-Sighted
-Glasses Ansatz auf die Benutzung einer Umgebung spezialisiert sind.
+% % % ==============
+% \section{Anforderungen an eine Installationsunterstützung}
+% \label{ch:Vergleich:sec:assembly}
+% % % ==============
+% ANFORDERUNGEN
+% % % %
+% Nicht nur die Systeme an sich, sondern auch die Anleitung ist mit einer gewissen
+% Variabilität ausgestattet
+% % % %
+% 
+% Aus den in der Literatur durchgeführten Studien
+% 
+% Die in \cite{Beckmann2004} durchgeführte Studie
+% 
+% Die in \cite{Beckmann2004} durchgeführte Studie hat den Prozess der Installation
+% von ubiquitären Systemen im Heimautomatisierungsbereich untersucht. Wertvolle
+% Einsichten in die Anforderungen einer Installationsaufgabe und die Zusammenhänge
+% zwischen dem Design des Systems und die Rolle, die es bei einer Installation
+% hat, wurden verdeutlicht.
+% 
+% Die Resultate der Studie in \cite{Beckmann2004} zeigen, dass die Anwender
+% Unterstützung bei der Installationsaufgabe von Seiten der Systemdesigner
+% benötigen.Die Dimensionen der Platzierung und Assoziation sind wichtige
+% Anhaltspunkte um eine korrekte Installation definieren zu können und um
+% physische Randbedingugen die im Modell festgehalten weredn müssen zu definieren.
+% 
+% Auch wenn die Studie drei Varianten von Handbüchern eingesetz hat, wurden die
+% Daten über deren Auswirkung auf die Installationsergebnisse nicht publiziert.
+% Die Versionen der Handbücher werden kurz beschrieben und es wird nur ein
+% Ausschnitt einer der Handbuchvarianten gezeigt. Es wird erwähnt, dass es keine
+% statistisch signifikanten Unterschiede zwischen dem Erfolg der Installation im
+% Zusammenhang mit den verschiedenen Dokumentationen gibt. Die Rohdaten wurden
+% nicht in das Paper integriert, da auch das Paper eine andere Fragestellung, als
+% die Eignung der Handbücher, verfolgt hat. Diese Information wäre im Rahmen
+% dieser Arbeit sehr wichtig gewesen.
+% 
+% Da in \cite{Beckmann2004} nur Mock-Up Sensoren bentuzt wurden, gab es auch keine
+% Konfigurationsaufgaben und alle Sensoren wurden einzeln betrachtet. Auch gab es
+% keine Interaktionen zwischen den installierten Sensoren oder ihrer
+% Anbringungsreihenfolge, auf die der Nutzer acht geben musste. Zu den Dimensionen
+% der Platzierung und Assoziation kommt folglich auch die gegenseitige
+% Wechselwirkung der Gadgets.
+% 
+% % hat die sample size eigentlich gereicht um so eine Aussage machen zu könnnen
+% In \cite{Antifakos2002} werden:
+% Es werden drei Aspekte identifiziert die bei der Unterstützung der
+% Installationsaufgabe einen mehrwert bieten können. Erstens Die Anleitungen
+% sollen den Nutzer nicht eingrenzen eine bestimmte Folge von Schritten
+% auszuführen, falls es andere Varianten gibt die für den Nutzer angenehmer sind.
+% Zweitens, die kognitive Anstrengung die durch die konstante Relation zwischen
+% virtueller(im Handbuch beschriebener) Welt und reeler Welt kann kontraproduktiv
+% sein. Drittens, verschiedene Skills und Expertise der Nutzer verlangen
+% unterschiedliche Arten der Interaktion und Intervention um eine geignete
+% Unterstützung zu bieten.
+% 
+% \begin{itemize}
+%   \item Optionale Teile der Dokumentation
+%   \item Querverweise und deren Konsistenz
+%   \item Platzhalter (z.B Name des Kunden)
+%   \item Grammatikalische Variation (Pluralbildung)
+%   \item Multi-Media-Objekte (z.B. Bilder)
+%   \item Formatierung und Layout (durch XSL oder CSS Style-Sheets
+%   realisierbar)
+% \end{itemize}
 
 
-Die Vorteile dieser Ansätze sind die hohe Intuitivität und die
-Präzision der Aufgabenbeschreibung, da jeder Schritt dem Benutzer
-so Angezeigt wird wie er durchzuführen ist.
+% %% ==============
+% \section{Gegenüberstellung der Ansätze}
+% \label{ch:Vergleich:sec:ar}
+% %% ==============
 
-%% ==============
-\section{\dopler Ansatz}
-\label{ch:Vergleich:sec:docgen}
-%% ==============
+% Auch im Bereich der Heimautomatisierung kann zwischen verschiedenen Nutzertypen
+% unterscheiden werden. Die Domänenexperten, sind diejenigen schon
+% Heimautomatisierung durchgeführt haben und in ihrem eigenen Heim, Endanwendern
+% muss man einen guten Überblick über das System geben, damit sie ein
+% ausreichendes Verständnis aufbauen. Die Entwickler sind
 
-\texttt{In Bearbeitung.}
+Bei der Gegenüberstellung der Ansätze gilt der Rahmen der
+Installationsuntrestützung bei Heimautomatisierungssystemen. Faktoren, die die
+Installationsunterstützung beinflußen sind in Tabelle \ref{table:comparison}
+aufgelistet. Eine einfache Skala von ++ (gute Unterstützung) bis -{}-
+(mangelhafte Unterstützung) dient dazu, jeden der Erwähnten Ansätze, zur
+Erstellung von Dokumenation und Anleitungen, qualitativ einzuschätzen. Ein x
+kennzeichnet hierbei die Nichterfüllung des Faktors. Gründe für die Bewertung
+jedes Faktors wird im Folgenden näher betrachtet.
 
-Der in \cite{Rabiser2010} beschriebene Ansatz wurde konzipiert um die
-Aufgabe der Dokumentenerstellung im industriellen Umfeld zu
-erleichtern. Durch die Werkzeugkette, die besonders für die Bedienung
-durch nicht-technisches Personal konzipiert wurde, eignet sich der
-Ansatz sehr gut für die Unterstützung und Erleichterung der manuellen
-Arbeit.
+% [Lipseste Überleitung de ce naiba ne uitam si la literate modelling] -> ca sa ne
+% folosim de cunostintele integrate in modelu sistemului, k altfel s-ar pierde
+% 
 
+% Der in \cite{Rabiser2010} beschriebene Ansatz wurde konzipiert um die
+% Aufgabe der Dokumentenerstellung im industriellen Umfeld zu
+% erleichtern. Durch die Werkzeugkette, die besonders für die Bedienung
+% durch nicht-technisches Personal konzipiert wurde, eignet sich der
+% Ansatz sehr gut für die Unterstützung und Erleichterung der manuellen
+% Arbeit.
 
 % Aur Pohl05 din introducere k se poate folosi si la 
 % Aber Statische textfragmente, viel expertenwissen
 
+
+
 \newcounter{magicrownumbers}
 \newcommand\rownumber{\stepcounter{magicrownumbers}\arabic{magicrownumbers}}
 \begin{table}[htb]
+
+% \tiny
   %\rowcolors{3}{green!25}{yellow!50}
-  \caption{Vergleich der Ansätze(unter dem Aspekt der \ldots, des
-  Anwendungszenarios)}
+  \caption{Vergleich der Ansätze in Bezug auf wichtige Faktoren in der
+  Installationsunterstützung}
   \centering
   \begin{tabular}{l c c c c}
     %heading
     \hline\hline
 
-   & AR-Handbook & \dopler & LiMonE & Gendoc \\  [1ex]
+	Faktoren in der Installationsunterstützung 
+	& AR-Handbuch & \dopler & \limo & Gendoc \\[1ex]
 
     \hline
-    %heading end
 
-    %     DUdu & &&& \parbox[t]{5cm}{Sales and marketing
-    %     people \\ porduct managers} \\ [1ex]
-
-     \rownumber.Eignung im Szenario & ++ & x & - & -   \\ [1ex]
-
-     \rownumber.Verlangtes Expertenwissen & ++ & x & - & -
-     \\[1ex]
-
-     \rownumber.Verhalten bei Veränderung des Systems & ++ & x & - & - \\ [1ex]
-
+     \rownumber. Geringer Authoring-Aufwand					& ++ & + & +/- & -{}- \\[1ex]
+     \rownumber. Authoring benötigt wenig Expertenwissen 	& ++ & -{}- & -{}- & -{}-\\[1ex] 
+     \rownumber. Anwendung benötigt wenig Expertenwissen 	& ++ & + & - & + 	\\[1ex] 
+     \rownumber. Verhalten bei Veränderung des Systems		& - & ++ & -{}- & -{}- \\[1ex] 
+     \rownumber. Endnutzerperspektive(Attraktivität) 		& ++ & +/- & - & +/- \\[1ex]
+     \rownumber. Zusammenhangsdarstellung				 	& - & + & + & -/+ \\[1ex]
+     \rownumber. Modellabbildung auf die Realität			& ++ & - & -{}- & -{}- \\[1ex]
+     \rownumber. Eignung zur physischen Installation		& ++ & +/- & +/- & +/- \\[1ex]
+     \rownumber. Eignung zur Interaktionsbeschreibung		& + & ++ & - & - \\[1ex]
+     \rownumber. Erweiterbarkeit auf andere Domänen			& ++ & - & - & -{}- \\[1ex]
+     \rownumber. Einbindung zusätzlicher Informationen		& + & ++ & - & -\\[1ex] 
+     \rownumber. Navigationsunterstützung für Anwender		& x & + & + & + \\[1ex]
+%      \rownumber. Benutzerfreundlichkeit 					& ++ & + & + & - 	\\[1ex]
+%      \rownumber. Struktur modellierung/dokumentierung? 		& ++ & x & - & -\\[1ex] 
+%      \rownumber. Übertragbarkeit der Modelle? 				& ++ & x & - & - \\[1ex] 
+%      \rownumber. Rückpropagierung 						& ++ & x & - & - \\[1ex]
+%      \rownumber. Authoring 									& ++ & x & - & - \\[1ex]
+%      \rownumber. Konsistenz									& ++ & x & - & - \\[1ex]
+%      \rownumber. Abstraktionsgrad							& ++ & x & - & - \\[1ex]
+%      \rownumber. Eigung für nicht-technisches Personal	& ++ & x & - & - \\[1ex]
+%      \rownumber. Eignung im Szenario 						& ++ & + & - & - \\[1ex]
+%      \rownumber. Möglickeiten der Benutzerfürhung			& ++ & + & - & + \\[1ex]
     \hline
   \end{tabular}
-  \label{table:tab1}
+  \label{table:comparison}
 \end{table}
 
-
-Vergleichsfaktoren:
-Eignung Szenario
-Verlangtes Expertenwissen in der Benutzung
-
-Verhalten bei Veränderung des Systems
-	dopler: ok, aber wenn sich die KOmponenten die statische textfragmente
-	zugeordnet haben, muss manuell nachgebessert werden
-	vr: neuaufnahme des veränderten teils und 
-	
-Struktur modellierung/dokumentierung
-
-
-
-zusammenhänge darstellen
 \begin{description}
-  \item[LiMonE] Literate Modelling
-  \item[TopCased] UML might suffer from trivialisation of Requirements
-  \item[Dopler] DocBook Markup als  
+%   \item[Benutzerfreundlichkeit] Die AR-Lösungen sind dank ihrer hohen
+%   Intuitivität sehr benutzerfreundlich. \dopler und \limo hingegen richten sich
+%   an Domänenexperten und brauchen daher eine Einlernphase. \dopler
+%   erlaubt eine übersichtliche Visualisierung der Dokumentenkonfiguration
+%   Benutzerfreundlichen GUIs und
+  \item[Geringer Authoring-Aufwand für Entwickler] Die Synchronisation des Modells mit
+  dem Text in \limo bietet beim Authoring volle Modellunterstützung, sodass
+  Konsistente Inhalte schnell Erstellt werden können. In Gendoc müssen Skripte
+  geschrieben werden, die Dank fehlender IDE-Unterstützung\footnote{Integrated
+  Development Environment} schwer zu erstellen und warten sind. In \dopler
+  werden einfache Annotationen zum Dokument hinzugefügt und ermöglichen sogar
+  deren Auslagerung an nicht-technisches Personal. Für den AR-Ansatz gilt, je
+  weniger Annotationen manuell eingefügt werden, desto kleiner bleibt der
+  Authoring-Aufwand.
+  \item[Authoring benötigt wenig Expertenwissen] In Gendoc wird neben dem
+  Domänenwissen auch Wissen über die Programmierung mit Acceleo und OCL verlangt
+  und eignet sich nur für spezialisiertes Personal. Das Authoring im
+  AR-Ansatz können Nutzer auch ohne Tiefe Kentnisse über das zu beschreibende
+  System ausführen.  In \dopler und \limo müssen fundierte Kentnisse in den
+  Anforderungen des Sytems und seinen Komponenten besitzen.
+  \item[Anwendung benötigt wenig Expertenwissen] Die Anwendung ist beim
+  AR-Ansatz sehr intuitiv. Da bei \dopler und Gendoc die Dokument-Templates
+  anpassbar sind, können Anleitungen erstellt werden die auch Nutzern mit wenig
+  Vorwissen eine Durchführung der Aufgaben erlauben. \limo hingegen ist auf
+  Anwender ausgelegt die entweder Wissen über die Anforderungserhebung oder UML
+  besitzen.
+  \item[Verhalten bei Veränderung des Systems] Da \dopler mit
+  Produktlinien-Support im Sinne erstellt wurde ist es der Ansatz der am besten
+  mit einem sich ändernden System umgehen kann. \limo und Gendoc müssen bei
+  Veränderungeen im System alle Stellen in den textuellen Dokumenten manuell
+  geändert werden, was bei vielen Varianten prohibitiv werden kann. Das Selbe
+  gilt auch für den AR-Ansatz, alle Veränderten Stellen müssen neu aufgenommen
+  und in die schon existierende Anleitung integriert werden.
+  \item[Endnutzerperspektive(Attraktivität)] Die Attraktivität für den
+  Endanwender ist bei einer AR-Lösung sehr groß, wobei textuelle Darstellungen
+  eher neutral bewertet werden. Die erstellten Dokumente in \limo eignen sich
+  für die Heimautomatisierung nicht, weil die Beschreibung der
+  Systemdetails nicht nötig ist und einen Anwender im Szenario der
+  Heimautomatisierung überfordern würden.
+  \item[Zusammenhangsdarstellung] Der AR-Ansatz muss auf manuelles
+  Authoring der Anleitung zurückgreifen, um Zusammenhänge darzustellen. Dadurch
+  sind die Vorteile des automatischen Authoring nicht mehr gegeben. Außerdem
+  gibt es kein zentrales Repository, dass die Zusammenhangsinformationen
+  beinhaltet. Im Gegensatz dazu, haben die anderen Ansätze den Vorteil eines
+  Modells mit den existierenden Zusammenhängen. In Gendoc aber müssen diese
+  Zusammenhänge mit Hilfe des imperativen Skriptes ausgewertet werden, was
+  einen starken Overhead beim Authoring hervorruft.
+  \item[Modellabbildung auf die Realität] Der AR-Ansatz ermöglich eine 1:1
+  Abbildung durch die Einblendung in das visuelle Sichtfeld des Benutzers.
+  \dopler kann im Gegensatz zu \limo und Gendoc, die Modelle besser auf die
+  Realität abbilden, weil die Variabilitäsmodelle mit abstrakteren Konstrukten 
+  als UML Modelle arbeiten.
+  \item[Eignung zur physischen Installation] In \limo müssen dafür einmalig
+  weitere Diagrammtypen integriert und entsprechende Constraints definiert
+  werden. In \dopler, \limo und Gendoc können Schaubilder oder
+  Textfragmente, die nicht zum Modell gehören, hinzugefügt werden, um
+  zusätzliche Informationen zur Unterstützung der Installation zu liefern.
+  In \limo und Gendoc existieren diese zusätzlichen Informationen aber nur in
+  den Dokumententemplates und es gibt keinen expliziten Steuerungsmechanismus
+  dafür. \dopler ist in der Lage diese zusätzlichen Informationen durch das
+  Variabilitätsmodell zu steuern.
+  \item[Eignung zur Interaktionsbeschreibung] In \limo ist dies nur möglich,
+  wenn neue Diagrammtypen unterstützt werden. In der AR-Lösung ist dies kaum
+  möglich, weil Interaktionsmuster in einer Einblendung mit der Realität nur 
+  umständlich darzustellen sind und alle Vorteile des automatischen
+  Authoring-Werkzeugs verloren gehen.
+  \item[Erweiterbarkeit auf andere Domänen] In diesem Punkt ist die
+  AR-Lösung sehr gut aufgestellt, denn sie kann ohne zusätzlichen Aufwand auf
+  unterschiedliche Domänen oder Systeme angewandt werden. Die modellbasierten
+  und modellgetriebenen Verfahren benötigen dazu erstmals ein Model des neuen
+  Systems und die Erstellung von Dokumenten-Templates. In \dopler
+  existiert sogar eine größere Kopplung zwischen dem System und dem
+  Konfigurationsmechanismus für Dokumente, wegen der Nutzergetriebenen
+  Variabilitätsauflösung.
+  \item[Einbindung zusätzlicher Informationen] Im AR-Ansatz, \limo und
+  Gendoc besteht die Möglichkeit Bilder, Zeichnungen oder zusätzlichen Text
+  einzubinden. Da diese nicht von den Systemen Verwaltet werden, verfügen
+  sie über eine geringe Wiederverwendung und Inkonsistenzen werden nicht
+  automatisch entdeckt. \dopler erlaubt es verschiedene Informationsquellen in
+  das Variabilitätsmodell einzubinden. Das Modell steuert somit die Verwendung
+  dieser Informationen und bietet volle Unterstützung in der Darstellung. 
+  \item[Navigationsunterstützung für Anwender] Der AR-Ansatz bietet keinen
+  Mechanismus für die Navigation durch die virtuelle Anleitung. Die
+  durchzuführenden Schritte müssen linear abgelaufen werden. Die anderen Ansätze
+  hingegen erlauben die Nutzerführung durch dynamische Links, falls diese in
+  einem elektronischen Format dargestellt werden.
 \end{description}
-verhalten
-(dynamisches verhalten bei AR), Realität zu modellmaping, product line support,
-mehrere Modelle vs mehrere dokumente(übertragbarkeit der Modelle), Eigenschaften
-die alle gerne hätten, Endnutzerperspektive (Attraktivität), Entwickleraufwand,
-Verhalten-> Auswertungskapitel, Kriterien erklären
- 
-One-way oder auch Back Propagation vom Dokument zum Modell
 
-Unterschied in der Erstellung der Tempaltes bei Dopler und TopCased
+Laut \cite{Pohl2005} ist die Heimautomatisierung eine Komplexe Anwendung, die
+dank der vielen Interaktions- und Konfigurationsmöglichkeiten einer Produktlinie
+ähnelt. Die Anpassung an den Kundenwunsch, verschiedene Kombinationen von
+Heimautomatisierungsprodukten (wie z.B. Heizungs-, Licht-, Fenstersteuerung
+o.ä.) anzuschaffen, verkörpert die Variabilität im Sinne von Produktlinien.
+Je nach Konfigurationswunsch sind diese verschiedenen Varianten des
+Heimautomatisierungsproduktes auszuliefern und in verschiedenen Arten zu
+installieren und zu warten. Der Kontext des Benutzers spielt dabei eine
+wesentliche Rolle. Somit muss auch die Variabilität des zu installierenden
+Systems in Betracht genommen werden.
+
+Die Domäne in denen die verschiedenen Ansätze angewendet werden sind im
+Folgenden aufgeführt.
 \begin{description}
-  \item[NL] Grammar based oder einfache Templates (mit einer abfragesprache?)
-  \item[TopCased] Skript direkt in ODT oder DOCX (mit custom tags?)
-  \item[Dopler] DocBook Markup als  
+  \item[AR-Handbuch] Unterstützung für Installationen, Wartungsarbeiten
+  oder andere Tätigkeiten, die sichtbare Komponenten enthalten. 
+  \item[\dopler] Gedacht für den industriellen Einsatz in Umgebungen mit
+  Produktfamilien. Erstellt Produktbeschreibungsdokumente die zu den
+  ausgelieferten Systemen passen.
+  \item[LiMonE] Wird primär für Anforderungsdokumente angewendet, ist aber noch
+  im Prototypstadium.
+  \item[TopCased] Dient primär zur Erzeugung von Architekturbeschreibungen im
+  industriellen Umfeld.
 \end{description}
 
-Informationsextraktion
-\begin{description}
-  \item[NL] extraga cumva din model informatia (nici nu stiu daca zice cum)
-  \item[TopCased] folosesc OCL(Acceleo - ii modeldriven)
-  \item[Dopler] DocBook erweiterung si interbari (Custom)
-\end{description}
+Wie aus Tabelle \ref{table:comparison} ersichtlich wird, deckt kein Ansatz alle
+Faktoren ausreichend ab. Eine Installationsunterstützung muss sowohl intuitiv
+und leicht zu Bedienen als auch das konzeputelle Modell des Nutzers
+unterstützen. Sind die Abhängigkeit und Assoziationsinformationen aber nicht
+formalisiert, so können diese nicht implizit in die Anleitung eingebaut werden
+und die Wartung ist mit der steigenden Zahl an Varianten nicht mehr
+durchführbar.
 
-Konfiguration des Dokumentes
+% BRAUCHT EIN ENDE !!!!
 
-Verantwortlichkeit für die Erstellung des Dokumentes
-
-
-Anwendbarkeit des Ansatzes während des Entwicklungszyklus
-AR nur gegen ende, sonst sind die Aufnahmen nicht mehr aktuell
-
-Erstellung des Content für Systeme mit großer Variabilität
-AR schlecht
-
-
-Dopler higher level than Topcased aber lower level als AR und Limone?
-
-Authoring Werkzeuge (Wie erstelle ich den Content?)
-\begin{description}
-  \item[LiMonE] Literate Modelling (Natürliche Sprache + UML Modellierung)
-  (Logik passiert im Hintergrund)
-  \item[TopCased] UML Modellierung + Templateerstellung. Keine
-  Unterstützungsfunktionen wie Sytax Checking oder autocompletion in den
-  Templates. Vermischen der Query-Logik des Systemmodells und dem Text wird sehr
-  unübersichtlich. Code wird durch Textformattierungen mitformatiert
-  \item[Dopler] Als Kommentare. Erlaubt eine bessere Separierung von Code und
-  Beschreibungstext
-\end{description}
-
-Kontext der Erstellung
-\begin{description}
-  \item[LiMonE] Referenziert das Entwicklungsmodell ()
-  \item[TopCased] Modell der Anwendung
-  \item[Dopler] DocBook erweiterung si interbari (Custom)
-\end{description}
-
-Anwendungen von Nicht-Entwicklern
-\begin{description} 
-  \item[AR-Handbuch] Sehr leicht, aufnehmen der Gewünschten Sequenz und
-  anschließend optionale Annotierung in einem Visuellen Editor. 
-  \item[LiMonE] Textuelle Beschreibung muss sich an die Einschränkungen der
-  Grammatik halten. Leicht.
-  \item[TopCased] Komplexe Logik in den Dokumenten enthalten
-  \item[Dopler] Augmentierung der Dokumente mit spezifischem Markup nur für eine
-  eingeschränkte Klasse von Fragmenttypen. Stört den Lesefluss nicht 
-\end{description}
-
-Variabilitäts-Management
-\begin{description}
-  \item[LiMonE] N/A (wegen consistency checking?)
-  \item[TopCased] Modelle müssen Variabilität unterstützen (in
-  UML ohne erweiterungen keine produktfamilien modellierung) und
-  Modellvariabilität muss vorher in den Modellen aufgelöst werden
-  \item[Dopler] DocBook erweiterung si interbari (Custom)
-\end{description}
-
-Standardkonformität des Modells
-  \item[LiMonE] ??
-  \item[TopCased] UML
-  \item[Dopler] Spezialisiertes Modell (nicht standard konform - prea riscant
-  sa zici ?)
-
-Anwendungsgebiete
-\begin{description}
-  \item[LiMonE] ?? wurde in einer Masterarbeit erstellt
-  \item[TopCased] Konsortium von Industriepartnern in der aktiven Entwicklung
-  von kritischen Anwendungen
-  \item[Dopler] Industrielle Anwendung bei Siemens VAI und Siemens AG
-\end{description}
-
-Generalisierbarkeit (Erweiterbarkeit auf andere Domänen(versch. Meta-Modelle))
-großer/kleiner Aufwand
-
-Topcased: alle von Papyrus unterstützten Diagramme + zusätzliche
-LiMonE: nur Klassendiagramme (also keine dynamischen Aspekte)
-
-Visuelle Unterstützung durch Einbindung von graphischen Elementen 
-\begin{description}
-  \item[LiMonE] ?? beschränkt auf Klassendiagramme und die synchronisation
-  bricht wahrscheinlich?!
-  \item[TopCased] Automatisches Einfügen eines Renderings der Systemmodelle
-  \item[Dopler] Manuell erstellte Dokumentenfragmente
-\end{description}
+% verhalten
+% (dynamisches verhalten bei AR), Realität zu modellmaping, product line support,
+% mehrere Modelle vs mehrere dokumente(übertragbarkeit der Modelle), Eigenschaften
+% die alle gerne hätten, Endnutzerperspektive (Attraktivität), Entwickleraufwand,
+% Verhalten-> Auswertungskapitel, Kriterien erklären
+%  
+% One-way oder auch Back Propagation vom Dokument zum Modell
+% 
+% 
+% Informationsextraktion(poate mai bine Konsistenz der Informationen)
+% \begin{description}
+%   \item[NL] extraga cumva din model informatia (nici nu stiu daca zice cum)
+%   \item[TopCased] folosesc OCL(Acceleo - ii modeldriven)
+%   \item[Dopler] DocBook erweiterung si interbari (Custom)
+% \end{description}
+% 
+% Konfiguration des Dokumentes
+% 
+% Verantwortlichkeit für die Erstellung des Dokumentes
+% 
+% Anwendbarkeit des Ansatzes während des Entwicklungszyklus
+% AR nur gegen ende, sonst sind die Aufnahmen nicht mehr aktuell
+% 
+% Erstellung des Content für Systeme mit großer Variabilität
+% AR schlecht
+% 
+% Authoring Werkzeuge (Wie erstelle ich den Content?)
+% \begin{description}
+%   \item[LiMonE] Literate Modelling (Natürliche Sprache + UML Modellierung)
+%   (Logik passiert im Hintergrund)
+%   \item[TopCased] UML Modellierung + Templateerstellung. Keine
+%   Unterstützungsfunktionen wie Sytax Checking oder autocompletion in den
+%   Templates. Vermischen der Query-Logik des Systemmodells und dem Text wird sehr
+%   unübersichtlich. Code wird durch Textformattierungen mitformatiert
+%   \item[Dopler] Als Kommentare. Erlaubt eine bessere Separierung von Code und
+%   Beschreibungstext
+% \end{description}
+% 
+% Kontext der Erstellung
+% \begin{description}
+%   \item[LiMonE] Referenziert das Entwicklungsmodell ()
+%   \item[TopCased] Modell der Anwendung
+%   \item[Dopler] DocBook erweiterung si interbari (Custom)
+% \end{description}
+% 
+% Anwendungen von Nicht-Entwicklern
+% \begin{description} 
+%   \item[AR-Handbuch] Sehr leicht, aufnehmen der Gewünschten Sequenz und
+%   anschließend optionale Annotierung in einem Visuellen Editor. 
+%   \item[LiMonE] Textuelle Beschreibung muss sich an die Einschränkungen der
+%   Grammatik halten. Leicht.
+%   \item[TopCased] Komplexe Logik in den Dokumenten enthalten
+%   \item[Dopler] Augmentierung der Dokumente mit spezifischem Markup nur für eine
+%   eingeschränkte Klasse von Fragmenttypen. Stört den Lesefluss nicht 
+% \end{description}
+% 
+% Variabilitäts-Management
+% \begin{description}
+%   \item[LiMonE] N/A (wegen consistency checking?)
+%   \item[TopCased] Modelle müssen Variabilität unterstützen (in
+%   UML ohne erweiterungen keine produktfamilien modellierung) und
+%   Modellvariabilität muss vorher in den Modellen aufgelöst werden
+%   \item[Dopler] DocBook erweiterung si interbari (Custom)
+% \end{description}
+% 
+% Standardkonformität des Modells
+%   \item[LiMonE] ??
+%   \item[TopCased] UML
+%   \item[Dopler] Spezialisiertes Modell (nicht standard konform - prea riscant
+%   sa zici ?)
+% 
 
 
-Weitere nicht qualitative Unterscheidungskriterien (Unterschiede)
-
-Ziele der generierten Artefakte
-\begin{description}
-  \item[LiMonE] Requirements Dokumente
-  \item[TopCased] Architekturbeschreibung
-  \item[Dopler] Produktbeschreibungsdokumente
-\end{description}
-
-Open Source vs Proprietär vs nicht Released
+% Der in dieser Arbeit erstellte Überblick der Ansätze zur Unterstützung
+% von Benutzern und Generierung von Dokumenten zeigt, dass eine
+% automatische Generierung von textuellen Beschreibung der Systeme mit
+% dem Zweck der Benutzerunterstüzung relevant und in dem hier
+% präsentierten Rahmen noch nicht behandelt wurde.
+% 
+% Articulate Modelling kann eine deutliche Erleichterung bei der
+% Generierung von natürlichsprachigen Beschreibung des Modells bewirken.
+% Da die Verbphrasen schon von einem Menschen erstellt wurden, bietet
+% sich eine einfache auf Templates basierende Lösung an.
 
 
 % 
@@ -318,11 +384,6 @@ Open Source vs Proprietär vs nicht Released
 % 
 % 
 
-- Schwergewichtige Dokumente
-
-- Benötigt viel Experteninput
-
-- basiert auf großen Text-Templates
  
 % 
 % Mit dem Variabilitätsmodell verknüpft, das Systemmodel könnte sich ändern.
@@ -340,11 +401,11 @@ Open Source vs Proprietär vs nicht Released
 % 
 % Bei der Generierung industrieller Dokumentation für den Endkunden  
 
-Laut der systematischen Literaturrecherche aus \cite{Nicolas2009} gibt
-es ähnliche Ansätze aber diese betrachten nur einen Typen von
-Dokumenten, nähmlich Anforderungsspezifikationen. Der in
-\cite{Rabiser2010} beschriebene Ansatz kann jede Art von Dokumenten
-unterstützen.
+% Laut der systematischen Literaturrecherche aus \cite{Nicolas2009} gibt
+% es ähnliche Ansätze aber diese betrachten nur einen Typen von
+% Dokumenten, nähmlich Anforderungsspezifikationen. Der in
+% \cite{Rabiser2010} beschriebene Ansatz kann jede Art von Dokumenten
+% unterstützen.
 
 % Es werden Entscheidungsmodelle benutzt die 
 
@@ -359,49 +420,6 @@ unterstützen.
 
 % Ist gedacht um in kooperation mit der Arbeit von Domänenexperten.
 % Braucht Experteninput. 
-
-%% ==============
-\section{Kontraste zwischen den Ansätzen}
-\label{ch:Vergleich:sec:vergleich}
-%% ==============
-
-\texttt{In Bearbeitung.}
-
-Die AR-Ansätze und der \dopler Ansatz unterscheiden sich in der
-Gewinnung der Informationen. Bei dem AR-Ansatz werden die
-durchzuführenden Schritte vom System erlernt, wobei beim \dopler
-Ansatz die Informationen durch ein Expertensystem gewinnt.
-
-% Dopler wird generiert (ii modellgetrieben sau nu ? - probabil modell si sple
-% getrieben) Die Anderen sind modellgetrieben unterwegs
-Bei dem AR-Handbuch und dem \dopler Ansatz Falls beim \dopler Ansatz
-das Variabilitätsmodell manuell auf dem neuesten Stand gehalten werden
-muss und des nicht mit dem Systemmodell automatisch synchronisiert
-wird, können wie bei dem AR-Handbuch Inkonsistenzen zwischen den
-Anleitungen auftreten. Bei dem AR-Handbuch Ansatz könnte die Behebung
-der Inkonsistenzen mehr Zeit in Anspruch nehmen, da Experten die
-veränderten Schritte durchführen müssen.
-
-Das AR-Handbuch des DFKI ähnelt stark der Version C Dokumentation aus
-der Studie in \cite{Beckmann2004} da sie sich beide auf
-Richtlinieninformationen beschränken. Das Konzeptuelle Modell des
-Benutzers kann deshalb schwach sein, weshalb die Lösung unerwartetenr
-Situationen schwerer fallen würde und das Risiko von unbewussten
-fehlerhaften Ausführungen steigen könnte. Eventuelle Informationen zur
-unterstützung des konzeptuellen Modells der Benutzer müssten Manuell
-in die eingeblendete Sequenz eingearbeitet werden.
-
-Der in dieser Arbeit erstellte Überblick der Ansätze zur Unterstützung
-von Benutzern und Generierung von Dokumenten zeigt, dass eine
-automatische Generierung von textuellen Beschreibung der Systeme mit
-dem Zweck der Benutzerunterstüzung relevant und in dem hier
-präsentierten Rahmen noch nicht behandelt wurde.
-
-Articulate Modelling kann eine deutliche Erleichterung bei der
-Generierung von natürlichsprachigen Beschreibung des Modells bewirken.
-Da die Verbphrasen schon von einem Menschen erstellt wurden, bietet
-sich eine einfache auf Templates basierende Lösung an.
-
 
 
 % Die wesentlichen Unterschiede zwischen den Ansätzen beziehen sich
@@ -518,7 +536,70 @@ sich eine einfache auf Templates basierende Lösung an.
 %   \label{table:tab1}
 % \end{table}
 
-%% ==============
-\section{Tabelle +/-}
-\label{ch:Vergleich:sec:vergleich}
-%% ==============
+% %% ==============
+% \section{Tabelle +/-}
+% \label{ch:Vergleich:sec:vergleich}
+% %% ==============
+
+% Pohl?
+
+% Die systematische Literaturrecherche aus \cite{Nicolas2009}
+% analysiert automatisierte Ansätze der Generierung von natürlichsprachlichen
+% Texten aus den formalen Modellen einer Anwendung. Die Autoren schlussfolgern,
+% dass das Thema in der Literatur schwach repräsentiert ist, obwohl das Interesse
+% an dem Thema steigt und die Notwendigkeit solcher Ansätze gegeben ist.
+% 
+% 
+% 
+% Die Augmented-Reality-Ansätze sind vielversprechend und bieten eine gute
+% Lösung für physische Installationsaufgaben. Die Benutzung ist intuitiv und
+% erlaubt die Anwendung durch eine breite Masse. Durch das visuelle
+% Vorführen der Aufgabe bleibt auch wenig Raum für fehlerhafte Interpretationen
+% der Arbeitsschritte. Besonders der in \cite{Niels2013} beschriebene Ansatz
+% unterstützt die sofortige Verifikation der durchzuführenden Schritte und erlaubt
+% es den Nutzern wichtiges Feedback zu liefern. Dies sind wichtige Elemente laut
+% der Studie in \cite{Antifakos2002}. Die automatische Anpassung der Ausgabe ist
+% ein wichtiger Faktor der die Nutzbarkeit dieses Ansatzes stark verbessert und
+% die Abbildung der durchzuführenden Schritte auf die Realität erleichtert. 
+% 
+% Das zentrale Feature des Ansatzes ist das automatische Lernen der
+% durchzuführenden Schritte aus einer Beispieldurchführung die vom System
+% aufgenommen wird. Man kann trotzdem ein paar Schwachpunkte dieser Art von
+% Ansätzen identifiziert.
+% Für Systeme mit vielen Varianten kann es ein potenzielles Problem werden wenn
+% jede Arbeitsabfolge einmal durchgespielt werden muss. Auch Änderungen in den
+% Prozessschritten müssen durch ein neues Durchspielen in die Dokumentation
+% aufgenommen werden. In diesen Fällen muss wieder Expertenwissen in die
+% Generierung der Dokumentation einfließen. Falls dieses Wissen nicht direkt von
+% den Entwicklern des Systems kommt, kann so viel Zeit zwischen den
+% Systemänderungen und dem Update der Dokumentation.
+% Bei Änderungen im System könnte es auch zu Inkonsistenzen kommen, da das
+% AR-Handbuch nicht mit dem Systemmodell gekoppelt ist. Um die Effektivität des
+% Ansatzes zu belegen wurden noch keine Studien durchgeführt, ob der Ansatz die
+% Arbeit erleichtert oder die Qualität steigt. Da der Ansatz mit graphischen
+% Benutzeroberflächen noch nicht getestet wurde, könnten auch dort eventuelle
+% Probleme bei der Bedienung auftreten, wegen der geringen größe der zu
+% manipulierenden Objekte.
+
+% Bei dem Second-sighted Glasses Ansatz in \cite{Yone2011} gelten die vorher
+% beschriebenen Probleme. Dazu kommt noch, dass die Animationen der \emph{Futures}
+% noch manuell erstellt werden müssen und dass Marker anwesend oder eine
+% Assoziation zwischen den Objekten und ihren virtuellen Repräsentaten erstellt
+% werden muss. Dies erschwert zusätzlich die Anwendung und bringt mehr Kompexität
+% in das Szenario ein.
+% 
+% Bis die Hardware (AR-Brille, Marker) breite Anwendung findet,
+% wird eine so unterstützte Installation erstens teuerer und zweitens würde es die Anschafung
+% der für das System notwendigen Geräte komplizieren.
+% 
+% % Genauigkeit der Beschreibung: kann das Garantiert werden wenn menschen das
+% % System intepretieren?
+% 
+% Der Unterschied bezüglich der Nutzergruppen des AR-Handbuchs und Second-Sighted
+% Glasses ist, dass das AR-Handbuch auf die Installation und der Second-Sighted
+% Glasses Ansatz auf die Benutzung einer Umgebung spezialisiert sind.
+% 
+% 
+% Die Vorteile dieser Ansätze sind die hohe Intuitivität und die
+% Präzision der Aufgabenbeschreibung, da jeder Schritt dem Benutzer
+% so Angezeigt wird wie er durchzuführen ist.

@@ -14,6 +14,11 @@
 % the IKEA PAX wardrobe we show the feasibility of the proposed approach. At the
 % end important issues are discussed and future directions are outlined. 
 
+% =======
+\subsection{Adaptierung an verschiedene Anwendertypen}
+% =======
+
+
 Eine weitere Forschungsgruppe befasst sich mit der Unterstützung der Anwender
 bei Installationsaufgaben. Laut \cite{Antifakos2002} gibt es zwei Felder in
 denen Anwender von besseren Anleitungen profitieren:
@@ -25,14 +30,14 @@ denen Anwender von besseren Anleitungen profitieren:
 \end{enumerate}
 % ============================================= %
 Eine Anleitung muss an das Nutzungsmodell der Anwenders angepasst werden, um ihn
-nicht zu über- oder unterfordern. Die von den Autoren definierten
+nicht über- oder unterzufordern. Die von den Autoren definierten
 Nutzungsmodelle sind im Folgenden beschrieben:
 \begin{enumerate}   
-  \item Das \emph{Full-walk-through} richtet sich an Anfänger,
+  \item Das \emph{Full-Walk-Through} richtet sich an Anfänger,
   die wenig Erfahrung und wenig
   Wissen über die zu erfüllende Aufgabe besitzen. Das Anleitungssystem liefert
   dieser Gruppe volle Unterstützung bei allen durchzuführenden Schritten.
-  \item Das \emph{Assistance-on-demand} richtet sich an Benutzer deren
+  \item Das \emph{Assistance-on-Demand} richtet sich an Benutzer deren
   Wissenstand höher als der eines Anfängers ist, aber dennoch kleiner als den
   eines Experten. Diese Gruppe bevorzugt es eine Installation ohne Anleitung zu
   starten und bestimmen die Reihenfolge der durchzuführenden Schritte selber.
@@ -41,17 +46,17 @@ Nutzungsmodelle sind im Folgenden beschrieben:
   \item Der \emph{Rescue-from-Trap} Gruppe gehören Domänenexperten an, die nur
   selten eine Anleitung ru Rate ziehen. Bei dieser Gruppe muss aber das System
   darauf achten, dass wichtige Sicherheitsregeln beachtet und der Nutzer bei
-  deren gefährdung gewarnt wird. \end{enumerate}
+  deren Gefährdung gewarnt wird. \end{enumerate}
 % ============================================= %
 Das Wichtige bei einer Anleitung ist es, so erklären die Autoren, den
 gewünschten Zustand zu erreichen und nicht eine bestimmte Reihenfolge der
 Schritte zu beachten. Diese Aussage stimmt auch mit der in \cite{Beckmann2004}
-gemachten Beobachtung, dass ein gutes konzeputuelles Modell, dem Benutzer
-ermöglicht Zustände des Systems ohne die Befolgung einer bestimmten Rheinefolge
+gemachten Beobachtung, dass ein gutes konzeptuelles Modell, dem Benutzer
+ermöglicht Zustände des Systems ohne die Befolgung einer bestimmten Reihenfolge
 der Anweisungen zu erreichen. Die Anleitungen die heutzutage in Gebrauch sind,
 präsentieren dem Nutzer nur einen eingeschränkten, linearen Lösungsraum. Des
 weiteren erzeugen sie einen kognitiven Overhead während der Abbildung der
-Anweisungen, von der graphischen Skizze des Lösungsraums und dem Text, auf die
+Anweisungen von der graphischen Skizze des Lösungsraums und dem Text auf die
 Aufgabe in der realen Welt.
 
 % =======
@@ -62,15 +67,15 @@ Der in \cite{Antifakos2002} beschriebene Ansatz hebt die Limitierungen der
 heutigen Benutzeranleitungen durch proaktive Unterstützung auf. Sensoren, wie
 Beschleunigungs- oder Kraftmesser, die an die verschiedenen Bauteile eines
 aufzubauenden Objektes angebracht sind, melden den Status der Installation an
-ein Beobachtendes System, dass auf den fortschritt in der Installation reagiert.
+ein Beobachtendes System, dass auf den Fortschritt in der Installation reagiert.
 Das System identifiziert unvollständig durchgeführte Installationsschritte
 (Schraube wird gedreht) anhand der Auswertung der Messdaten.
-Diese widerrum ermöglichen, unter der Verwendung eines Hidden Markov Model, die
-Identifikation von vollständig durchgeführten Schritten (Schraube ist in
-Gewinde).
+Diese widerum ermöglichen, unter der Verwendung eines Hidden Markov Model, die
+Identifikation von vollständig durchgeführten Schritten (Schraube wurde fertig
+gedreht).\\
 % ============================================= %
-\cite{Antifakos2002} weisen darauf hin, dass der so identifizierte Fortschritt
-der Installation, dem Anwender durch ein geignetes Medium präsentiert werden
+Die Autoren weisen darauf hin, dass der so identifizierte Fortschritt
+der Installation, dem Anwender durch ein geeignetes Medium präsentiert werden
 muss. Die Autoren nennen dafür zukünftige Augmented-Reality Anwendungen,
 erwägen aber auch dynamische textuelle Dokumente. Weiterführend können auch die
 Bauteile, mit Hilfe von Lichtsignalen oder Vibration, die Aufmerksamkeit des

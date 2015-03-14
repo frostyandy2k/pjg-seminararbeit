@@ -59,7 +59,7 @@ Entitäten definiert: \emph{Assets} und \emph{Decisions} (vgl. Abbildung
 Dokumente oder Technische Komponenten. Decisions hingegen sind die
 Entscheidungsbasis, anhand derer die Konfiguration der Assets stattfindet. Diese
 sind analog zu den in der Variabilitätsmodellierung eingesetzten
-Entscheidungspunkten (Variation Points).
+Entscheidungspunkten (Variation Points).\\
 % ============================================= %
 Die im Metamodell vorhandene Abhängigkeitsbeziehung zwischen Assets modelliert
 die Funktionsabhängigkeit und den strukturellen Aufbau des Systems. Logische und
@@ -112,13 +112,12 @@ spezifischen Variabilitätsmechanismus realisiert.
 % Modell eine Aggregation zwischen den Dokumentfragmenten eingeführt.
 
 % =======
-\subsection{Dokumentstruktur und ihren Einfluss auf die Generierung}
-% =======ii bun titlu? plm inca!
+\subsection{\dopler Werkzeuge}
+% =======
 
 Die \dopler Werkzeuge benutzten den Profil-Mechanismus des
-DocBook-Standards\footnote{www.docbook.org/}, um
-Elemente und Attribute zu implementieren, die die Variationspunkte in den
-Dokumenten definieren.
+DocBook-Standards\footnote{www.docbook.org/}, um Elemente und Attribute zu
+implementieren, die die Variationspunkte in den Dokumenten definieren.
 
 % Die zentrale Erweiterung zu DocBook ist das \emph{doplerdoc} Attribut. Es
 % koppelt das Markup-Element an ein Dokumentfragment und erlaubt es so optionale
@@ -140,13 +139,13 @@ Platzhalter für den Kühlungsmechanismus \emph{cooling\_mech}
 % =======
 
 Der Ablauf zur Generierung von Dokumenten beginnt mit der Erstellung eines
-Variabilitätsmodells. Die Antworten auf die Fragen der Decisions werden durch
-den Nutzer mit Hilfe eines Konfigurationsassitenten (z.B. \dopler
-Konfigurations-Wizard) in das Modell eingetragen. Das variable Dokument, das
-zentrale Artefakt im Prozess der Dokumentengenerierung, entsteht durch das
-Erweitern existierender Dokumentation mit der im Variabilitätsmodell
-existierenden Variabilitätsinformation und eine ständige Rückkopplung zu dem
-Variabilitätsmodell.
+Variabilitätsmodells (Abbildung \ref{fig:dopler-process}). Die Antworten auf die
+Fragen der Decisions werden durch den Nutzer mit Hilfe eines
+Konfigurationsassitenten (z.B. \dopler Konfigurations-Wizard) in das Modell
+eingetragen. Das variable Dokument, das zentrale Artefakt im Prozess der
+Dokumentengenerierung, entsteht durch das Erweitern existierender Dokumentation
+mit der im Variabilitätsmodell existierenden Variabilitätsinformation und eine
+ständige Rückkopplung zu dem Variabilitätsmodell.
 
 % =======
 \begin{figure}[htb]
@@ -155,7 +154,7 @@ Variabilitätsmodell.
   \caption{\dopler Überblick über den Generierungsprozess der finalen
   Dokumentation aus dem Variabilitätsmodell in
   \cite{Rabiser2010}.}
-  \label{fig:dopler-meta_model}
+  \label{fig:dopler-process}
 \end{figure}
 % =======
 
@@ -164,59 +163,42 @@ Dokument-Template an und startet die DocBook-XSLT-Engine, um ein Dokument im
 gewünschten Ausgabeformat (z.B. PDF) zu erstellen. Formattierungsoptionen sind
 mit XSL oder CSS realisiert und sind durch Decisions konfigurierbar.
 
-
 % =======
-\subsection{Erkentnisse aus industriellen Studien}
+\subsection{Industrielle Anwendung}
 % =======
 
-Die in den Studien aus \cite{Rabiser2007} eingesetzte Werkzeugkette, besteht aus
-verschiedenen Ausprägungen des \dopler Werkzeugs. Das \dopler
+Die in den Studien aus \cite{Rabiser2007} eingesetzte Werkzeugkette, besteht
+aus verschiedenen Ausprägungen des \dopler Werkzeugs. Das \dopler
 Variabilitäts-Modellierungs-Tool und der \dopler Konfigurations-Wizard, der den
 Nutzer durch die Produktableitung führt, sind Teil davon. Als Generator dient
-eine domänenspezifische Erweiterung des \dopler Konfigurationswerkzeugs.
+eine domänenspezifische Erweiterung des \dopler Konfigurationswerkzeugs.\\
+% ============================================= %
+Im ersten Anwendungsfall, bei der Siemens VAI, wurde auf einer schon
+bestehenden, automatisierten Software-Entwicklungskette aufgebaut. Ein Großteil
+der Decisions für die Dokumentengenerierung konnte aus den schon bestehenden
+Variabilitätsmodellen extrahiert werden. Für den restlichen Teil sind
+Dokumentenspezifische Decisions in Zusammenarbeit mit Domänenexperten erstellt
+worden. Ein einziges Entscheidungsmodell steuert die Produktkonfiguration als
+auch die Erstellung der technischen Benutzerdokumentation.\\
+% ============================================= %
+In der zweiten Industriellen Anwendung, bei der Siemens AG, mussten
+kundenspezifische Verkaufsdokumenete erstellt werden, wobei es keine existierende
+Variabilitätsmodellierung gab. Zu den unten erwähnten Variabilitätspunkten kamen
+noch variantenabhängige Berechnungen der Preise und anderer Indikatoren hinzu.
+Außerdem gab es in diesem Fall mehr Alternativtexte und einige Variationspunkte
+die einen dokumentenübergreifenden Einfluss hatten.
 
-Die gewonnenen Erkenntnisse aus den zwei industriellen Anwendungen des Ansatzes
-werden im weiteren beschrieben.
-
-% Im ersten Anwendungsfall, bei der Siemens VAI, waren Teile der Dokumentation für
-% Benutzer schon als DocBook-Quellen vorhanden. Des weiteren waren die
-% Variabilitätsmodelle schon vorhanden und die automatische Generierung von
-% Produktkonfigurationen wurde bereits unterstützt.  
-
-Bei der Erstellung der Variabilitätsmodelle sind ein Großteil der Decisions aus
-den technischen Variabilitäsmodellen benutzt werden. In den restlichen Fällen wurden
-Decisions spezifisch für die Dokumentengenerierung erstellt. Ein Generator wurde
-so erstellt, dass er die technische Benutzerdokumentation laut den Decisions
-aufbauen kann. Die Aufgabe der Erweiterung der Dokumente mit der
-Variabilitätsinformation konnte erfolgreich von den
-Domänenexperten durchgeführt werden, nachdem für jede oben erwähnte Art von
-Variabilität ein Beispiel zur Verfügung gestellt wurde.
-
-Laut einer Befragung der Domänenexperten treten folgede
-Kategorien von Variabilität am häufigsten auf:
+In beiden Anwendungsfällen wurde mit Hilfe einer Befragung der Domänenexperten
+die am häufigsten auftretende Variabilität in Dokumenten gesammelt:
 \begin{itemize}
-  \item Optionale Teile der Dokumentation
   \item Querverweise und deren Konsistenz
+  \item Optionale Teile
   \item Platzhalter (z.B Name des Kunden)
   \item Grammatikalische Variation (Pluralbildung)
   \item Multi-Media-Objekte (z.B. Bilder)
   \item Formatierung und Layout (durch XSL oder CSS Style-Sheets
   realisierbar)
 \end{itemize}
-Diese werden in der ersten Phase benutzt\ldots.
-
-Ein einziges Entscheidungsmodell wird benutzt um die Produktkonfiguration als
-auch die Technische Benutzerdokumentation zu erstellen.
-Für den Fall, dass Kunden eigene Erweiterungen für das System entwickeln wollen,
-müssen sehr spezifische Dokumente geliefert werden. Diese waren vor der
-Einführung der \dopler Werkzeuge nicht realisierbar.
-
-In der zweiten Industriellen Anwendung, bei der Siemens AG, mussten
-kundenspezifische Verkaufsdokumenete erstellt werden, wobei es keine existierende
-Variabilitätsmodellierung gab. Zu den oben erwähnten Variabilitätspunkten kamen
-noch variantenabhängige Berechnungen der Preise und anderer Indikatoren hinzu.
-Außerdem gab es in diesem Fall mehr Alternativtexte und einige Variationspunkte
-die einen dokumentenübergreifenden Einfluss hatten.
 
 Der in \cite{Rabiser2010} beschriebene Ansatz erlaubt es an den Entwicklungs und
 Generierungsprozesses von Software die Generierung von Dokumenten einzubinden.

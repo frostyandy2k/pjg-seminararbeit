@@ -1,111 +1,112 @@
-
 %% ==============
 \section{Modellgetriebene Generierung von Dokumentation}
 \label{ch:sec:}
 %% ==============
 
-Was ist topcased?
-Wozu wird es benutzt/Wozu wurde es gebaut?
+%% ==============
+\subsection{Topcased Gendoc}
+\label{ch:sec:}
+%% ==============
 
-\cite{Pontisso06}
+% Modellierung standardisiert OMG MDA, graduelle verfeinerung
+% Anstrengungen der MDA si
+% MDSD an diesem Beispiel kurz erklären
 
-Modellierung standardisiert OMG MDA, graduelle verfeinerung
-Anstrengungen der MDA si
-
-MDSD an diesem Beispiel kurz erklären
-
-[Einleitung] Ein weiteres Werzkeug zur automatischen Generierung von
-Dokumentation ist das in der Topcased Plattform enthaltene Gendoc, das aus
-Quellmodellen modellgetriebene Erstellung von Dokumentation ermöglicht.
-
+Ein weiteres Werkzeug zur automatischen Generierung von Dokumentation ist das
+in der Topcased Plattform enthaltene Gendoc, das aus Quellmodellen modellgetriebene
+Erstellung von Dokumentation ermöglicht. Die Model Driven Architecture (MDA),
+ein Standard zur modellgetriebenen Entwicklung der OMG\cite{Miller2001}, sieht
+eine Unterteilung in mehreren Modellebenen unterschiedlicher Abstraktion vor.
+Beginnend mit einem Modell der Domäne werden durch graduelle Verfeinerungen
+Details zur Bearbeitung von Informationen bis hin zu der Spezifizierung der
+konkreten technischen Implementierung, um aus den Modellen das fertige System zu
+generieren.
+% ============================================= %
 Topcased\footnote{http://www.topcased.org/ ab 2014 auf http://polarsys.org/} ist
 ein Open-Source Werkzeug für modellgetriebene Entwicklung und dient dem System-
-und Software-Engineering von kritischen und embedded Anwendungen. Die Plattform
-unterstützt alle Entwicklungsstufen von der Anforderungsanalyse bis zu der
-Implementierung. Sie basiert auf der Eclipse Plattform und benutzt das Eclipse
-Modeling Framework (EMF), um einen modellgetriebenen Arbeitsfluss zu
-realisieren. Es unterstützt neben UML Modellen auch andere von der OMG
-standardisierten Modellierungssprachen wie SysML\footnote{http://www.sysml.org/} und
+und Software-Engineering von kritischen und embedded Anwendungen
+\cite{Pontisso06}. Die Plattform unterstützt alle Entwicklungsstufen von der
+Anforderungsanalyse bis zu der Implementierung. Sie basiert auf der Eclipse
+Plattform und benutzt das Eclipse Modeling Framework (EMF), um einen
+modellgetriebenen Arbeitsfluss zu realisieren. Es unterstützt neben UML Modellen
+auch andere von der OMG standardisierten Modellierungssprachen wie
+SysML\footnote{http://www.sysml.org/} und
 ReqIF\footnote{http://www.omg.org/spec/ReqIF/}.
-
+% ============================================= %
 Als Teil der Topcased Plattform erlaubt Gendoc die Generierung von textueller
 Dokumentation aus UML Modellen. Die Generierung wird von Skripten in den
 Dokumenten-Templates, die Logik und Modellabfragen beinhalten, gesteuert. Um die
-Modellabfrage zu realisieren sind Acceleo Skripte und OCL Ausdrücke möglich.
+Modellabfrage zu realisieren sind
+Acceleo\footnote{http://www.eclipse.org/acceleo/} Skripte und Object Constraint
+Language (OCL)\footnote{http://www.omg.org/spec/OCL/} Ausdrücke möglich.
 
-Acceleo\footnote{} Skripte, die direkt in den Dokumenten-Templates geschrieben
-werden lesen die Quelldomodelle mit Hilfe von OCL aus und füllen das Dokument.
+%% ==============
+\subsection{Gendoc Realisierung}
+\label{ch:sec:}
+%% ==============
+
+Acceleo Skripte, die direkt in den Dokumenten-Templates geschrieben werden lesen
+die Quellmodelle mit Hilfe von OCL aus und füllen das Dokument.
 Die benutzten Skripte, die in der Acceleo Sprache geschrieben sind, können
-beliebig Komplexe OCL Ausdrücke wie Schleifen oder Logik enthalten. 
-
+beliebig Komplexe OCL Ausdrücke wie Schleifen oder Logik enthalten. Die Skripte
+sind in einer Markup-Ähnlichen Sprache eingebettet, die HTML ähnliche
+Unterstützung von Bildern und Listen besitzen.\\
+% ============================================= %
 Topcased unterstützt einen Großteil der UML Modelle, namentlich sind das
 Klassen-, Komponenten- und Deployment-Diagrammes, die die Struktur beschreiben
 und Sequenz-, Aktivitäts- und Zustandsdiagramme die die dynamischen Teile eines
 Systems beschreiben. Auch Use-Case Diagramme können modelliert, abgefragen und
-in die Dokumentation mit eingebunden werden.
-
+in die Dokumentation mit eingebunden werden.\\
+% ============================================= %
 Der generative Ansatz verläuft wie in Abbildung \ref{fig:topcased-gendocflow}
 dargestellt. Die Modelle und die Dokumenten-Templates sind die Eingaben des
 Systems, als Ausgabe liefert Gendoc das ausgefüllte Dokumenten-Template. Die
-Abspeicherung der ODT\footnote{} und DOCX\footnote{} Formate als XML, erlaubt es
-Gendoc die Skripte zu extrahieren und Auszuwerten. Da die Skripte in der
-Modelltransformationssprache Acceleo geschrieben sind können direkt auf die
-Modelle ausgeführt werden. Dieser Ansatz erlaubt es, alle von der EMF
-unterstützten Modellformate in Gendoc einzusetzen.
-
-UML Modelle liefern Informationen über den erwünschten Einsatz des Systems und
-werden primär in Zusammenarbeit mit Domänenrepräsentaten erstellt.
-
-Die Skripte sind in einer Markup-Ähnlichen Sprache eingebettet, die durch  und
-HTML ähnliche Unterstützung von Bildern und Listen besitzen. 
-
-Beim Auswerten der Skripte behalten die Ausgaben die Formattierung bei.
-Graphische Elemente, wie konkrete Diagramme können aus dem
-Quellmodell generiert werden und neben dem Text in das generierte Dokument
-eingefügt werden.
-Da die Formattierung des Dokuments beibehalten wird ist die dynamische
-Verlinkung mithilfe der Dokumenteneigenen Mechanismen möglich.
-
-Gendoc Befehlen werden durch das <gendoc> tag gekennzeichnet. Neben dem Acceleo
-Skript sind auch statische Texte mit Formatierungen, Bilder und Tabellen
-Erlaubt.
-
-Hyperlinking ist möglich durch das Benutzen des Dokumentformat abhängigen
-Verlinkungsmechanismus.
-
-Die Konfiguration, die die Erstellung des Dokumentes steuert wird auch im
-Dokument-Template unter einem Markup-Tag gespeichert.
-
-Ein Mechanismus zur Wiederverwendung von Code in den Templates steht zur
-Verfügung.
-
-Zugriff auf alle Elemente der Diagramme die benutzt weredn um das System zu
-modellieren. Volle Kontrolle auf die Erstellung des Dokumentes und der
-Informationen die aus den Modellen abgeleitet werden.
-
-Kann es andere Fragmente mit einbeziehen? Sind Acceleo Skript und Dokument immer
-gemischt. Domänenexperten können dann wahrscheinlich nicht damit arbeiten.
-
-Sagen dass Topcased auch code generieren Kann
-
-Gendoc erlaubt es auch im Batch-Modus zu laufen, um automatisierte
-Werkzeugketten zu realisieren.
-
-Nachteil: Code aus Templates kann nur mit großem Aufwand auf ein Anderes
-Template angewandt werden.
+Abspeicherung der ODT\footnote{Open Document Text} und DOCX\footnote{Microsoft
+Word Dokumenten Format} Formate als XML, erlaubt es Gendoc die Skripte zu
+extrahieren und Auszuwerten. Da die Skripte in der Modelltransformationssprache
+Acceleo geschrieben sind können sie direkt auf die Modelle ausgeführt werden.
+Dieser Ansatz erlaubt es, alle von der EMF unterstützten Modellformate in Gendoc
+einzusetzen. Gendoc erlaubt es auch im Batch-Modus zu laufen, um automatisierte
+Werkzeugketten zu realisieren.\\
+% ============================================= %
+Beim Auswerten der Skripte behalten die Ausgaben die Formatierung bei. Dies
+bedeutet aber auch, dass der Quell-Code im Template-Dokument unterschiedliche,
+für Code untypische, Formatierungen besitzt, was das bearbeiten erschwert. Da
+aber die Formatierung des Dokuments beibehalten wird ist die dynamische
+Verlinkung mithilfe der Dokumenteneigenen Mechanismen möglich. Graphische
+Elemente, wie konkrete Diagramme können aus dem Quellmodell generiert werden und
+neben dem Text in das generierte Dokument eingefügt werden.
 
 \begin{figure}[htp]
 \begin{center}
-  \includegraphics[width=0.6\textwidth]{img/topcased-gendocflow.png}
-  \caption[XXX]{XXXXXXX}
+  \includegraphics[width=1\textwidth]{img/topcased-gendocflow.png}
+  \caption[Architektur des Gendoc Werkzeugs]{Architektur des Gendoc Werkzeugs}
   \label{fig:topcased-gendocflow}
 \end{center}
 \end{figure}
 
+% Gendoc Befehlen werden durch das <gendoc> tag gekennzeichnet. Neben dem Acceleo
+% Skript sind auch statische Texte mit Formatierungen, Bilder und Tabellen
+% Erlaubt.
+% 
+% Die Konfiguration, die die Erstellung des Dokumentes steuert wird auch im
+% Dokument-Template unter einem Markup-Tag gespeichert.
+% 
+% Ein Mechanismus zur Wiederverwendung von Code in den Templates steht zur
+% Verfügung.
+% 
+% Zugriff auf alle Elemente der Diagramme die benutzt weredn um das System zu
+% modellieren. Volle Kontrolle auf die Erstellung des Dokumentes und der
+% Informationen die aus den Modellen abgeleitet werden.
 
-Wie funktioniert es?
-	Konzeptuell
-	Technische realisierung
+% Nachteil: Code aus Templates kann nur mit großem Aufwand auf ein Anderes
+% Template angewandt werden.
+
+% 
+% 
+% Wie funktioniert es?
+% 	Konzeptuell
+% 	Technische realisierung
 
 	
 % Listing erklären was die einzelnen tags machen. Are rost listingu? Vezi daca se

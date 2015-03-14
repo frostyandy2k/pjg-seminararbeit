@@ -6,259 +6,218 @@
 \label{ch:}
 %% ==============
 
-Der unterschied zw model driven und model based cu ref MDA ?
-
-Die automatisierte Generierung aus den formalen Modellen eines Systems, umgeht
-dieses Problem. Die systematische Literaturrecherche aus \cite{Nicolas2009}
-analysiert automatisierte Ansätze der Generierung von natürlichsprachlichen
-Texten aus den formalen Modellen einer Anwendung. Die Autoren schlussfolgern,
-dass das Thema in der Literatur schwach repräsentiert ist, obwohl das Interesse
-an dem Thema steigt und die Notwendigkeit solcher Ansätze gegeben ist.
-% % ============== 2009 SLR On the generation of requirements specifications
-% from software engineering Models
-
 %% ==============
 \subsection{Literate Modeling}
 \label{ch:sec:literate-modeling}
 %% ==============
-Inlocuiesti cu limone \cite{Schulze2012}
-In this paper, we have presented an approach to address a major problem in
-Literate Modeling: consistency between model and text. 
-our approach attempts to provide fne-grained synchronization of
-sentences in natural language with parts of the UML model.
- using text annota-
-tions and a synchronization algorithm that uses natural language processing in
-conjunction with OCL.
-Feingranulare, per Satz Synchronisation
 
-
-Explici putin ce ii cu literate modelling si apoi ca la topcased ce ii, la ce
-se folosete, cum functioneaza, cum e realizat?
-% Limone? da nu stiu cat de mult pot spune despre el\ldots 
+Im Gegensatz zur modellgetriebenen Entwicklung sieht die modellbasierte
+Entwicklung auch Modelle als Entwicklungsartefakte vor, jedoch werden diese
+Benutzt zu Dokumentationszwecken benutzt und nicht um daraus das fertige System
+zu bauen.\\
+% ============================================= %
 Unter \emph{Literate Modeling} versteht man die von \cite{Arlow1999} eingeführte
-Methode, in der das Anforderungsdokument Systemmodelle zusammen mit narativem
-Text vorsieht, um ein Gesamtbild des zu entwickelnden Systems zu geben.
-Das so entstandene Dokument, auch \emph{Business Context Document (BCD)}
+modellbasierte Methode, in der das Anforderungsdokument Systemmodelle zusammen
+mit narrativem Text vorsieht, um ein Gesamtbild des zu entwickelnden Systems zu geben.
+Das so entstandene Dokument, \emph{Business Context Document (BCD)}
 genannt, beinhaltet neben dem visuellen Modell auch natürlichsprachliche
 Beschreibungen der UML Syntax, den Gedankengang der zu Entscheidungen führte,
 Beispiele zur Illustration bestimmter Aspekte und eine Umschreibung in
-natürlicher Sprache des Modells.
+natürlicher Sprache des Modells. Dieses Dokument schließt die Lücke zwischen den
+Modellierern und den nicht technischen Stakeholdern und erlauben somit eine
+bessere Beurteilung der formalisierten Anforderungen. Die Anwendung der
+Literate-Modeling Methode führt laut \cite{Arlow1999} zu einer Verbesserung in
+der Umsetzung von großen Softwareprojekten, weil das Wissen der Entwickler auch
+den Entscheidungsträgern zugänglich ist.
 
-Auch \cite{Burden2011} identifizieren dieses Probleme und benutzen einen
-Ansatz, der ähnlicherweise grammatikalische Regeln als Unterstützung für die
-Generierung anwenden.
-
-Die Autoren arbeiteten zur Zeit der Entwicklung dieser Methode bei British
-Airways. Während der Systementwicklung trat ein Problem, dass die Autoren als
-\emph{'trivialisation of business requirements by visual modelling'} nannten,
-auf. Die Autoren haben beobachtet, dass nach der Formalisierung der
-Anforderungen wichtige Kernaspekte der Domäne zwischen anderen unwichtigeren
-Details untergehen. Ein Beispiel dieses Problems ist das Cross-Selling von
-Flugtickets zwischen British Airways und den Allianzpartnern, ein Markt der
-Umsätze in Millionenhöhe tätigt und somit sehr wichtig für das Geschäft ist.
-Diese Geschäftsanforderung wurde in dem UML Modell, korrekterweise, durch eine
-mit dem * Symbol dargestellte Multiplizität an dem Assoziationsende zwischen den
-Modellklassen Flug und Flugnummer dargestellt (vgl. Abbildung
-\ref{fig:articulate-model}. Dadurch verlor diese Anforderung an Bedeutung bei
-der Darstellung im formalen Modell. Nach der Einführung von BCD konnten die
-Geschäftsanforderungen enger an die Formalen Modelle gekoppelt werden und in
-\cite{Arlow1999} wird berichtet, dass die Anwendung der Literate-Programming
-Methode zu einer Verbesserung in der Umsetzung der Projekte geführt hat.
-
-Um diese Methode effizient zu nutzen, so merken die Autoren in \cite{Arlow1999}
-an, wird eine gute Werkzeugunterstützung benötigt, die die Konstistenz zwischen
-Modellen und dem beschreibenden Text gewährleistet. Aus diesem Grund wurde in
-\cite{Schulze2012} ein Ansatz entwickelt, um die Synchronisation zwischen den
-Diagrammelement und den Ihnen Beschreibenden natürlichsprachlichen Texten
-durchzuführen. Der dort beschriebene Ansatz basiert auf die Annotierung des
-Textes und einem Synchronisationsalgorithmus, der natürliche Sprache in
-Verbindung mit OCL Ausdrücken verarbeitet. Um den Ansatz prototypisch zu testen
-wurde das Tool LiMonE\footnote{LiMonE:
-http://squam.info/limone}, als Adapter für die Eclipse UML2 Tools und den
-Papyrus Editor, in einer Masterarbeit, entwickelt.
+%% ==============
+\subsection{Automatische Synchronisation für Literate Modeling}
+\label{ch:sec:literate-modeling}
+%% ==============
 
 % Besonders der Ansatz des Literate Modeling (vgl.
 % \ref{ch:sec:literate-modeling}) wird in verschiedenen Arbeiten verfolgt.
 
-The Business Context Document closes the comprehensibility gap between
-the modeler and their non-technical audience and allows for effective review and
-feedback on the models by non-technical stakeholders.
-
-For synchronization of individual elements, we use text annotations that provide
-the semantic link between a particular word of a sentence and the corresponding
-element of the UML model
-
- Each annotation contains the unique resource identiffer
-(URI) of the model element, as well as the fully qualifed name of the element
-within the model
-
-To take account of the modelfs structural features, sentences that contain refer-
-ences to model elements need to be validated. This is achieved by checking each
-sentence using a set of validation constraints. 
-
- For analyzing the structure of each sentence, we have
-used the Stanford PCFG Parser 
-
-Based on this representation, we have developed a language that allows us to
-search for specifc grammatical relationships between individual constituents of a
-sentence, as well as specify the type of the UML model elements particular words
-have to be associated with. 
-
-Internally, the sentence constraints are translated into an equivalent Prolog
-query and evaluated using a light-weight Prolog system for Java
-
-For expressing the second component of the validation
-constraint, we use the Object Constraint Language (OCL) [17]. Validation con-
-straints are required to work with all possible user models, hence we use OCL on
-the UML metamodel layer (M2) to constrain elements of the user model (M1).
-More precisely, the invariant mechanism of OCL is used to check whether a set
-of classes conforms to certain structural requirements.
-
-The presented approach has been implemented in a prototypic editor for Lit-
-erate Modeling, called LiMonE 2 , which was used to conduct the experiments
-discussed above. The tool has been developed as a plugin for Eclipse, and is
-designed to interoperate with different modeling tools built on top of the
-Eclipse platform. Currently, adapters for the Papyrus UML Modeler and the UML2
-Tools of Eclipse are provided.
-The editor allows the user to create a Business Context Document for a par-
-ticular model, and embed the diagrams of the model in the document. Model
-elements can be inserted via an auto-completion feature, which allows the user to
-select from a list of suggested items. UML model and text can be edited simulta-
-neously, with changes to individual model elements being updated immediately
-in the Business Context Document. In case structural changes have been made
-to the model, those sentences containing text annotations are validated after the
-model or the text document have been saved. As already mentioned in section
-3.2, changes can be detected even when the model is edited without the editor
-being open. A list with the detected inconsistencies is shown in a separate view,
-with the corresponding sentences being underlined in the editor.
-
-Diagrams from the model can be added
-
-
+Um die Methode des Literate-Modeling effizient zu nutzen, wird eine gute
+Werkzeugunterstützung benötigt, die die Konsistenz zwischen Modellen und dem
+beschreibenden Text gewährleistet. Aus diesem Grund ist in \cite{Schulze2012}
+ein Ansatz beschrieben, um die Synchronisation zwischen den Diagrammelement und
+den ihnen beschreibenden natürlichsprachlichen Texten durchzuführen. Der dort
+beschriebene Ansatz basiert auf die Annotierung des Textes und einem
+Synchronisationsalgorithmus, der natürliche Sprache in Verbindung mit OCL
+Ausdrücken verarbeitet. Um den Ansatz prototypisch zu testen wurde das Tool
+LiMonE\footnote{http://squam.info/limone}, als Adapter für die Eclipse UML2 Tools und den
+Papyrus Editor, in einer Masterarbeit, entwickelt.
+Die semantische Verbindung
 
 \begin{figure}[htp]
 \begin{center}
-  \includegraphics[width=0.8\textwidth]{img/limone-syncprocess.png}
-  \caption[XX]{\cite{Schulze2012}}
-  \label{fig:m2n-architecture}
+  \includegraphics[width=0.9\textwidth]{img/limone-syncprocess.png}
+  \caption[LiMonE Synchronisierungsprozess]{Der Synchronisierungsprozess als
+  Aktivitätsdiagramm aus
+  \cite{Schulze2012}}
+  \label{fig:limone-syncprocess}
 \end{center}
 \end{figure}
+
+Um einzelne Elemente zu synchronisieren, werden Textannotationen benutzt, die
+eine Verbindung zwischen einem im Satz auftretenden Wort und dem Modellelement
+herstellen. Jeder Modellbeschreibende Satz wird einzeln gegen ein Set von
+Constraints verifiziert. Dabei wird die grammatikalische Struktur mit den in
+Modell enthaltenen Informationen überprüft. Für die Analyse der Satzstrukturen
+wurde ein Parser für natürliche Sprache verwendet\footnote{Stanford PCFG Parser
+http://nlp.stanford.edu/software/lex-parser.shtml}. Die Satz-Constraints werden
+über logische Auflösung ausgewertet. 
+
+Durch die Verbindung der Wörter aus natürlichsprachlichem Text und den
+dazugehörigen Modellelementen ermöglicht diese System die Konsistenz zwischen
+der textuellen Dokumentation und den Modellen zu halten. So wird auch die
+Erstellung der Dokumentation aktiv unterstützt.
+
+
+% Internally, the sentence constraints are translated into an equivalent Prolog
+% query and evaluated using a light-weight Prolog system for Java
 % 
-% %% ==============
-% \subsection{Articulate Modelling}
-% \label{ch:sec:}
-% %% ==============
-% 
-% %% xtUML einführen
-% 
-% [aus Buch Starr2001]
-% Articulate modelling einführen (+xtUML) und sagen, dass das ein guter
-% schritt ist um die Systembeschreibung zu verbessern und die NL
-% generierung zu erleichtern. Dadurch entseht auch ein besserer Bezug
-% zwischen den Modellen und Korrekturen können leichter in das
-% Formale Systemmodell übernommen werden.
-%  What I am defining as an ''articulate'' class model is one
-% that expresses critical system rules with transparent, unambiguous precision.
-% 
-% % The model should express the application's true require-
-% % ments, as minimally and precisely as possible without telling the programmer how to write code.
-% % 
-% % DEFINING A PLATFORM INDEPENDENT CLASS
-% % WHAT QUESTIONS CAN THIS CLASS ANSWER?
-% % 
-% % ENFORCING THE IDENTITY CONSTRAINT
-% % 
-% % RELATIONSHIPS
-% % All relationships in the Good Model are glued together with referential
-% % attributes. % asta nu prea am inteles
-% % 
-% % VERB Pharases
-% % In fact, since the role name often matches the associated class name, you can usually drop them alto-
-% % gether without affecting a model's expressiveness.
-% % 
-% % To read an association named using verb phrases, start on one side of the association and read the
-% % phrase, multiplicity and class name on the opposite side as shown.
-% % 
-% % Main Idea: does the model express all the business rules? AND
-% % Behavioral constraints satisfied? Can you answers certain questions of
-% % situations that might arise during runtime?
-% % 
-% % Generic, all-inclusive verb phrases such as ''contains'', ''is a group of'',
-% % ''has'' and my favorite  ''is associated with'' are to be avoided.
+% Diagrams from the model can also be added
 % 
 % 
+% To take account of the model's structural features, sentences that contain
+% refer- ences to model elements need to be validated. This is achieved by
+% checking each sentence using a set of validation constraints.
 % 
-% %% In diskussion: aus dem Articulate ding kann man die Verbphrasen nehmen, da
-% % diese Unabhängig vom Tool das Benutzt wird erstellt werden können.
+% The tool has been developed as a plugin for Eclipse, and is
+% designed to interoperate with different modeling tools built on top of the
+% Eclipse platform.
+% UML model and text can be edited
+% simulta- neously, with changes to individual model elements being updated
+% immediately in the Business Context Document. In case structural changes have
+% been made to the model, those sentences containing text annotations are
+% validated after the model or the text document have been saved
 % 
-% 
-% % % 2011 Natural Language Generation from Class Diagrams
-% % Burden hat auch Grammar dings gemacht mit Grammatical Framework,
-% % ein..
+
+% Based on this representation, we have developed a language that allows us to
+% search for specifc grammatical relationships between individual constituents of
+% a sentence, as well as specify the type of the UML model elements particular
+% words have to be associated with.
+
+
+
+
+
+% % % Auch \cite{Burden2011} identifizieren die Lücke zwischen den Entwicklern und den
+% % % nicht-technischen Stakeholdern und benutzen einen Ansatz, die grammatikalische
+% % % Regeln benutzen um natürlichsprachlichen Text zu generieren. Im Gegensatz zu
+% % % dem vorher beschriebenen Ansatz läuft die Generierung modelgetrieben ab.
+% % % 
+% % % Die Problematik der Interpretation von Formalen Modellen wurde auch in
+% % % \cite{Burden2011} behandelt. Klassendiagramme, die dem Plattformunabhängigen
+% % % Modell angehören, wurden mit Hilfe des Grammatical Framework (GF)
+% % % \footnote{Grammatical Framework, ist eine Anwendung für multilinguale
+% % % Grammatikalische Anwendungen:
+% % % http://www.grammaticalframework.org/} in natürlichsprachliche Texte transformiert
+% % % mit dem Zweck den Stakeholdern das Verständniss des Modells zu erlauben. Die
+% % % Autoren sehen dies als wichtigen Schritt um die korrekte Übersetzung der
+% % % Anforderungsspezifikation in Form eines CIM in das Software-Technische PIM zu
+% % % überprüfen. Eine Validierung des plattformunabhängigen Modells kann so durch
+% % % Domänenexperten erfolgen und eventuelle Fehler aus falsch verstandenen Als
+% % % Nebeneffekt entdecken die Autoren das Domänenexperten auch Fehler in den
+% % % Originaldokumenten der Anforderungsspezifikation gefunden werden, da die
+% % % Repräsentation als Formales Modell  .. gehalten werden muss. Somit sind auch die
+% % % daraus generierten Texte frei von unklarheiten. Auch in \cite{Starr2001} wird
+% % % erwähnt, dass durch die Verbphrasen an den Assoziationsenden viel öfter Fehler
+% % % in den Modellen endeckt werden.
+
+% For expressing the second component of the validation constraint, we use the
+% Object Constraint Language (OCL) [17]. Validation con- straints are required to
+% work with all possible user models, hence we use OCL on the UML metamodel layer
+% (M2) to constrain elements of the user model (M1).
+% More precisely, the invariant mechanism of OCL is used to check whether a set of
+% classes conforms to certain structural requirements.
+
+% The presented approach has been implemented in a prototypic editor for Lit-
+% erate Modeling, called LiMonE 2 , which was used to conduct the experiments
+% discussed above. The tool has been developed as a plugin for Eclipse, and is
+% designed to interoperate with different modeling tools built on top of the
+% Eclipse platform. Currently, adapters for the Papyrus UML Modeler and the UML2
+% Tools of Eclipse are provided.
+% The editor allows the user to create a Business Context Document for a par-
+% ticular model, and embed the diagrams of the model in the document. Model
+% elements can be inserted via an auto-completion feature, which allows the user
+% to select from a list of suggested items. UML model and text can be edited
+% simulta- neously, with changes to individual model elements being updated
+% immediately in the Business Context Document. In case structural changes have
+% been made to the model, those sentences containing text annotations are
+% validated after the model or the text document have been saved. As already
+% mentioned in section 3.2, changes can be detected even when the model is edited
+% without the editor being open. A list with the detected inconsistencies is shown
+% in a separate view, with the corresponding sentences being underlined in the
+% editor.
+
+%  %% ============== \subsection{Articulate Modelling} \label{ch:sec:} %%
+% ==============  %% xtUML einführen  [aus Buch Starr2001] Articulate modelling
+% einführen (+xtUML) und sagen, dass das ein guter schritt ist um die
+% Systembeschreibung zu verbessern und die NL generierung zu erleichtern.
+% Dadurch entseht auch ein besserer Bezug zwischen den Modellen und Korrekturen
+% können leichter in das Formale Systemmodell übernommen werden.
+% What I am defining as an ''articulate'' class model is one that expresses
+% critical system rules with transparent, unambiguous precision.
+%  % The model should express the application's true require- % ments, as
+% minimally and precisely as possible without telling the programmer how to
+% write code.
+% % % DEFINING A PLATFORM INDEPENDENT CLASS % WHAT QUESTIONS CAN THIS CLASS
+% ANSWER? % % ENFORCING THE IDENTITY CONSTRAINT % % RELATIONSHIPS % All
+% relationships in the Good Model are glued together with referential %
+% attributes. % asta nu prea am inteles % % VERB Pharases % In fact, since the
+% role name often matches the associated class name, you can usually drop them
+% alto- % gether without affecting a model's expressiveness.
+% % % To read an association named using verb phrases, start on one side of the
+% association and read the % phrase, multiplicity and class name on the opposite
+% side as shown.
+% % % Main Idea: does the model express all the business rules? AND % Behavioral
+% constraints satisfied? Can you answers certain questions of % situations that
+% might arise during runtime? % % Generic, all-inclusive verb phrases such as
+% ''contains'', ''is a group of'', % ''has'' and my favorite  ''is associated
+% with'' are to be avoided.
+%    %% In diskussion: aus dem Articulate ding kann man die Verbphrasen nehmen,
+% da % diese Unabhängig vom Tool das Benutzt wird erstellt werden können.
+%   % % 2011 Natural Language Generation from Class Diagrams % Burden hat auch
+% Grammar dings gemacht mit Grammatical Framework, % ein..
+% \begin{figure}[htp] \begin{center}
+% \includegraphics[width=0.6\textwidth]{img/burden-approach.png} \caption[Ansatz
+% aus \cite{Burden2011}]{} \label{fig:burden-approach} \end{center} \end{figure}
+
+%  Der Ansatz benutzt.. In Abbildung \ref{fig:burden-approach}..
+%   zu erlauben damit so die Transfomation vom CIM in das PIM validiert.
+% Generalisierungsbeziehungen werden nicht erwähntw
+
 % \begin{figure}[htp]
 % \begin{center}
-%   \includegraphics[width=0.6\textwidth]{img/burden-approach.png}
-%   \caption[Ansatz aus \cite{Burden2011}]{}
-%   \label{fig:burden-approach}
+%   \includegraphics[width=0.8\textwidth]{img/airline-articulatemodel.png}
+%   \caption[Articulate Model, das Airline-Model]{Articulate Model aus
+%   \cite{Burden2011}. Die Verbphrasen and den
+%   Assoziationsenden erleichtern das Verständnis beim Lesen des
+%   Modells}
+%   \label{fig:articulate-model}
 % \end{center}
 % \end{figure}
-
-Die Problematik der Interpretation von Formalen Modellen wurde auch in
-\cite{Burden2011} behandelt. Klassendiagramme, die dem
-Plattformunabhängigen Modell angehören, wurden mit Hilfe des
-Grammatical Framework (GF) \footnote{Grammatical Framework, ist eine
-Anwendung für multilinguale Grammatikalische Anwendungen:
-http://www.grammaticalframework.org/} in natürlichsprachige Texte
-transformiert mit dem Zweck den Stakeholdern das
-Verständniss des Modells zu erlauben. Die Autoren sehen dies als wichtigen
-Schritt um die korrekte Übersetzung der Anforderungsspezifikation in Form eines
-CIM in das Software-Technische PIM zu überprüfen. Eine Validierung des
-plattformunabhängigen Modells kann so durch Domänenexperten erfolgen und
-eventuelle Fehler aus falsch verstandenen Als Nebeneffekt entdecken die Autoren
-das Domänenexperten auch Fehler in den Originaldokumenten der
-Anforderungsspezifikation gefunden werden, da die Repräsentation als Formales
-Modell  .. gehalten werden muss. Somit sind auch die daraus generierten Texte
-frei von unklarheiten. Auch in \cite{Starr2001} wird erwähnt, dass durch die
-Verbphrasen an den Assoziationsenden viel öfter Fehler in den Modellen endeckt
-werden.
 % 
-% Der Ansatz benutzt.. In Abbildung
-% \ref{fig:burden-approach}..
+% Im Folgenden wird ein Teil durch der in \cite{Burden2011}
+% präsentierten Technik erstellten Textes aufgeführt:
 % 
+% \begin{quotation}
+% \emph{An Airport has a name, an airport code and an address. An Aircraft can
+% get next Flight and get Airline. A Flight is identified by one or more
+% Flight Numbers. The relationship between a Flight and a Flight Number
+% is specified by an Airline. A Flight can have more than one Flight
+% number since code sharing is a multimillion-pound business, affecting
+% an alliance of airlines.}
+% \end{quotation}
 % 
-% zu erlauben damit so die
-% Transfomation vom CIM in das PIM validiert.
-% Generalisierungsbeziehungen werden nicht erwähntw
-% 
-
-\begin{figure}[htp]
-\begin{center}
-  \includegraphics[width=0.8\textwidth]{img/airline-articulatemodel.png}
-  \caption[Articulate Model, das Airline-Model]{Articulate Model aus
-  \cite{Burden2011}. Die Verbphrasen and den
-  Assoziationsenden erleichtern das Verständnis beim Lesen des
-  Modells}
-  \label{fig:articulate-model}
-\end{center}
-\end{figure}
-
-Im Folgenden wird ein Teil durch der in \cite{Burden2011}
-präsentierten Technik erstellten Textes aufgeführt:
-
-\begin{quotation}
-\emph{An Airport has a name, an airport code and an address. An Aircraft can
-get next Flight and get Airline. A Flight is identified by one or more
-Flight Numbers. The relationship between a Flight and a Flight Number
-is specified by an Airline. A Flight can have more than one Flight
-number since code sharing is a multimillion-pound business, affecting
-an alliance of airlines.}
-\end{quotation}
-
-Der Text orientiert sich sehr stark an das Diagramm aus
-\ref{fig:articulate-model}, ist aber verständlicher für Personen die nicht mit UML vertraut sind. Im
-letzten Satz wurde auch das der Flight-Klasse angehängte Kommentar
-eingeflegt. Dadurch wird die Wichtigkeit der modellierten
-Anforderung hervorgehoben.
+% Der Text orientiert sich sehr stark an das Diagramm aus
+% \ref{fig:articulate-model}, ist aber verständlicher für Personen die nicht mit UML vertraut sind. Im
+% letzten Satz wurde auch das der Flight-Klasse angehängte Kommentar
+% eingeflegt. Dadurch wird die Wichtigkeit der modellierten
+% Anforderung hervorgehoben.
 
 % %% ==============
 % \subsection{Template-basierte Generierung}
@@ -298,4 +257,24 @@ Anforderung hervorgehoben.
 % Prototyps, zur Generierung von natürlicher Sprache aus
 % Software-Modellen, basierend auf den hier vorgestellten Ansätzen
 % sollte möglich sein.
+
+
+
+% Die Autoren arbeiteten zur Zeit der Entwicklung dieser Methode bei British
+% Airways. Während der Systementwicklung trat ein Problem, dass die Autoren als
+% \emph{'trivialisation of business requirements by visual modelling'} nannten,
+% auf. Die Autoren haben beobachtet, dass nach der Formalisierung der
+% Anforderungen wichtige Kernaspekte der Domäne zwischen anderen unwichtigeren
+% Details untergehen. Ein Beispiel dieses Problems ist das Cross-Selling von
+% Flugtickets zwischen British Airways und den Allianzpartnern, ein Markt der
+% Umsätze in Millionenhöhe tätigt und somit sehr wichtig für das Geschäft ist.
+% Diese Geschäftsanforderung wurde in dem UML Modell, korrekterweise, durch eine
+% mit dem * Symbol dargestellte Multiplizität an dem Assoziationsende zwischen den
+% Modellklassen Flug und Flugnummer dargestellt (vgl. Abbildung
+% \ref{fig:articulate-model}. Dadurch verlor diese Anforderung an Bedeutung bei
+% der Darstellung im formalen Modell. Nach der Einführung von BCD konnten die
+% Geschäftsanforderungen enger an die Formalen Modelle gekoppelt werden und in
+% \cite{Arlow1999} wird berichtet, dass die Anwendung der Literate-Programming
+% Methode zu einer Verbesserung in der Umsetzung der Projekte geführt hat.
+
 	
